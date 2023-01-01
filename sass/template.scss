@@ -1,0 +1,91 @@
+.sheet-rolltemplate-feat {
+    div.sheet-template-container {
+        border: 2px solid #000 !important;
+        border-radius: 3px 3px 3px 3px;
+        .sheet-template-header {
+            background-color: rgba(112, 32, 130, 1);
+            color: #fff;
+            padding: 2px;
+            border-bottom: 1px solid black;
+            line-height: 1.6em;
+            font-size: 1.2em;
+            text-align: center;
+            font-weight: bold;
+
+            .sheet-template-main {
+                text-transform: uppercase;
+            }
+            .sheet-template-sub {
+                font-size: 0.8em;
+            }
+        }
+        .sheet-template-used {
+            .sheet-template-left,
+            .sheet-template-right {
+                width: calc(50% - 2px);
+                display: inline-block;
+                text-align: center;
+                div {
+                    text-transform: uppercase;
+                }
+            }
+            .sheet-template-left {
+                text-align: left;
+            }
+            .inlinerollresult {
+                display: inline-block;
+                text-align: center;
+                font-weight: normal;
+                background-color: inherit;
+                border: 0;
+            }
+        }
+        .sheet-template-results {
+            .sheet-template-row {
+                text-align: center;
+                span {
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-weight: bold;
+                    &.sheet-template-left {
+                        width: 70px;
+                    }
+                    &.sheet-template-right,
+                    &.sheet-template-right span {
+                        width: 32px;
+                    }
+                    &.fullfail,
+                    &.fullcrit {
+                        border: 0;
+                    }
+                }
+                .sheet-template-vals {
+                    margin: auto;
+                }
+            }
+            .sheet-template-critical {
+                .sheet-template-row {
+                    span {
+                        color: green;
+                        .inlinerollresult {
+                            border: 1px solid green;
+                        }
+                    }
+                }
+            }
+        }
+        .sheet-template-row {
+            padding: 5px;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+            &:nth-child(odd),
+            &:nth-child(odd) {
+                background-color: rgba(217, 217, 214, 1);
+            }
+            &:nth-child(even),
+            &:nth-child(even) {
+                background-color: rgba(233, 233, 233, 1);
+            }
+        }
+    }
+}

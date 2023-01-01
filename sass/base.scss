@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@200&family=Questrial&family=Quicksand:wght@300&family=Vollkorn+SC:wght@900&family=Vollkorn:wght@900&display=swap");
+/* Sheet Magic classes */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+button[type="roll"]::before {
+  content: "" !important;
+}
+
+.sheetmagic {
+  position: relative;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.sheetmagic * {
+  color: black !important;
+}
+
+.title {
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+.sm-prop {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute;
+  background: transparent !important;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.sm-prop:focus {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.sm-mlt {
+  font-size: 12px;
+  resize: none;
+}
+
+.sm-num {
+  text-align: center;
+}
+
+.sm-roll {
+  cursor: pointer;
+}
+
+.sm-checkbox {
+  cursor: pointer;
+  appearance: none;
+}
+
+.sm-checkbox:checked {
+  appearance: auto;
+}
+
+.sm-noedit {
+  border: none;
+}
+/* Base edited css */
+button[type="roll"] {
+  input[disabled] {
+    cursor: inherit;
+  }
+}
+
+/* Repeating custom values */
+div.repcontrol {
+  position: relative;
+  z-index: 2;
+  left: -13px;
+
+  button.repcontrol_add,
+  button.repcontrol_edit {
+    visibility: hidden;
+  }
+  button.repcontrol_add::before,
+  button.repcontrol_edit::after {
+    visibility: visible;
+    font-family: pictos;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+    padding: 2px 4px 2px 4px;
+    color: black;
+  }
+  button.repcontrol_add::before {
+    content: "&";
+  }
+  button.repcontrol_edit::after {
+    content: "(";
+  }
+  button.repcontrol_edit.clicked::after {
+    content: ")";
+  }
+}
+
+.sheet-front,
+.sheet-rear {
+  height: 576px;
+  overflow: auto;
+}
+
+/*Configure the tab buttons*/
+.charsheet .sheet-front,
+.charsheet .sheet-rear {
+  display: none;
+}
+
+.charsheet button[name="act_front"],
+.charsheet button[name="act_rear"] {
+  border: 0;
+  background-color: transparent;
+}
+
+/* show the selected tab */
+.charsheet .sheet-tabstoggle[value="front"] ~ div.sheet-front,
+.charsheet .sheet-tabstoggle[value="rear"] ~ div.sheet-rear {
+  display: block;
+}
+
+.charsheet .sheet-tabstoggle[value="front"] ~ #sheet-tab-container > button[name="act_front"],
+.charsheet .sheet-tabstoggle[value="rear"] ~ #sheet-tab-container > button[name="act_rear"] {
+  border: 2px solid black;
+}
+
+#sheet-tab-container {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.sheet-container {
+  width: 714px;
+  height: 1000px;
+  font-family: Didact Gothic, sans-serif;
+}
+
+div[data-groupname="repeating_feats"],
+div[data-groupname="repeating_martial"] {
+  &.repcontainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #bbb;
+      background-clip: padding-box;
+      border: 0.01em solid #eeeeee;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #ddd;
+    }
+    /* Buttons */
+    &::-webkit-scrollbar-button:single-button {
+      background-color: #ddd;
+      display: block;
+      border-style: solid;
+      height: 5px;
+      width: 8px;
+    }
+    /* Up */
+    &::-webkit-scrollbar-button:single-button:vertical:decrement {
+      border-width: 0 4px 4px 4px;
+      border-color: transparent transparent #777 transparent;
+    }
+
+    &::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+      border-color: transparent transparent #bbb transparent;
+    }
+    /* Down */
+    &::-webkit-scrollbar-button:single-button:vertical:increment {
+      border-width: 4px 4px 0 4px;
+      border-color: #777 transparent transparent transparent;
+    }
+
+    &::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+      border-color: #bbb transparent transparent transparent;
+    }
+    a.repcontrol_move,
+      button.repcontrol_del {
+        padding: 4px;
+        box-sizing: border-box;
+        line-height: 8px;
+        font-family: "Pictos" !important;
+        float: right !important;
+        position: relative;
+        z-index: 2000;
+      }
+  }
+  .repitem {
+    .options {
+      width: 100%;
+      background-color: white;
+      padding-top: 10px;
+      .label-span {
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+      input {
+        &[type="text"] {
+          background-color: transparent;
+          margin-bottom: 9px;
+          height: 24px;
+        }
+      }
+      select {
+        height: 25px;
+      }
+    }
+    .display-control[value="0"] ~ .display,
+    .display-control[value="0"] ~ .elem {
+      display: block;
+    }
+    .display-control[value="1"] ~ .display,
+    .display-control[value="1"] ~ .elem {
+      display: none;
+    }
+    .display-control[value="1"] ~ .options {
+      display: visible;
+    }
+    .display-control[value="0"] ~ .options {
+      display: none;
+    }
+  }
+}

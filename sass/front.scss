@@ -1,0 +1,558 @@
+@import "./variables.scss";
+
+#front-container {
+  background-image: url("https://i.ibb.co/XYSpmBJ/scheda-fronte.jpg");
+}
+
+.header {
+  height: 15px;
+  font-size: 10px;
+  border: transparent;
+}
+
+.defence,
+.calculated,
+.attributes,
+.feat {
+  input {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 14px !important;
+    border: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    background: transparent !important;
+    box-shadow: none;
+    color: black;
+  }
+}
+
+.feat,
+.points,
+.points-wider {
+  div {
+    position: absolute;
+  }
+  label {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    width: 0;
+    border: 0 transparent;
+    span {
+      position: relative;
+      line-height: $height + $text;
+      &:before,
+      &:after {
+        content: "";
+        height: $height + $text;
+      }
+      &:before {
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      &:after {
+        background: #222021;
+        height: $height + $text;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition: 300ms;
+        opacity: 0;
+      }
+    }
+    input:checked + span:after {
+      opacity: 1;
+    }
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  button[type="roll"],
+  button[type="action"] {
+    vertical-align: top;
+    height: 100% !important;
+    width: 129px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0;
+  }
+}
+/* Points */
+.points,
+.points-wider {
+  position: absolute;
+  @for $i from 1 through 3 {
+    .row_#{$i} {
+      $value: 399 + (27.5 * ($i - 1));
+      top: $value + $text;
+    }
+  }
+  @for $i from 1 through 9 {
+    .col_#{$i} {
+      $value: 602 - (17.3 * ($i - 1));
+      left: $value + $text;
+    }
+  }
+
+  .color[value="usable"] + span {
+    background-color: transparent;
+    opacity: 1;
+  }
+  .color[value="lost"] + span {
+    background-color: red;
+    opacity: 1;
+  }
+  .color[value="selected"] + span {
+    background-color: black;
+    opacity: 1;
+  }
+  .color[value="blocked"] + span {
+    background-color: grey;
+    opacity: 1;
+  }
+}
+.points {
+  label {
+    span {
+      &:before,
+      &:after {
+        width: 7px;
+      }
+    }
+  }
+}
+.points-wider {
+  left: 619px;
+  span {
+    &:before,
+    &:after {
+      width: 19px !important;
+    }
+  }
+}
+/* Attributes */
+.attributes {
+  input {
+    height: 27px !important;
+  }
+  .attributes-bonus-left {
+    input {
+      left: 26px;
+    }
+  }
+  .attributes-left {
+    .span-split {
+      position: absolute;
+      left: 141px;
+      width: 5px;
+      height: 27px;
+      width: 24px;
+      background: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) calc(50% - 0.8px),
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) calc(50% + 0.8px),
+        rgba(0, 0, 0, 0) 100%
+      ) !important;
+    }
+    input {
+      left: 141px;
+      &.splitted {
+        width: 11px !important;
+        height: 11px !important;
+      }
+      &.split-right {
+        left: 153px;
+        font-size: 12px !important;
+      }
+    }
+  }
+  .attributes-right {
+    input {
+      left: 269px;
+    }
+  }
+  .row_1 {
+    top: 151px;
+  }
+  .row_2 {
+    top: 179px;
+  }
+  .row_3 {
+    top: 207px;
+  }
+  .row_4 {
+    top: 234px;
+  }
+  .row_5 {
+    top: 287px;
+  }
+  .row_6 {
+    top: 315px;
+  }
+  .row_7 {
+    top: 343px;
+  }
+  .row_8 {
+    top: 398px;
+    &.split-left {
+      top: 400px;
+    }
+    &.split-right {
+      top: 410px;
+    }
+  }
+  .row_9 {
+    top: 425px;
+    &.split-left {
+      top: 427px;
+    }
+    &.split-right {
+      top: 437px;
+    }
+  }
+  .row_10 {
+    top: 453px;
+    &.split-left {
+      top: 455px;
+    }
+    &.split-right {
+      top: 465px;
+    }
+  }
+}
+/* Defences */
+.defence {
+  .martial {
+    border: 1px solid orange !important;
+  }
+}
+/* Calculated Values */
+.calculated {
+  button {
+    border: transparent !important;
+    position: absolute;
+    background: transparent !important;
+    box-shadow: none;
+    color: black;
+    margin: 0 !important;
+    padding: 0 !important;
+    input {
+      position: relative !important;
+    }
+  }
+  input,
+  button {
+    width: 31px !important;
+    height: 23px !important;
+    &.splitted {
+      background: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) calc(50% - 0.8px),
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) calc(50% + 0.8px),
+        rgba(0, 0, 0, 0) 100%
+      ) !important;
+    }
+  }
+  span[name="attr_malus_p"] {
+    left: 463px;
+    top: 362px;
+    position: absolute;
+    width: 22px;
+    height: 24px;
+    font-size: 14px;
+  }
+  .right {
+    left: 437px;
+  }
+  .left {
+    left: 329px;
+  }
+  .center {
+    left: 384px;
+  }
+  .row_1 {
+    top: 185px;
+  }
+  .row_3 {
+    top: 311px;
+    &.calculated-triangle.right-top {
+      top: 306px;
+      left: 438px;
+    }
+    &.calculated-triangle.right-bottom {
+      top: 315px;
+      left: 453px;
+    }
+    &.calculated-triangle.right-top,
+    &.calculated-triangle.right-bottom {
+      input {
+        font-size: 11px !important;
+        width: 10px !important;
+      }
+    }
+  }
+  .calculated-triangle {
+    width: 15px !important;
+    border: transparent;
+    font-size: 11px !important;
+  }
+  .calculated-triangle.left-top {
+    top: 248px;
+    left: 330px;
+  }
+  .calculated-triangle.left-bottom {
+    top: 258px;
+    left: 342px;
+  }
+  .calculated-triangle.right-top {
+    top: 248px;
+    left: 438px;
+  }
+  .calculated-triangle.right-bottom {
+    top: 258px;
+    left: 451px;
+  }
+}
+/* Feats */
+.feat {
+  div {
+    border: 0;
+    width: 226px;
+    left: $base-left;
+    height: $height + $text;
+    box-sizing: border-box;
+  }
+  @for $i from 1 through 22 {
+    .row_#{$i} {
+      $value: 527.2 + ($height * ($i - 1));
+      top: $value + $text;
+    }
+  }
+  .minus-4 {
+    left: 143px;
+  }
+  .minus-2 {
+    left: 156px;
+  }
+  .zero {
+    left: 171px;
+  }
+  .plus-1 {
+    left: 185px;
+  }
+  .plus-2 {
+    left: 199px;
+  }
+  .plus-3 {
+    left: 213px;
+  }
+  button {
+    width: 148px;
+    height: 13px;
+  }
+  label {
+    span {
+      &:before,
+      &:after {
+        width: 14px;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    left: 123px;
+    top: 3px;
+    height: 10px !important;
+  }
+}
+#repeating-feats-container {
+  $width: 235px;
+  position: absolute;
+  left: $base-left;
+  top: 853px;
+  width: $width;
+  height: 15px;
+
+  div[data-groupname="repeating_feats"] {
+    $width: 237;
+    &.repcontainer {
+      height: 117.5px;
+      max-height: 117.5px;
+      width: $width;
+    }
+    .repitem {
+      border-left: 1px solid $black;
+      line-height: 0;
+      a.repcontrol_move,
+      button.repcontrol_del {
+        height: 15px;
+        font-size: 10px;
+      }
+      div.feat-vals {
+        button[type="action"] {
+          width: 20px;
+          box-sizing: border-box;
+          height: 14px;
+          border: 0;
+          background-color: transparent;
+          padding: 3px;
+          line-height: 0;
+          i {
+            font-family: Pictos;
+            position: relative;
+            top: -1.5px;
+          }
+        }
+        button.roll-button {
+          width: calc(147px - 30px) !important;
+          margin-left: 20px !important;
+          border: 0 !important;
+          line-height: 0;
+          box-sizing: border-box;
+          position: relative;
+          top: 1px;
+          text-align: initial;
+          span {
+            height: $height + $text;
+            padding: 0 0 0 7px;
+            font-size: 11px;
+            vertical-align: sub;
+            width: 100%;
+          }
+        }
+        min-height: $height + $text;
+        box-sizing: border-box;
+        button.feat-options-toggle {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 18px !important;
+          height: 18px !important;
+          z-index: 2;
+        }
+        .display {
+          width: 100%;
+          height: 100%;
+        }
+        .options {
+          width: $width + px;
+          height: 200px;
+          .left-side {
+            width: calc(100% - 145px - 15px - 10px);
+            margin-left: 10px;
+          }
+          .right-side {
+            width: 120px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Wounds */
+.wound {
+  div {
+    position: absolute;
+    border-radius: 50%;
+  }
+  &.head {
+    div {
+      $radius: 8px;
+      width: $radius;
+      height: $radius;
+      &.row_2 {
+        top: 147px;
+      }
+      &.row_4 {
+        top: 157px;
+      }
+      &.centered {
+        left: 585px;
+      }
+      &.right {
+        left: 592px;
+      }
+    }
+  }
+  &.body {
+    div {
+      $radius: 14px;
+      width: $radius;
+      height: $radius;
+      &.row_1 {
+        top: 176px;
+      }
+      &.row_2 {
+        top: 195px;
+      }
+      &.row_3 {
+        top: 212px;
+      }
+      &.row_4 {
+        top: 226px;
+      }
+      &.centered {
+        left: 583px;
+        transform: translateY(1px);
+      }
+      &.right {
+        left: 601px;
+      }
+    }
+  }
+  &.left-arm,
+  &.right-arm,
+  &.left-leg,
+  &.right-leg {
+    div {
+      $radius: 10px;
+      width: $radius;
+      height: $radius;
+    }
+  }
+  &.left-arm {
+    div {
+      &.right {
+        left: 539px;
+      }
+      &.left {
+        left: 532px;
+      }
+    }
+  }
+  &.right-arm {
+    div {
+      &.right {
+        left: 633px;
+      }
+    }
+  }
+  &.left-leg {
+    div {
+      &.left {
+        left: 526px;
+      }
+    }
+  }
+  .color[value="healed"] + .status {
+    background-color: transparent;
+  }
+  .color[value="lost"] + .status {
+    background-color: black;
+  }
+  .color[value="wounded"] + .status {
+    background-color: crimson;
+  }
+  .color[value="blocked"] + .status {
+    background-color: grey;
+  }
+}

@@ -1,0 +1,281 @@
+@import "./variables.scss";
+$div-height: 19.563px;
+#rear-container {
+    padding: 0px;
+    box-sizing: border-box;
+    margin: auto;
+    height: 570px;
+}
+
+#rear-box {
+    border: 3px solid black;
+    height: 100%;
+
+    .title {
+        width: fit-content;
+        margin: 10px auto;
+    }
+    .title,
+    .grid-title > * {
+        font-family: Vollkorn, serif;
+        font-weight: 900;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    .grid-container {
+        $width: 700px;
+        width: $width;
+        margin: auto;
+        .name {
+            width: 116px;
+        }
+        .value {
+            width: 117px;
+        }
+        .requisites {
+            width: 112px;
+        }
+        .cell,
+        .inner-cell {
+            width: 19.5px;
+        }
+        .damage {
+            width: 100px;
+        }
+        .special,
+        .notes {
+            width: 108px;
+        }
+    }
+    .grid-title,
+    .grid-values {
+        div {
+            text-align: center;
+            float: left;
+        }
+    }
+    .grid-title {
+        height: 21.24px;
+        .cell {
+            font-size: 14px;
+        }
+    }
+    .grid-values {
+        width: 100%;
+        height: 480px;
+        border: $grey-border;
+        font-size: 0;
+        
+        #base-martial-container {
+            height: 254.319px;
+            width: 100%;
+            div {
+                height: $div-height;
+            }
+        }
+        div.element {
+            box-sizing: border-box;
+            border-bottom: $grey-border;
+            input[type="checkbox"] {
+                width: 10px;
+                height: 10px;
+            }
+            .notes,
+            .name,
+            .requisites,
+            .cell,
+            .damage,
+            .special {
+                span {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: inline-block;
+                    width: 100%;
+                    line-height: 2;
+                }
+            }
+            div {
+                span {
+                    font-size: 10px;
+                }
+                button[type="roll"] {
+                    width: calc(100% - 15px);
+                    height: calc(100% + 1px);
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 0;
+                    background: transparent !important;
+                    position: relative;
+                }
+                border-right: $grey-border;
+                box-sizing: border-box;
+                &.name {
+                    span {
+                        padding-left: 5px;
+                        text-align: left;
+                        &.used {
+                            width: 10px;
+                            vertical-align: top;
+                        }
+                    }
+                }
+                &.notes,
+                &.value {
+                    border-right: 0;
+                }
+                &.requisites {
+                    border-left: $grey-border;
+                }
+                &.no-border {
+                    border: 0;
+                }
+                &:last-child {
+                    border-bottom: 1px solid grey;
+                }
+                div.inner-cell {
+                    border-right: $grey-border;
+                    border-bottom: 0;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                    label {
+                        width: 0;
+                        display: inline-block;
+                        cursor: pointer;
+                        width: 100%;
+                        line-height: 0;
+                        height: 100%;
+                        margin: 0;
+                        &.no-click {
+                            cursor: default;
+                        }
+                        input[type="radio"] {
+                            display: none;
+                        }
+                        span {
+                            display: inline-block;
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            &.checked {
+                                opacity: 1;
+                                background: #222021;
+                            }
+                            &:before,
+                            &:after {
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                            }
+                            &:before {
+                                margin-right: 10px;
+                                display: inline-block;
+                                vertical-align: top;
+                            }
+                            &:after {
+                                background: #222021;
+                                transition: 300ms;
+                                opacity: 0;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                        }
+                        input:checked + span:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        #repeating-martial-container {
+            width: 100%;
+            height: calc(100% - 254.319px);
+            div[data-groupname="repeating_martial"] {
+                &.repcontainer {
+                    height: 100%;
+                    width: 102%; //for overflow bar
+                }
+                div[name="attr_martialrep"] {
+                    div {
+                        height: $div-height;
+                    }
+                    .name {
+                        button {
+                            width: calc(100% - 13px - 15px);
+                            &[type="roll"]{
+                                top: -3px;
+                            }
+                        }
+                    }
+                    button.martial-options-toggle {
+                        width: 12px;
+                        height: 13px;
+                        border: 0;
+                        padding: 0;
+                        margin: 0;
+                        background-color: transparent;
+                        i {
+                            font-family: Pictos;
+                            position: relative;
+                            // top: -1.5px;
+                        }
+                    }
+                    .options {
+                        height: 300px;
+                        $halfheight: 205px;
+                        .half {
+                            width: 50%;
+                            height: $halfheight;
+                            div {
+                                width: 100%;
+                                margin-bottom: 10px;
+                                span {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        .left-side {
+                            width: calc(100% - 160px - 10px);
+                            margin-left: 10px;
+                        }
+                        .left-side-small {
+                            width: calc(50% - 30px - 10px);
+                            margin-left: 10px;
+                        }
+                        .left-side-footer {
+                            width: calc(100% - 525px - 10px);
+                            margin-left: 10px;
+                            vertical-align: top;
+                        }
+                        .right-side {
+                            width: 160px;
+                        }
+                        .right-side-small {
+                            width: 30px;
+                        }
+                        .right-side-textarea {
+                            width: 176px;
+                            height: 175px;
+                        }
+                        .footer {
+                            height: calc(100% - #{$halfheight});
+                            width: 100%;
+                            span {
+                                text-align: left;
+                            }
+                            .footer-textarea {
+                                height: 90px;
+                                width: 515px;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

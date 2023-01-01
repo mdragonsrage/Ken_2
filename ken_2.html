@@ -1,0 +1,2958 @@
+<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="front" />
+<div id="sheet-tab-container">
+    <button type="action" name="act_front">Front</button>
+    <button type="action" name="act_rear">Rear</button>
+</div>
+
+<div class="sheet-front">
+    <div class="sheetmagic sheet-container" id="front-container">
+        <!-- General Info -->
+        <div id="general-info-container">
+            <input name="attr_character_name" value="(@{character_name})" disabled="true" type="text"
+                class="sm-prop sm-slt header" style="left: 341px; top: 42px; width: 188px;" />
+            <input name="attr_age" type="text" class="sm-prop sm-slt header"
+                style="left: 555px; top: 42px; width: 119px;" />
+            <input name="attr_job" type="text" class="sm-prop sm-slt header"
+                style="left: 353px; top: 64px; width: 172px;" />
+            <input name="attr_school" type="text" class="sm-prop sm-slt header"
+                style="left: 574px; top: 64px; width: 93px;" />
+            <input name="attr_player" type="text" class="sm-prop sm-slt header"
+                style="left: 370px; top: 84px; width: 152px;" />
+            <span class="title" style="position: absolute; left: 523px; top: 84px; width: 50px;">P.A.</span>
+            <input name="attr_pa" type="number" class="sm-prop sm-num header"
+                style="left: 545px; top: 84px; width: 30px;" min="0" max="100" value="0" />
+        </div>
+        <!-- Attributes -->
+        <div id="attributes-container" class="attributes">
+            <!--Components & Mediums-->
+            <div id="components-container" class="attributes-left">
+                <input type="hidden" name="attr_maxcomponent" value="7" />
+                <input type="hidden" name="attr_mincomponent" value="0" />
+                <input name="attr_corpo" value="0" min="0" max="7" type="number" class="sm-num row_1" />
+                <input name="attr_istinto" value="0" min="0" max="7" type="number" class="sm-num row_2" />
+                <input name="attr_cuore" value="0" min="0" max="7" type="number" class="sm-num row_3" />
+                <input name="attr_mente" value="0" min="0" max="7" type="number" class="sm-num row_4" />
+            </div>
+            <div id="mediums-container" class="attributes-right">
+                <input type="hidden" name="attr_maxmedium" value="5" />
+                <input type="hidden" name="attr_minmedium" value="0" />
+                <input name="attr_percezione" value="0" min="0" max="5" type="number" class="sm-num  row_1" />
+                <input name="attr_azione" value="0" min="0" max="5" type="number" class="sm-num  row_2" />
+                <input name="attr_desiderio" value="0" min="0" max="5" type="number" class="sm-num  row_3" />
+                <input name="attr_resistenza" value="0" min="0" max="5" type="number" class="sm-num  row_4" />
+            </div>
+            <!-- Reigns -->
+            <div id="reigns-container">
+                <input type="hidden" name="attr_maxreign" value="3" />
+                <input type="hidden" name="attr_minreign" value="0" />
+                <div class="attributes-left">
+                    <input name="attr_minerale" value="0" min="0" max="3" type="number" class="sm-num row_5" />
+                    <input name="attr_vegetale" value="0" min="0" max="3" type="number" class="sm-num row_6" />
+                    <input name="attr_animale" value="0" min="0" max="3" type="number" class="sm-num row_7" />
+                </div>
+                <div class="attributes-right">
+                    <input name="attr_umano" value="0" min="0" max="3" type="number" class="sm-num  row_5" />
+                    <input name="attr_meccanico" value="0" min="0" max="3" type="number" class="sm-num  row_6" />
+
+                    <input name="attr_nulla" value="-1" disabled="true" type="number" class="sm-num  row_7" />
+                </div>
+            </div>
+            <!--Energies & Techniques-->
+            <div class="energies-container">
+                <input type="hidden" name="attr_maxenergy" value="3" />
+                <input type="hidden" name="attr_minenergy" value="0" />
+                <div class="attributes-left">
+                    <span>
+                        <span class="span-split row_8"></span>
+                        <input name="attr_potenza" value="0" min="0" max="3" type="number"
+                            class="sm-num row_8 splitted split-left" />
+                        <input name="attr_bpotenza" value="0" min="0" max="3" type="number"
+                            class="sm-num row_8 splitted split-right" />
+                    </span>
+                    <span>
+                        <span class="span-split row_9"></span>
+                        <input name="attr_rapidita" value="0" min="0" max="3" type="number"
+                            class="sm-num row_9 splitted split-left" />
+                        <input name="attr_brapidita" value="0" min="0" max="3" type="number"
+                            class="sm-num row_9 splitted split-right" />
+                    </span>
+                    <span>
+                        <span class="span-split row_10"></span>
+                        <input name="attr_precisione" value="0" min="0" max="3" type="number"
+                            class="sm-num row_10 splitted split-left" />
+                        <input name="attr_bprecisione" value="0" min="0" max="3" type="number"
+                            class="sm-num row_10 splitted split-right" />
+                    </span>
+                </div>
+            </div>
+            <div class="techniques-container">
+                <input type="hidden" name="attr_maxtech" value="3" />
+                <input type="hidden" name="attr_mintech" value="0" />
+                <div class="attributes-right">
+                    <input name="attr_attacco" value="0" min="0" max="6" type="number" class="sm-num  row_8" />
+                    <input name="attr_difesa" value="0" min="0" max="6" type="number" class="sm-num  row_9" />
+                    <input name="attr_aura" value="0" min="0" max="6" type="number" class="sm-num  row_10" />
+                </div>
+            </div>
+        </div>
+        <!-- Defences & Wounds -->
+        <div id="defences-container">
+            <div class="defence">
+                <input name="attr_testa" value="0" min="0" max="6" type="number" class="sm-num"
+                    style="left: 550px; top: 138px;" />
+                <input name="attr_testaam" value="0" min="0" max="6" type="number" class="sm-num martial"
+                    style="left: 520px; top: 138px;" />
+                <input name="attr_torso" value="0" min="0" max="6" type="number" class="sm-num"
+                    style="left: 628px; top: 150px;" />
+                <input name="attr_torsoam" value="0" min="0" max="6" type="number" class="sm-num martial"
+                    style="left: 655px; top: 150px;" />
+                <input name="attr_bd" value="0" min="0" max="6" type="number" class="sm-num"
+                    style="left: 499px; top: 236px;" />
+                <input name="attr_bdam" value="0" min="0" max="6" type="number" class="sm-num martial"
+                    style="left: 499px; top: 266px;" />
+                <input name="attr_bs" value="0" min="0" max="6" type="number" class="sm-num"
+                    style="left: 655px; top: 226px;" />
+                <input name="attr_bsam" value="0" min="0" max="6" type="number" class="sm-num martial"
+                    style="left: 655px; top: 256px;" />
+                <input name="attr_gd" value="0" min="0" max="6" type="number" class="sm-num"
+                    style="left: 547px; top: 348px;" />
+                <input name="attr_gdam" value="0" min="0" max="6" type="number" class="sm-num martial"
+                    style="left: 574px; top: 348px;" />
+                <input name="attr_gs" value="0" min="0" max="6" type="number" class="sm-num"
+                    style="left: 640px; top: 347px;" />
+                <input name="attr_gsam" value="0" min="0" max="6" type="number" class="sm-num martial"
+                    style="left: 640px; top: 307px;" />
+            </div>
+        </div>
+        <div id="wounds-container">
+            <div id="head-wounds" class="wound head">
+                <input type="hidden" class="color" name="attr_wound-head-1" value="blocked" />
+                <div id="wound-head-1" class="status centered" name="attr_wound-head-1" style="top:143px;"></div>
+                <input type="hidden" class="color" name="attr_wound-head-2" value="blocked" />
+                <div id="wound-head-2" class="status row_2" name="attr_wound-head-2" style="left:577px;"></div>
+                <input type="hidden" class="color" name="attr_wound-head-3" value="blocked" />
+                <div id="wound-head-3" class="status row_2 right" name="attr_wound-head-3"></div>
+                <input type="hidden" class="color" name="attr_wound-head-4" value="blocked" />
+                <div id="wound-head-4" class="status centered" name="attr_wound-head-4" style="top:152px;"></div>
+                <input type="hidden" class="color" name="attr_wound-head-5" value="blocked" />
+                <div id="wound-head-5" class="status row_4" name="attr_wound-head-5" style="left:577px;"></div>
+                <input type="hidden" class="color" name="attr_wound-head-6" value="blocked" />
+                <div id="wound-head-6" class="status row_4 right" name="attr_wound-head-6"></div>
+                <input type="hidden" class="color" name="attr_wound-head-7" value="blocked" />
+                <div id="wound-head-7" class="status centered" name="attr_wound-head-7" style="top:161px;"></div>
+            </div>
+            <div id="body-wounds" class="wound body">
+                <input type="hidden" class="color" name="attr_wound-body-1" value="blocked" />
+                <div id="wound-body-1" class="status row_1" name="attr_wound-body-1" style="left: 566px"></div>
+                <input type="hidden" class="color" name="attr_wound-body-2" value="blocked" />
+                <div id="wound-body-2" class="status" name="attr_wound-body-2" style="top:177px;left:583px;"></div>
+                <input type="hidden" class="color" name="attr_wound-body-3" value="blocked" />
+                <div id="wound-body-3" class="status row_1 right" name="attr_wound-body-3" style="left: 601px"></div>
+                <input type="hidden" class="color" name="attr_wound-body-4" value="blocked" />
+                <div id="wound-body-4" class="status row_2" name="attr_wound-body-4" style="left: 567px"></div>
+                <input type="hidden" class="color" name="attr_wound-body-5" value="blocked" />
+                <div id="wound-body-5" class="status row_2 centered" name="attr_wound-body-5"></div>
+                <input type="hidden" class="color" name="attr_wound-body-6" value="blocked" />
+                <div id="wound-body-6" class="status row_2 right" name="attr_wound-body-6"></div>
+                <input type="hidden" class="color" name="attr_wound-body-7" value="blocked" />
+                <div id="wound-body-7" class="status row_3" name="attr_wound-body-7" style="left: 574px"></div>
+                <input type="hidden" class="color" name="attr_wound-body-8" value="blocked" />
+                <div id="wound-body-8" class="status row_3" name="attr_wound-body-8" style="left: 593px"></div>
+                <input type="hidden" class="color" name="attr_wound-body-9" value="blocked" />
+                <div id="wound-body-9" class="status row_4 centered" name="attr_wound-body-9"></div>
+            </div>
+            <div id="left-arm-wounds" class="wound left-arm">
+                <input type="hidden" class="color" name="attr_wound-left-arm-1" value="blocked" />
+                <div id="wound-left-arm-1" class="status" name="attr_wound-left-arm-1" style="top:197px;left:541px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-arm-2" value="blocked" />
+                <div id="wound-left-arm-2" class="status" name="attr_wound-left-arm-2" style="top:205px;left:549px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-arm-3" value="blocked" />
+                <div id="wound-left-arm-3" class="status right" name="attr_wound-left-arm-3" style="top:211px"></div>
+                <input type="hidden" class="color" name="attr_wound-left-arm-4" value="blocked" />
+                <div id="wound-left-arm-4" class="status row_2" name="attr_wound-left-arm-4"
+                    style="top:220px;left:529px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-arm-5" value="blocked" />
+                <div id="wound-left-arm-5" class="status row_2 right" name="attr_wound-left-arm-5" style="top:223px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-arm-6" value="blocked" />
+                <div id="wound-left-arm-6" class="status row_2 left" name="attr_wound-left-arm-6" style="top:234px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-arm-7" value="blocked" />
+                <div id="wound-left-arm-7" class="status row_3 left" name="attr_wound-left-arm-7" style="top:246px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-arm-8" value="blocked" />
+                <div id="wound-left-arm-8" class="status row_3 right" name="attr_wound-left-arm-8" style="top:253px;">
+                </div>
+            </div>
+            <div id="right-arm-wounds" class="wound right-arm">
+                <input type="hidden" class="color" name="attr_wound-right-arm-1" value="blocked" />
+                <div id="wound-right-arm-1" class="status row_1" name="attr_wound-right-arm-1"
+                    style="top:202px;left:626px;"></div>
+                <input type="hidden" class="color" name="attr_wound-right-arm-2" value="blocked" />
+                <div id="wound-right-arm-2" class="status" name="attr_wound-right-arm-2" style="top:209px;left:616px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-arm-3" value="blocked" />
+                <div id="wound-right-arm-3" class="status left" name="attr_wound-right-arm-3"
+                    style="top:217px;left:625px">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-arm-4" value="blocked" />
+                <div id="wound-right-arm-4" class="status row_2" name="attr_wound-right-arm-4"
+                    style="top:231px;left:624px;"></div>
+                <input type="hidden" class="color" name="attr_wound-right-arm-5" value="blocked" />
+                <div id="wound-right-arm-5" class="status row_2 right" name="attr_wound-right-arm-5" style="top:224px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-arm-6" value="blocked" />
+                <div id="wound-right-arm-6" class="status row_2" name="attr_wound-right-arm-6"
+                    style="top:240px;left:635px;"></div>
+                <input type="hidden" class="color" name="attr_wound-right-arm-7" value="blocked" />
+                <div id="wound-right-arm-7" class="status row_3" name="attr_wound-right-arm-7"
+                    style="top:251px;left:639px">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-arm-8" value="blocked" />
+                <div id="wound-right-arm-8" class="status row_3 right" name="attr_wound-right-arm-8" style="top:259px;">
+                </div>
+            </div>
+            <div id="left-leg-wounds" class="wound left-leg">
+                <input type="hidden" class="color" name="attr_wound-left-leg-1" value="blocked" />
+                <div id="wound-left-leg-1" class="status" name="attr_wound-left-leg-1" style="top:299px;left:537px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-leg-2" value="blocked" />
+                <div id="wound-left-leg-2" class="status" name="attr_wound-left-leg-2" style="top:310px;left:545px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-leg-3" value="blocked" />
+                <div id="wound-left-leg-3" class="status" name="attr_wound-left-leg-3" style="top:312px;left:532px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-leg-4" value="blocked" />
+                <div id="wound-left-leg-4" class="status" name="attr_wound-left-leg-4" style="top:324px;left:538px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-left-leg-5" value="blocked" />
+                <div id="wound-left-leg-5" class="status left" name="attr_wound-left-leg-5" style="top:326px;"></div>
+                <input type="hidden" class="color" name="attr_wound-left-leg-6" value="blocked" />
+                <div id="wound-left-leg-6" class="status left" name="attr_wound-left-leg-6" style="top:339px;"></div>
+                <input type="hidden" class="color" name="attr_wound-left-leg-7" value="blocked" />
+                <div id="wound-left-leg-7" class="status left" name="attr_wound-left-leg-7" style="top:353px;"></div>
+                <input type="hidden" class="color" name="attr_wound-left-leg-8" value="blocked" />
+                <div id="wound-left-leg-8" class="status" name="attr_wound-left-leg-8" style="top:361px;left:517px">
+                </div>
+            </div>
+            <div id="right-leg-wounds" class="wound right-leg">
+                <input type="hidden" class="color" name="attr_wound-right-leg-1" value="blocked" />
+                <div id="wound-right-leg-1" class="status" name="attr_wound-right-leg-1" style="top:301px;left:613px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-leg-2" value="blocked" />
+                <div id="wound-right-leg-2" class="status" name="attr_wound-right-leg-2" style="top:305px;left:601px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-leg-3" value="blocked" />
+                <div id="wound-right-leg-3" class="status" name="attr_wound-right-leg-3" style="top:315px;left:611px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-leg-4" value="blocked" />
+                <div id="wound-right-leg-4" class="status" name="attr_wound-right-leg-4" style="top:325px;left:619px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-leg-5" value="blocked" />
+                <div id="wound-right-leg-5" class="status" name="attr_wound-right-leg-5" style="top:327px;left:606px;">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-leg-6" value="blocked" />
+                <div id="wound-right-leg-6" class="status" name="attr_wound-right-leg-6" style="top:339px;left:613px">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-leg-7" value="blocked" />
+                <div id="wound-right-leg-7" class="status" name="attr_wound-right-leg-7" style="top:352px;left:612px">
+                </div>
+                <input type="hidden" class="color" name="attr_wound-right-leg-8" value="blocked" />
+                <div id="wound-right-leg-8" class="status" name="attr_wound-right-leg-8" style="top:364px;left:616px">
+                </div>
+            </div>
+
+        </div>
+        <!-- Calculated Values -->
+        <div id="calculated-container">
+            <div class="calculated">
+                <input name="attr_iniziativa" value="(@{istinto}) + (@{azione}) + (@{umano}) + (@{aura})"
+                    disabled="true" type="number" class="sm-num left row_1" />
+                <input name="attr_movimento" value="(8 + @{difesa})" disabled="true" type="number"
+                    class="sm-num center row_1" />
+                <input name="attr_corsa" value="((@{movimento} + @{feat-9})*3)" disabled="true" type="number"
+                    class="sm-num right row_1" />
+
+                <input name="attr_cac_u" value="(@{corpo} + @{azione} + @{umano} + @{attacco})" disabled="true"
+                    type="number" class="sm-num calculated-triangle left-top" />
+                <input name="attr_cac_m" value="(@{corpo} + @{azione} + @{meccanico} + @{attacco})" disabled="true"
+                    type="number" class="sm-num calculated-triangle left-bottom" />
+                <input name="attr_dist_u" value="(@{corpo} + @{percezione} + @{umano} + @{attacco})" disabled="true"
+                    type="number" class="sm-num calculated-triangle right-top" />
+                <input name="attr_dist_m" value="(@{corpo} + @{percezione} + @{meccanico} + @{attacco})" disabled="true"
+                    type="number" class="sm-num calculated-triangle right-bottom" />
+
+                <button name="roll_roll_dodge" value="/em uses Schivata with MS [[(@{schivata}) - 2d6]]" type="roll"
+                    class="sm-roll left row_3">
+                    <input name="attr_schivata" value="(@{istinto} + @{percezione} + @{umano} + @{difesa})"
+                        disabled="true" type="number" class="sm-num" />
+                </button>
+                <button disabled class="sm-roll right row_3 splitted"></button>
+                <button name="roll_roll_parata_u"
+                    value="@{character_name} uses Parata Umano with MS [[(@{parata_u}) - 2d6]]" type="roll"
+                    class="sm-roll right row_3 calculated-triangle right-top">
+                    <input name="attr_parata_u" value="(@{corpo} + @{azione} + @{umano} + @{difesa})" disabled="true"
+                        type="number" class="sm-num" />
+                </button>
+                <button name="roll_roll_parata_m" value="/em uses Parata Meccanico with MS [[(@{parata_m}) - 2d6]]"
+                    type="roll" class="sm-roll right row_3 calculated-triangle right-bottom">
+                    <input name="attr_parata_m" value="(@{corpo} + @{azione} + @{meccanico} + @{difesa})"
+                        disabled="true" type="number" class="sm-num" />
+                </button>
+                <span name="attr_malus_p" class="sm-num"></span>
+            </div>
+        </div>
+        <!-- Points -->
+        <div id="points-container">
+            <!-- Punti Dolore -->
+            <input type="hidden" name="attr_malus_points" value="0" />
+            <div id="dolor-points-container">
+                <input type="hidden" name="attr_malus_points" value="0" />
+                <input type="hidden" name="attr_malus_dolore" value="0" />
+                <input type="hidden" name="attr_malus_pres" value="0" />
+                <input type="hidden" name="attr_malus_peq" value="0" />
+                <div class="points">
+                    <div class="row_1">
+                        <label class="col_5">
+                            <input type="hidden" class="color" name="attr_dolore-5" value="blocked" />
+                            <span id="dolore-5" value="0" type="malus_dolore"></span>
+                        </label>
+                        <label class="col_4">
+                            <input type="hidden" class="color" name="attr_dolore-4" value="blocked" />
+                            <span id="dolore-4" value="-1" type="malus_dolore"></span>
+                        </label>
+                        <label class="col_3">
+                            <input type="hidden" class="color" name="attr_dolore-3" value="usable" />
+                            <span id="dolore-3" value="-2" type="malus_dolore"></span>
+                        </label>
+                        <label class="col_2">
+                            <input type="hidden" class="color" name="attr_dolore-2" value="usable" />
+                            <span id="dolore-2" value="-3" type="malus_dolore"></span>
+                        </label>
+                        <label class="col_1">
+                            <input type="hidden" class="color" name="attr_dolore-1" value="usable" />
+                            <span id="dolore-1" value="-4" type="malus_dolore"></span>
+                        </label>
+                        <label class="points-wider">
+                            <input type="hidden" class="color" name="attr_dolore-coma" value="usable" />
+                            <span id="dolore-coma" value="-100" type="malus_dolore"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Punti Resistenza -->
+            <div id="resistence-points-container">
+                <div class="points">
+                    <div class="row_2">
+                        <label class="col_9">
+                            <input type="hidden" class="color" name="attr_pres-9" value="blocked" />
+                            <span id="pres-9" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_8">
+                            <input type="hidden" class="color" name="attr_pres-8" value="blocked" />
+                            <span id="pres-8" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_7">
+                            <input type="hidden" class="color" name="attr_pres-7" value="blocked" />
+                            <span id="pres-7" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_6">
+                            <input type="hidden" class="color" name="attr_pres-6" value="blocked" />
+                            <span id="pres-6" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_5">
+                            <input type="hidden" class="color" name="attr_pres-5" value="blocked" />
+                            <span id="pres-5" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_4">
+                            <input type="hidden" class="color" name="attr_pres-4" value="blocked" />
+                            <span id="pres-4" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_3">
+                            <input type="hidden" class="color" name="attr_pres-3" value="usable" />
+                            <span id="pres-3" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_2">
+                            <input type="hidden" class="color" name="attr_pres-2" value="usable" />
+                            <span id="pres-2" value="0" type="malus_pres"></span>
+                        </label>
+                        <label class="col_1">
+                            <input type="hidden" class="color" name="attr_pres-1" value="usable" />
+                            <span id="pres-1" value="-1" type="malus_pres"></span>
+                        </label>
+                        <label class="points-wider">
+                            <input type="hidden" class="color" name="attr_pres-ko" value="usable" />
+                            <span id="pres-ko" value="-100" type="malus_pres"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Punti Equilibrio -->
+            <div id="equilibrium-points">
+                <div class="points">
+                    <div class="row_3">
+                        <label class="col_9">
+                            <input type="hidden" class="color" name="attr_peq-9" value="blocked" />
+                            <span id="peq-9" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_8">
+                            <input type="hidden" class="color" name="attr_peq-8" value="blocked" />
+                            <span id="peq-8" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_7">
+                            <input type="hidden" class="color" name="attr_peq-7" value="blocked" />
+                            <span id="peq-7" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_6">
+                            <input type="hidden" class="color" name="attr_peq-6" value="blocked" />
+                            <span id="peq-6" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_5">
+                            <input type="hidden" class="color" name="attr_peq-5" value="blocked" />
+                            <span id="peq-5" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_4">
+                            <input type="hidden" class="color" name="attr_peq-4" value="blocked" />
+                            <span id="peq-4" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_3">
+                            <input type="hidden" class="color" name="attr_peq-3" value="usable" />
+                            <span id="peq-3" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_2">
+                            <input type="hidden" class="color" name="attr_peq-2" value="usable" />
+                            <span id="peq-2" value="0" type="malus_peq"></span>
+                        </label>
+                        <label class="col_1">
+                            <input type="hidden" class="color" name="attr_peq-1" value="usable" />
+                            <span id="peq-1" value="-1" type="malus_peq"></span>
+                        </label>
+                        <label class="points-wider">
+                            <input type="hidden" class="color" name="attr_peq-pazzo" value="usable" />
+                            <span id="peq-pazzo" value="-100" type="malus_peq"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feats -->
+        <div id="feat-container">
+            <div class="feat">
+                <div class="row_1" id="feat-1">
+                    <input type="hidden" name="attr_feat-1-name" value="Armi da Corpo a corpo" />
+                    <input type="hidden" name="attr_feat-1-rolldmg" value="true" />
+                    <input type="hidden" name="attr_feat-1-isphysical" value="true" />
+                    <input type="checkbox" name="attr_feat-1-used" class="feat-used" value="1" />
+                    <button name="act_feat" type="action" title="feat-1"
+                        value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-1" id="feat-1-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-1" id="feat-1-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-1" id="feat-1-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-1" id="feat-1-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-1" id="feat-1-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-1" id="feat-1-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_2" id="feat-2">
+                    <input type="hidden" name="attr_feat-2-name" value="Armi da Fuoco" />
+                    <input type="hidden" name="attr_feat-2-rolldmg" value="true" />
+                    <input type="checkbox" name="attr_feat-2-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-2-isphysical" value="true" />
+                    <button name="act_feat" type="action" title="feat-2"
+                        value="corpo|pecezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-2" id="feat-2-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-2" id="feat-2-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-2" id="feat-2-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-2" id="feat-2-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-2" id="feat-2-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-2" id="feat-2-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_3" id="feat-3">
+                    <input type="hidden" name="attr_feat-3-name" value="Armi a Distanza" />
+                    <input type="checkbox" name="attr_feat-3-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-3-rolldmg" value="true" />
+                    <input type="hidden" name="attr_feat-3-isphysical" value="true" />
+                    <button name="act_feat" type="action" title="feat-3"
+                        value="corpo|percezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-3" id="feat-3-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-3" id="feat-3-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-3" id="feat-3-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-3" id="feat-3-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-3" id="feat-3-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-3" id="feat-3-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_4" id="feat-4">
+                    <input type="hidden" name="attr_feat-4-name" value="Atletica" />
+                    <input type="checkbox" name="attr_feat-4-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-4-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-4-isphysical" value="true" />
+                    <button name="act_feat" type="action" title="feat-4"
+                        value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>>
+                    <label class="zero">
+                        <input name="attr_feat-4" id="feat-4-0" type="radio" value="0" checked />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-4" id="feat-4-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-4" id="feat-4-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-4" id="feat-4-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_5" id="feat-5">
+                    <input type="hidden" name="attr_feat-5-name" value="Cavalcare" />
+                    <input type="checkbox" name="attr_feat-5-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-5-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-5-isphysical" value="true" />
+                    <button name="act_feat" type="action" title="feat-5"
+                        value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-5" id="feat-5-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-5" id="feat-5-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-5" id="feat-5-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-5" id="feat-5-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-5" id="feat-5-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-5" id="feat-5-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_6" id="feat-6">
+                    <input type="hidden" name="attr_feat-6-name" value="Cercare" />
+                    <input type="checkbox" name="attr_feat-6-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-6-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-6-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-6-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-6"
+                        value="|percezione||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="minus-2">
+                        <input name="attr_feat-6" id="feat-6-2" type="radio" value="-2" checked />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-6" id="feat-6-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-6" id="feat-6-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-6" id="feat-6-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-6" id="feat-6-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_7" id="feat-7">
+                    <input type="hidden" name="attr_feat-7-name" value="Commerciare" />
+                    <input type="checkbox" name="attr_feat-7-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-7-rolldmg" value="false" />
+                    <button name="act_feat" type="action" title="feat-7"
+                        value="mente|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-7" id="feat-7-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-7" id="feat-7-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-7" id="feat-7-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-7" id="feat-7-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-7" id="feat-7-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-7" id="feat-7-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_8" id="feat-8">
+                    <input type="hidden" name="attr_feat-8-name" value="Concentrazione" />
+                    <input type="checkbox" name="attr_feat-8-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-8-rolldmg" value="false" />
+                    <button name="act_feat" type="action" title="feat-8"
+                        value="mente|resistenza|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="zero">
+                        <input name="attr_feat-8" id="feat-8-0" type="radio" value="0" checked />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-8" id="feat-8-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-8" id="feat-8-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-8" id="feat-8-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_9" id="feat-9">
+                    <input type="hidden" name="attr_feat-9-name" value="Correre" />
+                    <input type="checkbox" name="attr_feat-9-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-9-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-1-isphysical" value="true" />
+                    <button name="act_feat" type="action" title="feat-9"
+                        value="corpo|resistenza|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-9" id="feat-9-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-9" id="feat-9-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-9" id="feat-9-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-9" id="feat-9-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-9" id="feat-9-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-9" id="feat-9-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_10" id="feat-10">
+                    <input type="hidden" name="attr_feat-10-name" value="Geografia" />
+                    <input type="checkbox" name="attr_feat-10-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-10-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-10-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-10-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-10-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-10"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="minus-2">
+                        <input name="attr_feat-10" id="feat-10-2" type="radio" value="-2" checked />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-10" id="feat-10-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-10" id="feat-10-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-10" id="feat-10-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-10" id="feat-10-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_11" id="feat-11">
+                    <input type="hidden" name="attr_feat-11-name" value="Guidare Veicoli" />
+                    <input type="checkbox" name="attr_feat-11-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-11-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-1-isphysical" value="true" />
+                    <button name="act_feat" type="action" title="feat-11"
+                        value="corpo|percezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-11" id="feat-11-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-11" id="feat-11-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-11" id="feat-11-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-11" id="feat-11-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-11" id="feat-11-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-11" id="feat-11-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_12" id="feat-12">
+                    <input type="hidden" name="attr_feat-12-name" value="Insegnamento" />
+                    <input type="checkbox" name="attr_feat-12-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-12-rolldmg" value="false" />
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-12" id="feat-12-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-12" id="feat-12-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-12" id="feat-12-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-12" id="feat-12-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-12" id="feat-12-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-12" id="feat-12-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_13" id="feat-13">
+                    <input type="hidden" name="attr_feat-13-name" value="Leadership" />
+                    <input type="checkbox" name="attr_feat-13-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-13-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-13-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-13-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-13-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-13"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-13" id="feat-13-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-13" id="feat-13-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-13" id="feat-13-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-13" id="feat-13-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-13" id="feat-13-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-13" id="feat-13-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_14" id="feat-14">
+                    <input type="hidden" name="attr_feat-14-name" value="Leggere" />
+                    <input type="checkbox" name="attr_feat-14-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-14-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-14-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-14-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-14-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-14"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-14" id="feat-14-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-14" id="feat-14-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-14" id="feat-14-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-14" id="feat-14-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-14" id="feat-14-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-14" id="feat-14-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_15" id="feat-15">
+                    <input type="hidden" name="attr_feat-15-name" value="Medicina" />
+                    <input type="checkbox" name="attr_feat-15-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-15-rolldmg" value="false" />
+                    <button name="act_feat" type="action" title="feat-15"
+                        value="mente|percezione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-15" id="feat-15-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-15" id="feat-15-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-15" id="feat-15-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-15" id="feat-15-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-15" id="feat-15-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-15" id="feat-15-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_16" id="feat-16">
+                    <input type="hidden" name="attr_feat-16-name" value="Oratoria" />
+                    <input type="checkbox" name="attr_feat-16-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-16-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-16-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-16-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-16-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-16"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-16" id="feat-16-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-16" id="feat-16-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-16" id="feat-16-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-16" id="feat-16-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-16" id="feat-16-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-16" id="feat-16-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_17" id="feat-17">
+                    <input type="hidden" name="attr_feat-17-name" value="Pronto Soccorso" />
+                    <input type="checkbox" name="attr_feat-17-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-17-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-17-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-17-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-17-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-17"
+                        value="mente|percezione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="minus-2">
+                        <input name="attr_feat-17" id="feat-17-2" type="radio" value="-2" checked />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-17" id="feat-17-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-17" id="feat-17-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-17" id="feat-17-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-17" id="feat-17-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_18" id="feat-18">
+                    <input type="hidden" name="attr_feat-18-name" value="Raggirare" />
+                    <input type="checkbox" name="attr_feat-18-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-18-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-18-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-18-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-18-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-18"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-18" id="feat-18-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-18" id="feat-18-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-18" id="feat-18-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-18" id="feat-18-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-18" id="feat-18-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-18" id="feat-18-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_19" id="feat-19">
+                    <input type="hidden" name="attr_feat-19-name" value="Rissare" />
+                    <input type="checkbox" name="attr_feat-19-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-19-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-1-isphysical" value="true" />
+                    <button name="act_feat" type="action" title="feat-19"
+                        value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="zero">
+                        <input name="attr_feat-19" id="feat-19-0" type="radio" value="0" checked />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-19" id="feat-19-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-19" id="feat-19-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-19" id="feat-19-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_20" id="feat-20">
+                    <input type="hidden" name="attr_feat-20-name" value="Sopravvivenza" />
+                    <input type="checkbox" name="attr_feat-20-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-20-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-20-isphysical" value="true" />
+                    <button name="roll_roll_feat-20"
+                        value="/em uses @{feat-20-name} with MS [[(@{dist_m}) + (@{feat-20}) - 2d6]]" type="roll"
+                        class="sm-roll">
+                    </button>
+                    <label class="minus-2">
+                        <input name="attr_feat-20" id="feat-20-2" type="radio" value="-2" checked />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-20" id="feat-20-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-20" id="feat-20-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-20" id="feat-20-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-20" id="feat-20-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_21" id="feat-21">
+                    <input type="hidden" name="attr_feat-21-name" value="Spionaggio" />
+                    <input type="checkbox" name="attr_feat-21-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-21-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-21-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-21-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-21-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-21"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="repeating minus-4">
+                        <input name="attr_feat-21" id="feat-21-minus-4" type="radio" value="-4" checked />
+                        <span></span>
+                    </label>
+                    <label class="minus-2">
+                        <input name="attr_feat-21" id="feat-21-2" type="radio" value="-2" />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-21" id="feat-21-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-21" id="feat-21-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-21" id="feat-21-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-21" id="feat-21-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="row_22" id="feat-22">
+                    <input type="hidden" name="attr_feat-22-name" value="Travestimento" />
+                    <input type="checkbox" name="attr_feat-22-used" class="feat-used" value="1" />
+                    <input type="hidden" name="attr_feat-22-rolldmg" value="false" />
+                    <input type="hidden" name="attr_feat-22-needcomponent" value="true" />
+                    <input type="hidden" name="attr_feat-22-needmedium" value="true" />
+                    <input type="hidden" name="attr_feat-22-needreign" value="true" />
+                    <button name="act_feat" type="action" title="feat-22"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        class="sm-roll">
+                    </button>
+                    <label class="minus-2">
+                        <input name="attr_feat-22" id="feat-22-2" type="radio" value="-2" checked />
+                        <span></span>
+                    </label>
+                    <label class="zero">
+                        <input name="attr_feat-22" id="feat-22-0" type="radio" value="0" />
+                        <span></span>
+                    </label>
+                    <label class="plus-1">
+                        <input name="attr_feat-22" id="feat-22-1" type="radio" value="1" />
+                        <span></span>
+                    </label>
+                    <label class="plus-2">
+                        <input name="attr_feat-22" id="feat-22-2" type="radio" value="2" />
+                        <span></span>
+                    </label>
+                    <label class="plus-3">
+                        <input name="attr_feat-22" id="feat-22-3" type="radio" value="3" />
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <!-- Repeating Feats -->
+            <div id="repeating-feats-container">
+                <fieldset class="repeating_feats">
+                    <div name="attr_featvals" class="feat-vals">
+                        <input type='hidden' class='display-control' name='attr_info-display' value='0'>
+                        <input type="hidden" name="attr_featvalue" value="-1000" />
+                        <div class="display feat">
+                            <input type="checkbox" name="attr_featused" class="feat-used" value="1" />
+                            <button name="act_feat" type="action"class="roll-button">
+                                <span type="text" name="attr_featname"></span>
+                            </button>
+                            <label class="minus-4">
+                                <input name="attr_featvalue" type="radio" value="-4" />
+                                <span></span>
+                            </label>
+                            <label class="minus-2">
+                                <input name="attr_featvalue" type="radio" value="-2" />
+                                <span></span>
+                            </label>
+                            <label class="zero">
+                                <input name="attr_featvalue" type="radio" value="0" />
+                                <span></span>
+                            </label>
+                            <label class="plus-1">
+                                <input name="attr_featvalue" type="radio" value="1" />
+                                <span></span>
+                            </label>
+                            <label class="plus-2">
+                                <input name="attr_featvalue" type="radio" value="2" />
+                                <span></span>
+                            </label>
+                            <label class="plus-3">
+                                <input name="attr_featvalue" type="radio" value="3" />
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <span class="label-span left-side">Nome:</span>
+                                <input class="right-side" type="text" name="attr_featname" />
+                            </div>
+                            <div>
+                                <span class="label-span left-side">Componente:</span>
+                                <select class="right-side" name="attr_componente">
+                                    <option value="corpo">Corpo</option>
+                                    <option value="istinto">Istinto</option>
+                                    <option value="cuore">Cuore</option>
+                                    <option value="mente">Mente</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span class="label-span left-side">Mezzo:</span>
+                                <select class="right-side" name="attr_mezzo">
+                                    <option value="percezione">Percezione</option>
+                                    <option value="azione">Azione</option>
+                                    <option value="desiderio">Desiderio</option>
+                                    <option value="resistenza">Resistenza</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span class="label-span left-side">Regno:</span>
+                                <select class="right-side" name="attr_regno">
+                                    <option value="minerale">Minerale</option>
+                                    <option value="vegetale">Vegetale</option>
+                                    <option value="animale">Animale</option>
+                                    <option value="umano">Umano</option>
+                                    <option value="meccanico">Meccanico</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span class="label-span left-side">Potenza</span>
+                                <span><input type="checkbox" name="attr_usepotenza" value="true" /></span>
+                                <span class="label-span left-side">Rapidità</span>
+                                <span><input type="checkbox" name="attr_userapidita" value="true" /></span>
+                            </div>
+                            <div>
+                                <span class="label-span left-side">Precisione</span>
+                                <span><input type="checkbox" name="attr_useprecisione" value="true" /></span>
+                                <span class="label-span left-side">Attacco</span>
+                                <span><input type="checkbox" name="attr_useattacco" value="true" /></span>
+                            </div>
+                            <div>
+                                <span class="label-span left-side">Difesa</span>
+                                <span><input type="checkbox" name="attr_usedifesa" value="true" /></span>
+                                <span class="label-span left-side">Armatura</span>
+                                <span><input type="checkbox" name="attr_isphysical" value="true" /></span>
+                            </div>
+                            <div>
+                                <span class="label-span left-side">Danni</span>
+                                <span><input type="checkbox" name="attr_rolldmg" value="true"/></span>
+                            </div>
+                        </div>
+                        <button class="feat-options-toggle" type="action" name="act_activate"><i>i</i></button>
+                        <input type="number" name="attr_displayvals" value="1" style="display:none" />
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <!-- INFO -->
+        <div id="info-container">
+            <textarea name="attr_equip" class="sm-prop sm-mlt"
+                style="left: 271px; top: 528px; width: 199px; height: 189px;"></textarea>
+            <textarea name="attr_descr" class="sm-prop sm-mlt"
+                style="left: 481px; top: 527px; width: 201px; height: 190px;"></textarea>
+            <textarea name="attr_storia" class="sm-prop sm-mlt"
+                style="left: 270px; top: 749px; width: 412px; height: 221px;"></textarea>
+        </div>
+    </div>
+</div>
+<div class="sheet-rear">
+    <div id="rear-container" class="sheet-container">
+        <div id="rear-box">
+            <div class="title"><span>Arti Marziali</span></div>
+            <div class="grid-container">
+                <div class="grid-title">
+                    <div class="name"><span>Colpo</span></div>
+                    <div class="value">
+                        <div class="inner-cell">-4</div>
+                        <div class="inner-cell">-2</div>
+                        <div class="inner-cell">0</div>
+                        <div class="inner-cell">+1</div>
+                        <div class="inner-cell">+2</div>
+                        <div class="inner-cell">+3</div>
+                    </div>
+                    <div class="requisites"><span>Limitazioni</span></div>
+                    <div class="cell"><span>T</span></div>
+                    <div class="cell"><span>C</span></div>
+                    <div class="damage"><span>Danno</span></div>
+                    <div class="special"><span>Speciale</span></div>
+                    <div class="notes"><span>Note</span></div>
+                </div>
+                <div class="grid-values">
+                    <div id="base-martial-container">
+                        <div id="martial-kick" class="element">
+                            <div class="name">
+                                <button name="roll_roll_kick" type="roll"
+                                    value="/em uses @{kick_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_kick_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_kick_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_kick_name" value="B2 Calcio Marziale" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_kick_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_kick_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_kick_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_kick_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_kick_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_kick_req"></span>
+                                <input type="hidden" name="attr_kick_req" value="---" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_kick_t"></span>
+                                <input type="hidden" name="attr_kick_t" value="C" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_kick_c"></span>
+                                <input type="hidden" name="attr_kick_c" value="1" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_kick_dmg"></span>
+                                <input type="hidden" name="attr_kick_dmg" value="(C)PV (B)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_kick_spec"></span>
+                                <input type="hidden" name="attr_kick_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_kick_notes"></span>
+                                <input type="hidden" name="attr_kick_notes" value="---" />
+                            </div>
+                        </div>
+                        <div id="martial-rush" class="element">
+                            <div class="name">
+                                <button name="roll_roll_rush" type="roll"
+                                    value="/em uses @{rush_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_rush_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_rush_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_rush_name" value="B3 Carica" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_rush_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_rush_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_rush_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_rush_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_rush_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_rush_req"></span>
+                                <input type="hidden" name="attr_rush_req" value="Rincorsa 4m." />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_rush_t"></span>
+                                <input type="hidden" name="attr_rush_t" value="SP" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_rush_c"></span>
+                                <input type="hidden" name="attr_rush_c" value="2" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_rush_dmg"></span>
+                                <input type="hidden" name="attr_rush_dmg" value="(C)PV (C)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_rush_spec"></span>
+                                <input type="hidden" name="attr_rush_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_rush_notes"></span>
+                                <input type="hidden" name="attr_rush_notes" value="---" />
+                            </div>
+                        </div>
+                        <div id="martial-grap" class="element">
+                            <div class="name">
+                                <button name="roll_roll_grap" type="roll"
+                                    value="/em uses @{grap_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_grap_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_grap_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_grap_name" value="B5 Immobilizzare" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_grap_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_grap_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_grap_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_grap_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_grap_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_grap_req"></span>
+                                <input type="hidden" name="attr_grap_req" value="---" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_grap_t"></span>
+                                <input type="hidden" name="attr_grap_t" value="P" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_grap_c"></span>
+                                <input type="hidden" name="attr_grap_c" value="2F" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_grap_dmg"></span>
+                                <input type="hidden" name="attr_grap_dmg" value="(B)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_grap_spec"></span>
+                                <input type="hidden" name="attr_grap_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_grap_notes"></span>
+                                <input type="hidden" name="attr_grap_notes" value="2 arti immobilizzati" />
+                            </div>
+                        </div>
+                        <div id="martial-punch" class="element">
+                            <div class="name">
+                                <button name="roll_roll_punch" type="roll"
+                                    value="/em uses @{punch_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_punch_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_punch_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_punch_name" value="B6 Pugno Marziale" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_punch_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_punch_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_punch_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_punch_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_punch_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_punch_req"></span>
+                                <input type="hidden" name="attr_punch_req" value="---" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_punch_t"></span>
+                                <input type="hidden" name="attr_punch_t" value="P" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_punch_c"></span>
+                                <input type="hidden" name="attr_punch_c" value="1" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_punch_dmg"></span>
+                                <input type="hidden" name="attr_punch_dmg" value="(B)PV (D)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_punch_spec"></span>
+                                <input type="hidden" name="attr_punch_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_punch_notes"></span>
+                                <input type="hidden" name="attr_punch_notes" value="---" />
+                            </div>
+                        </div>
+                        <div id="martial-push" class="element">
+                            <div class="name">
+                                <button name="roll_roll_push" type="roll"
+                                    value="/em uses @{push_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_push_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_push_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_push_name" value="B7 Spinta" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_push_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_push_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_push_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_push_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_push_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_push_req"></span>
+                                <input type="hidden" name="attr_push_req" value="---" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_push_t"></span>
+                                <input type="hidden" name="attr_push_t" value="P" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_push_c"></span>
+                                <input type="hidden" name="attr_push_c" value="1F" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_push_dmg"></span>
+                                <input type="hidden" name="attr_push_dmg" value="(B)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_push_spec"></span>
+                                <input type="hidden" name="attr_push_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_push_notes"></span>
+                                <input type="hidden" name="attr_push_notes" value="---" />
+                            </div>
+                        </div>
+                        <div id="martial-crush" class="element">
+                            <div class="name">
+                                <button name="roll_roll_crush" type="roll"
+                                    value="/em uses @{crush_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_crush_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_crush_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_crush_name" value="B8 Stritolamento" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_crush_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_crush_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_crush_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_crush_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_crush_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_crush_req"></span>
+                                <input type="hidden" name="attr_crush_req" value="Solo Avversari Immobili" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_crush_t"></span>
+                                <input type="hidden" name="attr_crush_t" value="P" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_crush_c"></span>
+                                <input type="hidden" name="attr_crush_c" value="3F" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_crush_dmg"></span>
+                                <input type="hidden" name="attr_crush_dmg" value="(C)PV (C)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_crush_spec"></span>
+                                <input type="hidden" name="attr_crush_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_crush_notes"></span>
+                                <input type="hidden" name="attr_crush_notes" value="Scegliere locazione" />
+                            </div>
+                        </div>
+                        <div id="martial-headbut" class="element">
+                            <div class="name">
+                                <button name="roll_roll_headbut" type="roll"
+                                    value="/em uses @{headbut_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_headbut_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_headbut_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_headbut_name" value="B9 Testata Marziale" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_headbut_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_headbut_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_headbut_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_headbut_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_headbut_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_headbut_req"></span>
+                                <input type="hidden" name="attr_headbut_req" value="---" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_headbut_t"></span>
+                                <input type="hidden" name="attr_headbut_t" value="T" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_headbut_c"></span>
+                                <input type="hidden" name="attr_headbut_c" value="2" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_headbut_dmg"></span>
+                                <input type="hidden" name="attr_headbut_dmg" value="(B)PV (D)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_headbut_spec"></span>
+                                <input type="hidden" name="attr_headbut_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_headbut_notes"></span>
+                                <input type="hidden" name="attr_headbut_notes" value="---" />
+                            </div>
+                        </div>
+                        <div id="martial-jump-kick" class="element">
+                            <div class="name">
+                                <button name="roll_roll_jump-kick" type="roll"
+                                    value="/em uses @{jump-kick_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_jump-kick_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_jump-kick_kick" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_jump-kick_name" value="B1 Calcio con salto" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_jump-kick_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_jump-kick_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_jump-kick_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_jump-kick_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_jump-kick_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_jump-kick_req"></span>
+                                <input type="hidden" name="attr_jump-kick_req" value="Attacco 1" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_jump-kick_t"></span>
+                                <input type="hidden" name="attr_jump-kick_t" value="SN" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_jump-kick_c"></span>
+                                <input type="hidden" name="attr_jump-kick_c" value="2" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_jump-kick_dmg"></span>
+                                <input type="hidden" name="attr_jump-kick_dmg" value="(D)PV (B)PR" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_jump-kick_spec"></span>
+                                <input type="hidden" name="attr_jump-kick_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_jump-kick_notes"></span>
+                                <input type="hidden" name="attr_jump-kick_notes" value="Localizzare come pugno" />
+                            </div>
+                        </div>
+                        <div id="martial-endure" class="element">
+                            <div class="name">
+                                <button name="roll_roll_endure" type="roll"
+                                    value="/em uses @{endure_name} with MS [[@{mente} + @{desiderio} + @{umano} + @{endure_value} - 2d6]]">
+                                    <span name="attr_endure_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_endure_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_endure_name" value="B4 Res. al Dolore" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_endure_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_endure_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_endure_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_endure_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_endure_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_endure_req"></span>
+                                <input type="hidden" name="attr_endure_req" value="Difesa 1" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_endure_t"></span>
+                                <input type="hidden" name="attr_endure_t" value="SP" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_endure_c"></span>
+                                <input type="hidden" name="attr_endure_c" value="XF" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_endure_dmg"></span>
+                                <input type="hidden" name="attr_endure_dmg" value="---" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_endure_spec"></span>
+                                <input type="hidden" name="attr_endure_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_endure_notes"></span>
+                                <input type="hidden" name="attr_endure_notes" value="Test: Mente + Des. + Umano" />
+                            </div>
+                        </div>
+                        <div id="martial-melee" class="element">
+                            <div class="name">
+                                <button name="roll_roll_melee" type="roll"
+                                    value="/em uses @{melee_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_melee_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_melee_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_melee_name" value="B10 Tec. Spade" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_melee_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_melee_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_melee_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_melee_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_melee_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_melee_req"></span>
+                                <input type="hidden" name="attr_melee_req" value="Attacco 1" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_melee_t"></span>
+                                <input type="hidden" name="attr_melee_t" value="CO" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_melee_c"></span>
+                                <input type="hidden" name="attr_melee_c" value="3" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_melee_dmg"></span>
+                                <input type="hidden" name="attr_melee_dmg" value="Arma + 1 Categoria" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_melee_spec"></span>
+                                <input type="hidden" name="attr_melee_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_melee_notes"></span>
+                                <input type="hidden" name="attr_melee_notes" value="Solo con armi" />
+                            </div>
+                        </div>
+                        <div id="martial-bullet" class="element">
+                            <div class="name">
+                                <button name="roll_roll_bullet" type="roll"
+                                    value="/em uses @{bullet_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_bullet_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_bullet_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_bullet_name" value="B11 Tec. Proiettili" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_bullet_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_bullet_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_bullet_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_bullet_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_bullet_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_bullet_req"></span>
+                                <input type="hidden" name="attr_bullet_req" value="Attacco 1" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_bullet_t"></span>
+                                <input type="hidden" name="attr_bullet_t" value="CO" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_bullet_c"></span>
+                                <input type="hidden" name="attr_bullet_c" value="1" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_bullet_dmg"></span>
+                                <input type="hidden" name="attr_bullet_dmg" value="Arma + 1 Categoria" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_bullet_spec"></span>
+                                <input type="hidden" name="attr_bullet_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_bullet_notes"></span>
+                                <input type="hidden" name="attr_bullet_notes" value="Solo con armi" />
+                            </div>
+                        </div>
+                        <div id="martial-wall" class="element">
+                            <div class="name">
+                                <button name="roll_roll_wall" type="roll"
+                                    value="/em uses @{wall_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_wall_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_wall_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_wall_name" value="B12 Tec. Muro Spade" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_wall_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_wall_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_wall_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_wall_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_wall_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_wall_req"></span>
+                                <input type="hidden" name="attr_wall_req" value="Difesa 1" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_wall_t"></span>
+                                <input type="hidden" name="attr_wall_t" value="CO" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_wall_c"></span>
+                                <input type="hidden" name="attr_wall_c" value="3F" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_wall_dmg"></span>
+                                <input type="hidden" name="attr_wall_dmg" value="(C)PV all'attaccante" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_wall_spec"></span>
+                                <input type="hidden" name="attr_wall_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_wall_notes"></span>
+                                <input type="hidden" name="attr_wall_notes" value="Solo con armi" />
+                            </div>
+                        </div>
+                        <div id="martial-cross-ref" class="element">
+                            <div class="name">
+                                <button name="roll_roll_cross-ref" type="roll"
+                                    value="/em uses @{cross-ref_name} with MS [[0 - 2d6]]">
+                                    <span name="attr_cross-ref_name"></span>
+                                </button>
+                                <span class="used">
+                                    <input type="checkbox" name="attr_cross-ref_used" class="martial-used" value="1" />
+                                </span>
+                                <input type="hidden" name="attr_cross-ref_name" value="B13 Tec. Rifl. Incrociata" />
+                            </div>
+                            <div class="value">
+                                <div class="inner-cell">
+                                    <label class="minus-4 no-click">
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="minus-2">
+                                        <input name="attr_cross-ref_value" type="radio" value="-2" checked />
+                                        <span class="checked"></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="zero">
+                                        <input name="attr_cross-ref_value" type="radio" value="0" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-1">
+                                        <input name="attr_cross-ref_value" type="radio" value="1" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-2">
+                                        <input name="attr_cross-ref_value" type="radio" value="2" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="inner-cell">
+                                    <label class="plus-3">
+                                        <input name="attr_cross-ref_value" type="radio" value="3" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="requisites">
+                                <span name="attr_cross-ref_req"></span>
+                                <input type="hidden" name="attr_cross-ref_req" value="Att. 1 - Dif. 2" />
+                            </div>
+                            <div class="cell" name="t">
+                                <span name="attr_cross-ref_t"></span>
+                                <input type="hidden" name="attr_cross-ref_t" value="CO" />
+                            </div>
+                            <div class="cell" name="c">
+                                <span name="attr_cross-ref_c"></span>
+                                <input type="hidden" name="attr_cross-ref_c" value="3" />
+                            </div>
+                            <div class="damage">
+                                <span name="attr_cross-ref_dmg"></span>
+                                <input type="hidden" name="attr_cross-ref_dmg" value="---" />
+                            </div>
+                            <div class="special">
+                                <span name="attr_cross-ref_spec"></span>
+                                <input type="hidden" name="attr_cross-ref_spec" value="---" />
+                            </div>
+                            <div class="notes">
+                                <span name="attr_cross-ref_notes"></span>
+                                <input type="hidden" name="attr_cross-ref_notes" value="Solo con armi" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="repeating-martial-container">
+                        <fieldset class="repeating_martial">
+                            <div name="attr_martialrep">
+                                <input type='hidden' class='display-control' name='attr_info-display' value='0'>
+                                <input type="hidden" name="attr_martial_value" value="-1000" />
+
+                                <div class="element">
+                                    <div class="name">
+                                        <button class="martial-options-toggle" type="action"
+                                            name="act_activate"><i>i</i></button>
+                                        <button name="roll_roll_martial" type="roll"
+                                            value="/em uses @{martial_name} with MS [[0 - 2d6]]">
+                                            <span name="attr_martial_name"></span>
+                                        </button>
+                                        <span class="used">
+                                            <input type="checkbox" name="attr_martial_used" class="martial-used"
+                                                value="1" />
+                                        </span>
+                                    </div>
+                                    <div class="value">
+                                        <div class="inner-cell">
+                                            <label class="minus-4 ">
+                                                <input name="attr_martial_value" type="radio" value="-4" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="inner-cell">
+                                            <label class="minus-2">
+                                                <input name="attr_martial_value" type="radio" value="-2" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="inner-cell">
+                                            <label class="zero">
+                                                <input name="attr_martial_value" type="radio" value="0" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="inner-cell">
+                                            <label class="plus-1">
+                                                <input name="attr_martial_value" type="radio" value="1" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="inner-cell">
+                                            <label class="plus-2">
+                                                <input name="attr_martial_value" type="radio" value="2" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="inner-cell">
+                                            <label class="plus-3">
+                                                <input name="attr_martial_value" type="radio" value="3" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="requisites">
+                                        <span name="attr_martial_req"></span>
+                                    </div>
+                                    <div class="cell" name="t">
+                                        <span name="attr_martial_t"></span>
+                                    </div>
+                                    <div class="cell" name="c">
+                                        <span name="attr_martial_c"></span>
+                                    </div>
+                                    <div class="damage">
+                                        <span name="attr_martial_dmg"></span>
+                                    </div>
+                                    <div class="special">
+                                        <span name="attr_martial_spec"></span>
+                                    </div>
+                                    <div class="notes">
+                                        <span name="attr_martial_notes"></span>
+                                    </div>
+                                </div>
+                                <div class="options">
+                                    <div class="half">
+                                        <div>
+                                            <span class="label-span left-side">Nome:</span>
+                                            <input class="right-side" type="text" name="attr_martial_name" />
+                                        </div>
+                                        <div>
+                                            <span class="label-span left-side">Componente:</span>
+                                            <select class="right-side" name="attr_componente">
+                                                <option value="@{corpo}">Corpo</option>
+                                                <option value="@{istinto}">Istinto</option>
+                                                <option value="@{cuore}">Cuore</option>
+                                                <option value="@{mente}">Mente</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <span class="label-span left-side">Mezzo:</span>
+                                            <select class="right-side" name="attr_mezzo">
+                                                <option value="@{percezione}">Percezione</option>
+                                                <option value="@{azione}">Azione</option>
+                                                <option value="@{desiderio}">Desiderio</option>
+                                                <option value="@{resistenza}">Resistenza</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <span class="label-span left-side">Regno:</span>
+                                            <select class="right-side" name="attr_regno">
+                                                <option value="@{minerale}">Minerale</option>
+                                                <option value="@{vegetale}">Vegetale</option>
+                                                <option value="@{animale}">Animale</option>
+                                                <option value="@{umano}">Umano</option>
+                                                <option value="@{meccanico}">Meccanico</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <span class="label-span left-side">Limitazioni:</span>
+                                            <input class="right-side" type="text" name="attr_martial_req" value="---" />
+                                        </div>
+                                        <div>
+                                            <span class="label-span left-side">Danno:</span>
+                                            <input class="right-side" type="text" name="attr_martial_dmg" value="---" />
+                                        </div>
+                                        <div>
+                                            <span class="label-span left-side-small">T:</span>
+                                            <input class="right-side-small" type="text" name="attr_martial_t" />
+                                            <span class="label-span left-side-small">C:</span>
+                                            <input class="right-side-small" type="text" name="attr_martial_c" />
+                                        </div>
+
+                                    </div>
+                                    <div class="half">
+                                        <div>
+                                            <span class="label-span left-side">Speciale:</span>
+                                            <textarea class="textarea right-side-textarea" type="text"
+                                                name="attr_martial_spec">---</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <span class="label-span left-side-footer">Nome:</span>
+                                        <textarea class="textarea footer-textarea" type="text"
+                                            name="attr_martial_notes">---</textarea>
+                                    </div>
+                                </div>
+                                <input type="number" name="attr_displaymarialvals" value="1" style="display:none" />
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/worker">
+    const dolorPointsAttributes = ['dolore-5', 'dolore-4', 'dolore-3', 'dolore-2', 'dolore-1', 'dolore-coma'];
+    const resistencePointsAttributes = ['pres-9', 'pres-8', 'pres-7', 'pres-6', 'pres-5', 'pres-4', 'pres-3', 'pres-2', 'pres-1', 'pres-ko'];
+    const equilibriumPointsAttributes = ['peq-9', 'peq-8', 'peq-7', 'peq-6', 'peq-5', 'peq-4', 'peq-3', 'peq-2', 'peq-1', 'peq-pazzo'];
+    const tabList = ["front","rear"];
+    const attributes = [
+        {"cuore": "component"}, {"istinto": "component"}, {"corpo": "component"}, {"mente": "component"},
+        {"percezione": "medium"}, {"azione": "medium"}, {"desiderio": "medium"}, {"resistenza": "medium"},
+        {"minerale": "reign"}, {"vegetale": "reign"}, {"animale": "reign"}, {"umano": "reign"}, {"meccanico": "reign"},
+        {"potenza": "energy"}, {"precisione": "energy"}, {"rapidita": "energy"},
+        {"attacco": "tech"}, {"difesa": "tech"}, {"aura": "tech"}
+    ];
+    const defences = ["testa", "torso", "bd", "bs", "gd", "gs"];
+    $20("button.repcontrol_edit").on("click", function(){$20("button.repcontrol_edit").toggleClass("clicked")})
+    $20(".wound div").on("click", (event) => toggleWound(event));
+    $20(".points span").on("click", (event) => togglePoint(event));
+    
+    /* tab selection */
+    tabList.forEach(tab => {
+        on(`clicked:${tab}`, function() {
+            setAttrs({
+                sheetTab: tab
+            });
+        });
+    });
+    /*Check Attributes Change */
+    attributes.forEach((attr) => {
+        Object.keys(attr).forEach((a) => {
+            const type = attr[a];
+            on(`change:${a} sheet:opened`, function(eventInfo) {
+                checkAttributeValue(a, type);
+            });
+        })
+    });
+    defences.forEach((def) => {
+        on(`change:${def}`, function(eventInfo) {
+            setArmorMalus()
+        });
+    });
+    on("sheet:opened", () => setArmorMalus());
+    on("clicked:feat", (info) => processRoll(info));
+    on("clicked:repeating_feats:feat", (info) => processRepeatingRoll(info));
+    on("change:bpotenza change:bprecisione change:brapidita", function(eventInfo) {
+        const attr = eventInfo.triggerName.split("b")[1];
+        const battr = eventInfo.triggerName;
+        const val = eventInfo.newValue;
+        checkBonusEnergy(attr, battr, val);
+    });
+    on("clicked:repeating_feats:activate", function(eventInfo) {
+        getAttrs (['repeating_feats_info-display'], function(values) {
+           const output = {};
+           output['repeating_feats_info-display'] = values['repeating_feats_info-display'] == 1 ? "0" : "1";
+           setAttrs(output);
+        });
+    });
+    on("clicked:repeating_martial:activate", function(eventInfo) {
+      getAttrs (['repeating_martial_info-display'], function(values) {
+         const output = {};
+         output['repeating_martial_info-display'] = values['repeating_martial_info-display'] == 1 ? "0" : "1";
+         setAttrs(output);
+      });
+    });
+    on("change:malus_dolore change:malus_peq change:malus_pres sheet:opened", function() {
+        setMalusPoints();
+    });
+
+    /* Check if attribute is between min/max and sets accordingly */
+    const checkAttributeValue = function (attr, type) {
+        const maxattr = 'max' + type;
+        const minattr = 'min' + type;
+        getAttrs([attr, maxattr, minattr], (value) => {
+            const val = {};
+            val[attr] = (parseInt(value[minattr]) <= parseInt(value[attr]) && parseInt(value[attr]) <= parseInt(value[maxattr])) ? value[attr] : parseInt(value[attr]) > parseInt(value[maxattr]) ? value[maxattr] : value [minattr];
+            setAttrs(val);
+            if(type === "energy") {
+                const battr = "b" + attr;
+                getAttrs([battr], (value) => {
+                    checkBonusEnergy(attr, battr, value[battr]);
+                })
+            }
+        });
+    }
+    /* Check if bonus value is outside attribute boundaries */
+    const checkBonusEnergy = function(attr, battr, val) {
+        getAttrs([attr], (value) => {
+            const bonus = {};
+            bonus[battr] =(parseInt(value[attr]) <= parseInt(val) && parseInt(val) >= 0) ? value[attr] : (parseInt(val) < 0)? "0" : val;
+            setAttrs(bonus);
+        });
+    }
+    /* Set malus modifier due to dolor/resistence/equilibrium points malus */
+    const setMalusPoints = function() {
+        getAttrs(["malus_points","malus_dolore", "malus_peq", "malus_pres"], function(value) {
+            value["malus_points"] = parseInt(value["malus_dolore"]) + parseInt(value["malus_pres"]) + parseInt(value["malus_peq"]);
+            setAttrs(value);
+        });
+    }
+    const setArmorMalus = function() {
+        getAttrs(defences, (values) => {
+            let sum = 0;
+            Object.keys(values).forEach((val) => {
+                sum += parseInt(values[val]);
+            });
+            const attr = {
+                "malus_p": Math.floor(sum/6)
+            };
+            setAttrs(attr);
+        });
+    }
+    /* Enable the use of blocked/lost points, set malus value */
+    const togglePoint = function(event) {
+        const htmlAttrs = event.htmlAttributes;
+        const attrName = htmlAttrs.type;
+        const selector = "#" + htmlAttrs.id;
+        let newVal = htmlAttrs.value;
+        let array = [];
+        if(htmlAttrs.id.includes("dolor")) array = dolorPointsAttributes;
+        else if(htmlAttrs.id.includes("res")) array = resistencePointsAttributes;
+        else array = equilibriumPointsAttributes;
+        getAttrs([htmlAttrs.id], function(val) {
+            let newColorStatus = val[htmlAttrs.id];
+            if(event.ctrlKey) {
+                newColorStatus = "lost";
+                newVal = 0;
+            }
+            else if(event.altKey) {
+                newColorStatus = "usable";
+                newVal = 0;
+            }
+            else if(event.shiftKey) {
+                newColorStatus = "blocked"
+                newVal = 0;
+            }
+            else {
+                switch(newColorStatus.toLowerCase()) {
+                    case "usable":
+                        newColorStatus = "selected";
+                        break;
+                    case "selected":
+                        newColorStatus = "usable";
+                        break;;
+                }
+            }
+            // change other attributes background color
+            getAttrs(array, function(values){
+                array.forEach((key) => {
+                    if(values[key] == "selected" && key != htmlAttrs.id) {
+                        values[key] = "usable";
+                    }
+                    else if(key == htmlAttrs.id) values[key] = newColorStatus;
+                })
+                setAttrs(values);
+            })
+            // set background color
+            val[htmlAttrs.id] = newColorStatus;
+            setAttrs(val);
+            // set worker value
+            getAttrs([attrName], function(value) {
+                value[attrName] = newVal;
+                setAttrs(value);
+            });
+        });
+    }
+    /* Enable the use of blocked/lost points, set malus value */
+    const toggleWound = function(event) {
+        const htmlAttrs = event.htmlAttributes;
+        const attrName = htmlAttrs.id;
+        let newVal = "";
+        getAttrs([attrName], function(value) {
+            const val = value[attrName];
+            newVal = val;
+            if(event.altKey) {
+                newVal = "healed";
+            }
+            else if(event.ctrlKey) {
+                newVal = "lost";
+            }
+            else if(event.shiftKey) {
+                newVal = "blocked"
+            }
+            else {
+                switch(val.toLowerCase()) {
+                    case "healed":
+                        newVal = "wounded";
+                        break;
+                    case "wounded":
+                        newVal = "healed";
+                        break;
+                }
+            }
+            value[attrName] = newVal
+            setAttrs(value);
+        })
+    }
+    /* Calculate critical range and dice pool */
+    const getCritInfo = function(bonus) {
+        let dice = 1;
+        let range = 2;
+        let bonusInt = parseInt(bonus);
+        if(bonus >= 1) {
+            dice += bonusInt;
+            range += bonusInt;
+        }
+        return {dice: dice, range: range};
+    }
+    /* check if roll needs query by user and sends to prepareTemplate */
+    const processRoll = function(info) {
+        /* check if any need */
+        const title = info.htmlAttributes.title;
+        info.htmlAttributes["modifier"] = title;
+        info.htmlAttributes["displaytitle"] = title + "-name";
+        info.htmlAttributes["rolldmg"] = title + "-rolldmg";
+        info.htmlAttributes["isPhysical"] = title + "-isphysical";
+        let needArray = [];
+        const attrs = [title + "-needcomponent", title + "-needreign", title + "-needmedium"];
+        getAttrs(attrs, async (vals) => {
+            Object.keys(vals).forEach((k) => {
+                let needed = vals[k];
+                if(needed === 'true') needArray.push(k.split("need")[1]);
+            });
+            if(needArray.length > 0) {
+                info = await queryValues(info, needArray);
+            }
+            prepareRollTemplate(info);
+        });
+        
+    }
+    const processRepeatingRoll = function(info) {
+        /* GetInfo and prepare value */        
+        const attrs = ["repeating_feats_componente", "repeating_feats_mezzo", "repeating_feats_regno"];
+        const mods = ["repeating_feats_usepotenza", "repeating_feats_userapidita", "repeating_feats_useprecisione", "repeating_feats_useattacco", "repeating_feats_usedifesa"];
+        const values = [];
+        info.htmlAttributes["displaytitle"] = "repeating_feats_featname";
+        info.htmlAttributes["modifier"] = "repeating_feats_featvalue";
+        info.htmlAttributes["isPhysical"] = "repeating_feats_isphysical";
+        info.htmlAttributes["rolldmg"] = "repeating_feats_rolldmg";
+        getAttrs(attrs, (vals) => {
+            Object.keys(vals).forEach((k) => {
+                values.push(vals[k]);
+            });
+            getAttrs(mods, (vals) => {
+                Object.keys(vals).forEach((k) => {
+                    const mod = {};
+                    mod[k.replace("repeating_feats_use", "")] = vals[k] === 'true';
+                    values.push(JSON.stringify(mod));
+                });
+                info.htmlAttributes.value = values.join("|");
+                prepareRollTemplate(info);        
+            });
+        });
+    }
+    /* query for reign and set value */
+    const queryValues = async function(info, needs) {
+        const rxGrab = /^0(.*)\s*$/;
+        let vals = info.htmlAttributes.value.split("|");
+        let roll = "";
+        for(let i = 0; i < needs.length; i++) {
+            let n = needs[i];
+            if(n==="component") {
+                roll = "! {{query1= [[ 0?{Componente|Corpo|Istinto|Cuore|Mente}]]}}"
+                let res = await startRoll(roll);
+                let val = (res.results.query1.expression.match(rxGrab) || [])[1]; 
+                vals[0] = val;
+            }
+            else if(n==="medium") {
+                roll = "! {{query1= [[ 0?{Mezzo|Percezione|Azione|Desiderio|Resistenza}]]}}"
+                let res = await startRoll(roll);
+                let val = (res.results.query1.expression.match(rxGrab) || [])[1]; 
+                vals[1] = val;
+            }
+            else if(n==="reign") {
+                roll = "! {{query1= [[ 0?{Regno|Umano|Meccanico|Minerale|Vegetale|Animale}]]}}"
+                let res = await startRoll(roll);
+                let val = (res.results.query1.expression.match(rxGrab) || [])[1]; 
+                vals[2] = val;
+            }
+        }
+        info.htmlAttributes.value = vals.join("|");
+        return info;
+    }
+    /* get attributes and starts rolltemplate */
+    const prepareRollTemplate = function(info) {
+        let attrs = info.htmlAttributes.value.split("|");
+        let energies = []
+        let techs = [];
+        const usesEnergy = attrs.splice(3, 3);
+        const usesTechs = attrs.splice(3, 3);
+        const modifier = info.htmlAttributes.modifier;
+        const name = info.htmlAttributes.displaytitle;
+        const rolldmg = info.htmlAttributes.rolldmg;
+        const isPhysical = info.htmlAttributes.isPhysical;
+        usesEnergy.forEach((energy) => {
+            const energyObjs = JSON.parse(energy);
+            Object.keys(energyObjs).forEach((k) => {
+                if(energyObjs[k]) {
+                    energies.push("b"+k);
+                }
+            });
+        });
+        usesTechs.forEach((tech) => {
+            const techObjs = JSON.parse(tech);
+            Object.keys(techObjs).forEach((k) => {
+                if(techObjs[k]) {
+                    techs.push(k);
+                }
+            });
+        });
+        getAttrs(attrs, function(attributes) {
+            let attributeList = [];
+            Object.keys(attributes).forEach((k) => {
+                const attribute = {};
+                attribute["name"] = k;
+                attribute["val"] = attributes[k];
+                attributeList.push(attribute);
+            });
+            getAttrs(energies, function(ergs) {
+                let energyList = [];
+                Object.keys(ergs).forEach((k) => {
+                    const energy = {};
+                    energy["name"] = k.split("b")[1];
+                    energy["val"] = ergs[k];
+                    energyList.push(energy);
+                });
+                getAttrs(techs, function(ts) {
+                    let techList = [];
+                    Object.keys(ts).forEach((k) => {
+                        const tech = {};
+                        tech["name"] = k;
+                        tech["val"] = ts[k];
+                        techList.push(tech);
+                    });
+                    let miscArray = ["malus_points", "character_name", name, modifier, rolldmg, isPhysical, "malus_p"];
+                    getAttrs(miscArray, function(misc) {
+                        let damagedie = 2;
+                        let critInfo = getCritInfo(misc[modifier]);
+                        let mod = misc[modifier] ? parseInt(misc[modifier]) : -4;
+                        let totalMalus = parseInt(misc.malus_points) - (misc[isPhysical] === 'true' ? parseInt(misc["malus_p"]) : 0);
+                        let sum = totalMalus + mod;
+                        let showdmg = misc[rolldmg] === 'true';
+                        let roll = `&{template:feat} {{name=${misc.character_name}}} {{rollname=${misc[name]}}} {{malus=${totalMalus}}} `;
+                        roll += `{{modifier=[[${mod}]]}} {{critrange=[[${critInfo.range}]]}} `;
+                        if(showdmg) roll += `{{showdmg=1}}`;
+                        attributeList.forEach((attr, index) => {
+                            roll += `{{component${index+1}Name=${attr.name}}} `;
+                            roll += `{{component${index+1}Value=${attr.val}}} `;
+                            sum += parseInt(attr.val);
+                        });
+                        energyList.forEach((en, index) => {
+                            roll += `{{energy${index+1}Name=${en.name}}} `;
+                            roll += `{{energy${index+1}Value=${en.val}}} `;
+                            sum += parseInt(en.val);
+                        });
+                        techList.forEach((t, index) => {
+                            roll += `{{tech${index+1}Name=${t.name}}} `;
+                            roll += `{{tech${index+1}Value=${t.val}}} `;
+                            sum += parseInt(t.val);
+                        });
+                        roll += ` [[ [[${sum}  -[[2d6]] ]] + [[${damagedie}d6]] ]] [[${critInfo.dice}d6]] {{roll=$[[2]]}} {{damage=$[[3]]}} {{crit=$[[4]]}} {{ms=$[[5]]}} {{msdamage=$[[6]]}}`;
+                        startRoll(roll, (res) => {
+                            finishRoll(res.rollId,res);
+                        });
+                    });
+                });
+            });
+        });
+    }
+</script>
+
+<rolltemplate class="sheet-rolltemplate-feat">
+    <div class="sheet-template-container">
+        <div class="sheet-template-header">
+            <div class="sheet-template-main">
+                <span>{{rollname}}</span>
+            </div>
+            <div class="sheet-template-sub">
+                <span>{{name}}</span>
+            </div>
+        </div>
+        <div class="sheet-template-used">
+            {{#component1Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{component1Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{component1Value}}</div>
+                </div>
+            </div>
+            {{/component1Name}}
+            {{#component2Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{component2Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{component2Value}}</div>
+                </div>
+            </div>
+            {{/component2Name}}
+            {{#component3Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{component3Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{component3Value}}</div>
+                </div>
+            </div>
+            {{/component3Name}}
+            {{#energy1Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{energy1Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{energy1Value}}</div>
+                </div>
+            </div>
+            {{/energy1Name}}
+            {{#energy2Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{energy2Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{energy2Value}}</div>
+                </div>
+            </div>
+            {{/energy2Name}}
+            {{#energy3Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{energy3Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{energy3Value}}</div>
+                </div>
+            </div>
+            {{/energy3Name}}
+            {{#tech1Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{tech1Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{tech1Value}}</div>
+                </div>
+            </div>
+            {{/tech1Name}}
+            {{#tech2Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{tech2Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{tech2Value}}</div>
+                </div>
+            </div>
+            {{/tech2Name}}
+            {{#tech3Name}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>{{tech3Name}}</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{tech3Value}}</div>
+                </div>
+            </div>
+            {{/tech3Name}}
+            {{#modifier}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>mod</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{modifier}}</div>
+                </div>
+            </div>
+            {{/modifier}}
+            {{#malus}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>Malus</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{malus}}</div>
+                </div>
+            </div>
+            {{/malus}}
+            {{#critrange}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>critrange</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{critrange}}</div>
+                </div>
+            </div>
+            {{/critrange}}
+        </div>
+        <div class="sheet-template-results">
+            <div class="sheet-template-row">
+                <div class="sheet-template-vals">
+                    <span class="sheet-template-left">MS</span>
+                    <span class="sheet-template-right">{{ms}}</span>
+                </div>
+            </div>
+            {{#showdmg}}
+                {{#rollGreater() ms 0 }}
+                {{#^rollBetween() roll 0 critrange }}
+                <div class="sheet-template-row">
+                    <div class="sheet-template-vals">
+                        <span class="sheet-template-left">Damage</span>
+                        <span class="sheet-template-right">{{msdamage}}</span>
+                    </div>
+                </div>
+                {{/^rollBetween() roll 0 critrange }}
+                {{/rollGreater() ms 0 }}
+                {{#rollBetween() roll 0 critrange }}
+                <div class="sheet-template-critical">
+                    <div class="sheet-template-row">It's a critcal roll!</div>
+                    {{#rollLess() ms 0 }}
+                        <div class="sheet-template-row">
+                            <div class="sheet-template-vals">
+                                <span class="sheet-template-left">Damage</span>
+                                <span class="sheet-template-right">{{damage}}</span>
+                            </div>
+                        </div>
+                    {{/rollLess() ms 0 }}
+                    {{#rollGreater() ms 0 }}
+                        <div class="sheet-template-row">
+                            <div class="sheet-template-vals">
+                                <span class="sheet-template-left">Damage</span>
+                                <span class="sheet-template-right">{{msdamage}}</span>
+                            </div>
+                        </div>
+                    {{/rollGreater() ms 0 }}
+                    <div class="sheet-template-row">
+                        <div class="sheet-template-vals">
+                            <span class="sheet-template-left">Crit</span>
+                            <span class="sheet-template-right">{{crit}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/rollBetween() roll 0 critrange }}
+            {{/showdmg}}
+        </div>
+    </div>
+</rolltemplate>

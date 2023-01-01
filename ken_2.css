@@ -1,0 +1,1004 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@200&family=Questrial&family=Quicksand:wght@300&family=Vollkorn+SC:wght@900&family=Vollkorn:wght@900&display=swap");
+/* Sheet Magic classes */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield; }
+
+button[type="roll"]::before {
+  content: "" !important; }
+
+.sheetmagic {
+  position: relative;
+  margin: auto;
+  font-family: sans-serif; }
+
+.sheetmagic * {
+  color: black !important; }
+
+.title {
+  font-family: "Arial";
+  font-weight: bold; }
+
+.sm-prop {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute;
+  background: transparent !important;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: black; }
+
+.sm-prop:focus {
+  background: rgba(0, 0, 0, 0.1) !important; }
+
+.sm-mlt {
+  font-size: 12px;
+  resize: none; }
+
+.sm-num {
+  text-align: center; }
+
+.sm-roll {
+  cursor: pointer; }
+
+.sm-checkbox {
+  cursor: pointer;
+  appearance: none; }
+
+.sm-checkbox:checked {
+  appearance: auto; }
+
+.sm-noedit {
+  border: none; }
+
+/* Base edited css */
+button[type="roll"] input[disabled] {
+  cursor: inherit; }
+
+/* Repeating custom values */
+div.repcontrol {
+  position: relative;
+  z-index: 2;
+  left: -13px; }
+  div.repcontrol button.repcontrol_add,
+  div.repcontrol button.repcontrol_edit {
+    visibility: hidden; }
+  div.repcontrol button.repcontrol_add::before,
+  div.repcontrol button.repcontrol_edit::after {
+    visibility: visible;
+    font-family: pictos;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+    padding: 2px 4px 2px 4px;
+    color: black; }
+  div.repcontrol button.repcontrol_add::before {
+    content: "&"; }
+  div.repcontrol button.repcontrol_edit::after {
+    content: "("; }
+  div.repcontrol button.repcontrol_edit.clicked::after {
+    content: ")"; }
+
+.sheet-front,
+.sheet-rear {
+  height: 576px;
+  overflow: auto; }
+
+/*Configure the tab buttons*/
+.charsheet .sheet-front,
+.charsheet .sheet-rear {
+  display: none; }
+
+.charsheet button[name="act_front"],
+.charsheet button[name="act_rear"] {
+  border: 0;
+  background-color: transparent; }
+
+/* show the selected tab */
+.charsheet .sheet-tabstoggle[value="front"] ~ div.sheet-front,
+.charsheet .sheet-tabstoggle[value="rear"] ~ div.sheet-rear {
+  display: block; }
+
+.charsheet .sheet-tabstoggle[value="front"] ~ #sheet-tab-container > button[name="act_front"],
+.charsheet .sheet-tabstoggle[value="rear"] ~ #sheet-tab-container > button[name="act_rear"] {
+  border: 2px solid black; }
+
+#sheet-tab-container {
+  text-align: center;
+  margin-bottom: 5px; }
+
+.sheet-container {
+  width: 714px;
+  height: 1000px;
+  font-family: Didact Gothic, sans-serif; }
+
+div[data-groupname="repeating_feats"].repcontainer,
+div[data-groupname="repeating_martial"].repcontainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  /* Buttons */
+  /* Up */
+  /* Down */ }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar {
+    width: 8px; }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-thumb,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    background-clip: padding-box;
+    border: 0.01em solid #eeeeee; }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-track,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-track {
+    background-color: #ddd; }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button {
+    background-color: #ddd;
+    display: block;
+    border-style: solid;
+    height: 5px;
+    width: 8px; }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 4px 4px 4px;
+    border-color: transparent transparent #777 transparent; }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #bbb transparent; }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:increment,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 4px 4px 0 4px;
+    border-color: #777 transparent transparent transparent; }
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:vertical:single-button:increment:hover,
+  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #bbb transparent transparent transparent; }
+  div[data-groupname="repeating_feats"].repcontainer a.repcontrol_move,
+  div[data-groupname="repeating_feats"].repcontainer button.repcontrol_del,
+  div[data-groupname="repeating_martial"].repcontainer a.repcontrol_move,
+  div[data-groupname="repeating_martial"].repcontainer button.repcontrol_del {
+    padding: 4px;
+    box-sizing: border-box;
+    line-height: 8px;
+    font-family: "Pictos" !important;
+    float: right !important;
+    position: relative;
+    z-index: 2000; }
+
+div[data-groupname="repeating_feats"] .repitem .options,
+div[data-groupname="repeating_martial"] .repitem .options {
+  width: 100%;
+  background-color: white;
+  padding-top: 10px; }
+  div[data-groupname="repeating_feats"] .repitem .options .label-span,
+  div[data-groupname="repeating_martial"] .repitem .options .label-span {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block; }
+  div[data-groupname="repeating_feats"] .repitem .options input[type="text"],
+  div[data-groupname="repeating_martial"] .repitem .options input[type="text"] {
+    background-color: transparent;
+    margin-bottom: 9px;
+    height: 24px; }
+  div[data-groupname="repeating_feats"] .repitem .options select,
+  div[data-groupname="repeating_martial"] .repitem .options select {
+    height: 25px; }
+
+div[data-groupname="repeating_feats"] .repitem .display-control[value="0"] ~ .display,
+div[data-groupname="repeating_feats"] .repitem .display-control[value="0"] ~ .elem,
+div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .display,
+div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .elem {
+  display: block; }
+
+div[data-groupname="repeating_feats"] .repitem .display-control[value="1"] ~ .display,
+div[data-groupname="repeating_feats"] .repitem .display-control[value="1"] ~ .elem,
+div[data-groupname="repeating_martial"] .repitem .display-control[value="1"] ~ .display,
+div[data-groupname="repeating_martial"] .repitem .display-control[value="1"] ~ .elem {
+  display: none; }
+
+div[data-groupname="repeating_feats"] .repitem .display-control[value="1"] ~ .options,
+div[data-groupname="repeating_martial"] .repitem .display-control[value="1"] ~ .options {
+  display: visible; }
+
+div[data-groupname="repeating_feats"] .repitem .display-control[value="0"] ~ .options,
+div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .options {
+  display: none; }
+
+#front-container {
+  background-image: url("https://i.ibb.co/XYSpmBJ/scheda-fronte.jpg"); }
+
+.header {
+  height: 15px;
+  font-size: 10px;
+  border: transparent; }
+
+.defence input,
+.calculated input,
+.attributes input,
+.feat input {
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 14px !important;
+  border: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute;
+  background: transparent !important;
+  box-shadow: none;
+  color: black; }
+
+.feat div,
+.points div,
+.points-wider div {
+  position: absolute; }
+
+.feat label,
+.points label,
+.points-wider label {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  width: 0;
+  border: 0 transparent; }
+  .feat label span,
+  .points label span,
+  .points-wider label span {
+    position: relative;
+    line-height: 14.8px; }
+    .feat label span:before, .feat label span:after,
+    .points label span:before,
+    .points label span:after,
+    .points-wider label span:before,
+    .points-wider label span:after {
+      content: "";
+      height: 14.8px; }
+    .feat label span:before,
+    .points label span:before,
+    .points-wider label span:before {
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: top; }
+    .feat label span:after,
+    .points label span:after,
+    .points-wider label span:after {
+      background: #222021;
+      height: 14.8px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      transition: 300ms;
+      opacity: 0; }
+  .feat label input:checked + span:after,
+  .points label input:checked + span:after,
+  .points-wider label input:checked + span:after {
+    opacity: 1; }
+
+.feat input[type="radio"],
+.points input[type="radio"],
+.points-wider input[type="radio"] {
+  display: none; }
+
+.feat button[type="roll"],
+.feat button[type="action"],
+.points button[type="roll"],
+.points button[type="action"],
+.points-wider button[type="roll"],
+.points-wider button[type="action"] {
+  vertical-align: top;
+  height: 100% !important;
+  width: 129px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0; }
+
+/* Points */
+.points,
+.points-wider {
+  position: absolute; }
+  .points .row_1,
+  .points-wider .row_1 {
+    top: 399px; }
+  .points .row_2,
+  .points-wider .row_2 {
+    top: 426.5px; }
+  .points .row_3,
+  .points-wider .row_3 {
+    top: 454px; }
+  .points .col_1,
+  .points-wider .col_1 {
+    left: 602px; }
+  .points .col_2,
+  .points-wider .col_2 {
+    left: 584.7px; }
+  .points .col_3,
+  .points-wider .col_3 {
+    left: 567.4px; }
+  .points .col_4,
+  .points-wider .col_4 {
+    left: 550.1px; }
+  .points .col_5,
+  .points-wider .col_5 {
+    left: 532.8px; }
+  .points .col_6,
+  .points-wider .col_6 {
+    left: 515.5px; }
+  .points .col_7,
+  .points-wider .col_7 {
+    left: 498.2px; }
+  .points .col_8,
+  .points-wider .col_8 {
+    left: 480.9px; }
+  .points .col_9,
+  .points-wider .col_9 {
+    left: 463.6px; }
+  .points .color[value="usable"] + span,
+  .points-wider .color[value="usable"] + span {
+    background-color: transparent;
+    opacity: 1; }
+  .points .color[value="lost"] + span,
+  .points-wider .color[value="lost"] + span {
+    background-color: red;
+    opacity: 1; }
+  .points .color[value="selected"] + span,
+  .points-wider .color[value="selected"] + span {
+    background-color: black;
+    opacity: 1; }
+  .points .color[value="blocked"] + span,
+  .points-wider .color[value="blocked"] + span {
+    background-color: grey;
+    opacity: 1; }
+
+.points label span:before, .points label span:after {
+  width: 7px; }
+
+.points-wider {
+  left: 619px; }
+  .points-wider span:before, .points-wider span:after {
+    width: 19px !important; }
+
+/* Attributes */
+.attributes input {
+  height: 27px !important; }
+
+.attributes .attributes-bonus-left input {
+  left: 26px; }
+
+.attributes .attributes-left .span-split {
+  position: absolute;
+  left: 141px;
+  width: 5px;
+  height: 27px;
+  width: 24px;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), black 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%) !important; }
+
+.attributes .attributes-left input {
+  left: 141px; }
+  .attributes .attributes-left input.splitted {
+    width: 11px !important;
+    height: 11px !important; }
+  .attributes .attributes-left input.split-right {
+    left: 153px;
+    font-size: 12px !important; }
+
+.attributes .attributes-right input {
+  left: 269px; }
+
+.attributes .row_1 {
+  top: 151px; }
+
+.attributes .row_2 {
+  top: 179px; }
+
+.attributes .row_3 {
+  top: 207px; }
+
+.attributes .row_4 {
+  top: 234px; }
+
+.attributes .row_5 {
+  top: 287px; }
+
+.attributes .row_6 {
+  top: 315px; }
+
+.attributes .row_7 {
+  top: 343px; }
+
+.attributes .row_8 {
+  top: 398px; }
+  .attributes .row_8.split-left {
+    top: 400px; }
+  .attributes .row_8.split-right {
+    top: 410px; }
+
+.attributes .row_9 {
+  top: 425px; }
+  .attributes .row_9.split-left {
+    top: 427px; }
+  .attributes .row_9.split-right {
+    top: 437px; }
+
+.attributes .row_10 {
+  top: 453px; }
+  .attributes .row_10.split-left {
+    top: 455px; }
+  .attributes .row_10.split-right {
+    top: 465px; }
+
+/* Defences */
+.defence .martial {
+  border: 1px solid orange !important; }
+
+/* Calculated Values */
+.calculated button {
+  border: transparent !important;
+  position: absolute;
+  background: transparent !important;
+  box-shadow: none;
+  color: black;
+  margin: 0 !important;
+  padding: 0 !important; }
+  .calculated button input {
+    position: relative !important; }
+
+.calculated input,
+.calculated button {
+  width: 31px !important;
+  height: 23px !important; }
+  .calculated input.splitted,
+  .calculated button.splitted {
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), black 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%) !important; }
+
+.calculated span[name="attr_malus_p"] {
+  left: 463px;
+  top: 362px;
+  position: absolute;
+  width: 22px;
+  height: 24px;
+  font-size: 14px; }
+
+.calculated .right {
+  left: 437px; }
+
+.calculated .left {
+  left: 329px; }
+
+.calculated .center {
+  left: 384px; }
+
+.calculated .row_1 {
+  top: 185px; }
+
+.calculated .row_3 {
+  top: 311px; }
+  .calculated .row_3.calculated-triangle.right-top {
+    top: 306px;
+    left: 438px; }
+  .calculated .row_3.calculated-triangle.right-bottom {
+    top: 315px;
+    left: 453px; }
+  .calculated .row_3.calculated-triangle.right-top input, .calculated .row_3.calculated-triangle.right-bottom input {
+    font-size: 11px !important;
+    width: 10px !important; }
+
+.calculated .calculated-triangle {
+  width: 15px !important;
+  border: transparent;
+  font-size: 11px !important; }
+
+.calculated .calculated-triangle.left-top {
+  top: 248px;
+  left: 330px; }
+
+.calculated .calculated-triangle.left-bottom {
+  top: 258px;
+  left: 342px; }
+
+.calculated .calculated-triangle.right-top {
+  top: 248px;
+  left: 438px; }
+
+.calculated .calculated-triangle.right-bottom {
+  top: 258px;
+  left: 451px; }
+
+/* Feats */
+.feat div {
+  border: 0;
+  width: 226px;
+  left: 33px;
+  height: 14.8px;
+  box-sizing: border-box; }
+
+.feat .row_1 {
+  top: 527.2px; }
+
+.feat .row_2 {
+  top: 542px; }
+
+.feat .row_3 {
+  top: 556.8px; }
+
+.feat .row_4 {
+  top: 571.6px; }
+
+.feat .row_5 {
+  top: 586.4px; }
+
+.feat .row_6 {
+  top: 601.2px; }
+
+.feat .row_7 {
+  top: 616px; }
+
+.feat .row_8 {
+  top: 630.8px; }
+
+.feat .row_9 {
+  top: 645.6px; }
+
+.feat .row_10 {
+  top: 660.4px; }
+
+.feat .row_11 {
+  top: 675.2px; }
+
+.feat .row_12 {
+  top: 690px; }
+
+.feat .row_13 {
+  top: 704.8px; }
+
+.feat .row_14 {
+  top: 719.6px; }
+
+.feat .row_15 {
+  top: 734.4px; }
+
+.feat .row_16 {
+  top: 749.2px; }
+
+.feat .row_17 {
+  top: 764px; }
+
+.feat .row_18 {
+  top: 778.8px; }
+
+.feat .row_19 {
+  top: 793.6px; }
+
+.feat .row_20 {
+  top: 808.4px; }
+
+.feat .row_21 {
+  top: 823.2px; }
+
+.feat .row_22 {
+  top: 838px; }
+
+.feat .minus-4 {
+  left: 143px; }
+
+.feat .minus-2 {
+  left: 156px; }
+
+.feat .zero {
+  left: 171px; }
+
+.feat .plus-1 {
+  left: 185px; }
+
+.feat .plus-2 {
+  left: 199px; }
+
+.feat .plus-3 {
+  left: 213px; }
+
+.feat button {
+  width: 148px;
+  height: 13px; }
+
+.feat label span:before, .feat label span:after {
+  width: 14px; }
+
+.feat input[type="checkbox"] {
+  position: absolute;
+  left: 123px;
+  top: 3px;
+  height: 10px !important; }
+
+#repeating-feats-container {
+  position: absolute;
+  left: 33px;
+  top: 853px;
+  width: 235px;
+  height: 15px; }
+  #repeating-feats-container div[data-groupname="repeating_feats"].repcontainer {
+    height: 117.5px;
+    max-height: 117.5px;
+    width: 237; }
+  #repeating-feats-container div[data-groupname="repeating_feats"] .repitem {
+    border-left: 1px solid #000000;
+    line-height: 0; }
+    #repeating-feats-container div[data-groupname="repeating_feats"] .repitem a.repcontrol_move,
+    #repeating-feats-container div[data-groupname="repeating_feats"] .repitem button.repcontrol_del {
+      height: 15px;
+      font-size: 10px; }
+    #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals {
+      min-height: 14.8px;
+      box-sizing: border-box; }
+      #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals button[type="action"] {
+        width: 20px;
+        box-sizing: border-box;
+        height: 14px;
+        border: 0;
+        background-color: transparent;
+        padding: 3px;
+        line-height: 0; }
+        #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals button[type="action"] i {
+          font-family: Pictos;
+          position: relative;
+          top: -1.5px; }
+      #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals button.roll-button {
+        width: calc(147px - 30px) !important;
+        margin-left: 20px !important;
+        border: 0 !important;
+        line-height: 0;
+        box-sizing: border-box;
+        position: relative;
+        top: 1px;
+        text-align: initial; }
+        #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals button.roll-button span {
+          height: 14.8px;
+          padding: 0 0 0 7px;
+          font-size: 11px;
+          vertical-align: sub;
+          width: 100%; }
+      #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals button.feat-options-toggle {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 18px !important;
+        height: 18px !important;
+        z-index: 2; }
+      #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals .display {
+        width: 100%;
+        height: 100%; }
+      #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals .options {
+        width: 237px;
+        height: 200px; }
+        #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals .options .left-side {
+          width: calc(100% - 145px - 15px - 10px);
+          margin-left: 10px; }
+        #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals .options .right-side {
+          width: 120px !important; }
+
+/* Wounds */
+.wound div {
+  position: absolute;
+  border-radius: 50%; }
+
+.wound.head div {
+  width: 8px;
+  height: 8px; }
+  .wound.head div.row_2 {
+    top: 147px; }
+  .wound.head div.row_4 {
+    top: 157px; }
+  .wound.head div.centered {
+    left: 585px; }
+  .wound.head div.right {
+    left: 592px; }
+
+.wound.body div {
+  width: 14px;
+  height: 14px; }
+  .wound.body div.row_1 {
+    top: 176px; }
+  .wound.body div.row_2 {
+    top: 195px; }
+  .wound.body div.row_3 {
+    top: 212px; }
+  .wound.body div.row_4 {
+    top: 226px; }
+  .wound.body div.centered {
+    left: 583px;
+    transform: translateY(1px); }
+  .wound.body div.right {
+    left: 601px; }
+
+.wound.left-arm div, .wound.right-arm div, .wound.left-leg div, .wound.right-leg div {
+  width: 10px;
+  height: 10px; }
+
+.wound.left-arm div.right {
+  left: 539px; }
+
+.wound.left-arm div.left {
+  left: 532px; }
+
+.wound.right-arm div.right {
+  left: 633px; }
+
+.wound.left-leg div.left {
+  left: 526px; }
+
+.wound .color[value="healed"] + .status {
+  background-color: transparent; }
+
+.wound .color[value="lost"] + .status {
+  background-color: black; }
+
+.wound .color[value="wounded"] + .status {
+  background-color: crimson; }
+
+.wound .color[value="blocked"] + .status {
+  background-color: grey; }
+
+#rear-container {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: auto;
+  height: 570px; }
+
+#rear-box {
+  border: 3px solid black;
+  height: 100%; }
+  #rear-box .title {
+    width: fit-content;
+    margin: 10px auto; }
+  #rear-box .title,
+  #rear-box .grid-title > * {
+    font-family: Vollkorn, serif;
+    font-weight: 900;
+    font-size: 15px;
+    text-transform: uppercase; }
+  #rear-box .grid-container {
+    width: 700px;
+    margin: auto; }
+    #rear-box .grid-container .name {
+      width: 116px; }
+    #rear-box .grid-container .value {
+      width: 117px; }
+    #rear-box .grid-container .requisites {
+      width: 112px; }
+    #rear-box .grid-container .cell,
+    #rear-box .grid-container .inner-cell {
+      width: 19.5px; }
+    #rear-box .grid-container .damage {
+      width: 100px; }
+    #rear-box .grid-container .special,
+    #rear-box .grid-container .notes {
+      width: 108px; }
+  #rear-box .grid-title div,
+  #rear-box .grid-values div {
+    text-align: center;
+    float: left; }
+  #rear-box .grid-title {
+    height: 21.24px; }
+    #rear-box .grid-title .cell {
+      font-size: 14px; }
+  #rear-box .grid-values {
+    width: 100%;
+    height: 480px;
+    border: 1px solid grey;
+    font-size: 0; }
+    #rear-box .grid-values #base-martial-container {
+      height: 254.319px;
+      width: 100%; }
+      #rear-box .grid-values #base-martial-container div {
+        height: 19.563px; }
+    #rear-box .grid-values div.element {
+      box-sizing: border-box;
+      border-bottom: 1px solid grey; }
+      #rear-box .grid-values div.element input[type="checkbox"] {
+        width: 10px;
+        height: 10px; }
+      #rear-box .grid-values div.element .notes span,
+      #rear-box .grid-values div.element .name span,
+      #rear-box .grid-values div.element .requisites span,
+      #rear-box .grid-values div.element .cell span,
+      #rear-box .grid-values div.element .damage span,
+      #rear-box .grid-values div.element .special span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: 100%;
+        line-height: 2; }
+      #rear-box .grid-values div.element div {
+        border-right: 1px solid grey;
+        box-sizing: border-box; }
+        #rear-box .grid-values div.element div span {
+          font-size: 10px; }
+        #rear-box .grid-values div.element div button[type="roll"] {
+          width: calc(100% - 15px);
+          height: calc(100% + 1px);
+          border: 0;
+          margin: 0;
+          padding: 0;
+          line-height: 0;
+          background: transparent !important;
+          position: relative; }
+        #rear-box .grid-values div.element div.name span {
+          padding-left: 5px;
+          text-align: left; }
+          #rear-box .grid-values div.element div.name span.used {
+            width: 10px;
+            vertical-align: top; }
+        #rear-box .grid-values div.element div.notes, #rear-box .grid-values div.element div.value {
+          border-right: 0; }
+        #rear-box .grid-values div.element div.requisites {
+          border-left: 1px solid grey; }
+        #rear-box .grid-values div.element div.no-border {
+          border: 0; }
+        #rear-box .grid-values div.element div:last-child {
+          border-bottom: 1px solid grey; }
+        #rear-box .grid-values div.element div div.inner-cell {
+          border-right: 1px solid grey;
+          border-bottom: 0; }
+          #rear-box .grid-values div.element div div.inner-cell:last-child {
+            border-right: 0; }
+          #rear-box .grid-values div.element div div.inner-cell label {
+            width: 0;
+            display: inline-block;
+            cursor: pointer;
+            width: 100%;
+            line-height: 0;
+            height: 100%;
+            margin: 0; }
+            #rear-box .grid-values div.element div div.inner-cell label.no-click {
+              cursor: default; }
+            #rear-box .grid-values div.element div div.inner-cell label input[type="radio"] {
+              display: none; }
+            #rear-box .grid-values div.element div div.inner-cell label span {
+              display: inline-block;
+              position: relative;
+              width: 100%;
+              height: 100%; }
+              #rear-box .grid-values div.element div div.inner-cell label span.checked {
+                opacity: 1;
+                background: #222021; }
+              #rear-box .grid-values div.element div div.inner-cell label span:before, #rear-box .grid-values div.element div div.inner-cell label span:after {
+                content: "";
+                width: 100%;
+                height: 100%; }
+              #rear-box .grid-values div.element div div.inner-cell label span:before {
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: top; }
+              #rear-box .grid-values div.element div div.inner-cell label span:after {
+                background: #222021;
+                transition: 300ms;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0; }
+            #rear-box .grid-values div.element div div.inner-cell label input:checked + span:after {
+              opacity: 1; }
+    #rear-box .grid-values #repeating-martial-container {
+      width: 100%;
+      height: calc(100% - 254.319px); }
+      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"].repcontainer {
+        height: 100%;
+        width: 102%; }
+      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] div {
+        height: 19.563px; }
+      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .name button {
+        width: calc(100% - 13px - 15px); }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .name button[type="roll"] {
+          top: -3px; }
+      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] button.martial-options-toggle {
+        width: 12px;
+        height: 13px;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: transparent; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] button.martial-options-toggle i {
+          font-family: Pictos;
+          position: relative; }
+      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options {
+        height: 300px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half {
+          width: 50%;
+          height: 205px; }
+          #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div {
+            width: 100%;
+            margin-bottom: 10px; }
+            #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div span {
+              text-align: left; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side {
+          width: calc(100% - 160px - 10px);
+          margin-left: 10px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-small {
+          width: calc(50% - 30px - 10px);
+          margin-left: 10px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-footer {
+          width: calc(100% - 525px - 10px);
+          margin-left: 10px;
+          vertical-align: top; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side {
+          width: 160px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-small {
+          width: 30px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-textarea {
+          width: 176px;
+          height: 175px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer {
+          height: calc(100% - 205px);
+          width: 100%; }
+          #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer span {
+            text-align: left; }
+          #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer .footer-textarea {
+            height: 90px;
+            width: 515px; }
+
+.sheet-rolltemplate-feat div.sheet-template-container {
+  border: 2px solid #000 !important;
+  border-radius: 3px 3px 3px 3px; }
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-header {
+    background-color: #702082;
+    color: #fff;
+    padding: 2px;
+    border-bottom: 1px solid black;
+    line-height: 1.6em;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-header .sheet-template-main {
+      text-transform: uppercase; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-header .sheet-template-sub {
+      font-size: 0.8em; }
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-left,
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-right {
+    width: calc(50% - 2px);
+    display: inline-block;
+    text-align: center; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-left div,
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-right div {
+      text-transform: uppercase; }
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-left {
+    text-align: left; }
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .inlinerollresult {
+    display: inline-block;
+    text-align: center;
+    font-weight: normal;
+    background-color: inherit;
+    border: 0; }
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row {
+    text-align: center; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: bold; }
+      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-left {
+        width: 70px; }
+      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-right,
+      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-right span {
+        width: 32px; }
+      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.fullfail, .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.fullcrit {
+        border: 0; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row .sheet-template-vals {
+      margin: auto; }
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span {
+    color: green; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span .inlinerollresult {
+      border: 1px solid green; }
+  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(odd), .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(odd) {
+      background-color: #d9d9d6; }
+    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(even), .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(even) {
+      background-color: #e9e9e9; }
