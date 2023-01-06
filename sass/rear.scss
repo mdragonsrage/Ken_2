@@ -65,7 +65,7 @@ $div-height: 19.563px;
         height: 480px;
         border: $grey-border;
         font-size: 0;
-        
+
         #base-martial-container {
             height: 254.319px;
             width: 100%;
@@ -99,7 +99,7 @@ $div-height: 19.563px;
                 span {
                     font-size: 10px;
                 }
-                button[type="roll"] {
+                button[type="roll"],button[type="action"] {
                     width: calc(100% - 15px);
                     height: calc(100% + 1px);
                     border: 0;
@@ -205,12 +205,15 @@ $div-height: 19.563px;
                     .name {
                         button {
                             width: calc(100% - 13px - 15px);
-                            &[type="roll"]{
+                            &[type="roll"] {
                                 top: -3px;
                             }
                         }
                     }
                     button.martial-options-toggle {
+                        position: absolute;
+                        top: 2px;
+                        left: -2px;
                         width: 12px;
                         height: 13px;
                         border: 0;
@@ -225,7 +228,7 @@ $div-height: 19.563px;
                     }
                     .options {
                         height: 300px;
-                        $halfheight: 205px;
+                        $halfheight: 235px;
                         .half {
                             width: 50%;
                             height: $halfheight;
@@ -237,13 +240,21 @@ $div-height: 19.563px;
                                 }
                             }
                         }
+                        div.choices {
+                            text-align: left;
+                            padding-left: 10px;
+                        }
                         .left-side {
                             width: calc(100% - 160px - 10px);
                             margin-left: 10px;
                         }
                         .left-side-small {
-                            width: calc(50% - 30px - 10px);
-                            margin-left: 10px;
+                            width: 45px;
+                            margin-left: 2px;
+                        }
+                        .left-side-smaller {
+                            width: 10px;
+                            margin-right: 2px;
                         }
                         .left-side-footer {
                             width: calc(100% - 525px - 10px);
@@ -254,11 +265,15 @@ $div-height: 19.563px;
                             width: 160px;
                         }
                         .right-side-small {
-                            width: 30px;
+                            max-width: 30px;
+                            margin-right: 10px;
                         }
                         .right-side-textarea {
                             width: 176px;
                             height: 175px;
+                        }
+                        .checkbox-container {
+                            vertical-align: super;
                         }
                         .footer {
                             height: calc(100% - #{$halfheight});
@@ -270,9 +285,7 @@ $div-height: 19.563px;
                                 height: 90px;
                                 width: 500px;
                             }
-
                         }
-                        
                     }
                 }
             }

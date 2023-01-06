@@ -820,7 +820,7 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
         box-sizing: border-box; }
         #rear-box .grid-values div.element div span {
           font-size: 10px; }
-        #rear-box .grid-values div.element div button[type="roll"] {
+        #rear-box .grid-values div.element div button[type="roll"], #rear-box .grid-values div.element div button[type="action"] {
           width: calc(100% - 15px);
           height: calc(100% + 1px);
           border: 0;
@@ -898,6 +898,9 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .name button[type="roll"] {
           top: -3px; }
       #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] button.martial-options-toggle {
+        position: absolute;
+        top: 2px;
+        left: -2px;
         width: 12px;
         height: 13px;
         border: 0;
@@ -911,18 +914,24 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
         height: 300px; }
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half {
           width: 50%;
-          height: 205px; }
+          height: 235px; }
           #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div {
             width: 100%;
             margin-bottom: 10px; }
             #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div span {
               text-align: left; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options div.choices {
+          text-align: left;
+          padding-left: 10px; }
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side {
           width: calc(100% - 160px - 10px);
           margin-left: 10px; }
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-small {
-          width: calc(50% - 30px - 10px);
-          margin-left: 10px; }
+          width: 45px;
+          margin-left: 2px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-smaller {
+          width: 10px;
+          margin-right: 2px; }
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-footer {
           width: calc(100% - 525px - 10px);
           margin-left: 10px;
@@ -930,12 +939,15 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side {
           width: 160px; }
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-small {
-          width: 30px; }
+          max-width: 30px;
+          margin-right: 10px; }
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-textarea {
           width: 176px;
           height: 175px; }
+        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .checkbox-container {
+          vertical-align: super; }
         #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer {
-          height: calc(100% - 205px);
+          height: calc(100% - 235px);
           width: 100%; }
           #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer span {
             text-align: left; }
@@ -943,10 +955,10 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
             height: 90px;
             width: 500px; }
 
-.sheet-rolltemplate-feat div.sheet-template-container {
+.sheet-rolltemplate-roll div.sheet-template-container {
   border: 2px solid #000 !important;
   border-radius: 3px 3px 3px 3px; }
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-header {
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-header {
     background-color: #702082;
     color: #fff;
     padding: 2px;
@@ -955,50 +967,50 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
     font-size: 1.2em;
     text-align: center;
     font-weight: bold; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-header .sheet-template-main {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-header .sheet-template-main {
       text-transform: uppercase; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-header .sheet-template-sub {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-header .sheet-template-sub {
       font-size: 0.8em; }
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-left,
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-right {
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-used .sheet-template-left,
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-used .sheet-template-right {
     width: calc(50% - 2px);
     display: inline-block;
     text-align: center; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-left div,
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-right div {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-used .sheet-template-left div,
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-used .sheet-template-right div {
       text-transform: uppercase; }
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .sheet-template-left {
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-used .sheet-template-left {
     text-align: left; }
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-used .inlinerollresult {
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-used .inlinerollresult {
     display: inline-block;
     text-align: center;
     font-weight: normal;
     background-color: inherit;
     border: 0; }
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row {
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row {
     text-align: center; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row span {
       display: inline-block;
       margin-right: 10px;
       font-weight: bold; }
-      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-left {
+      .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-left {
         width: 70px; }
-      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-right,
-      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-right span {
+      .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-right,
+      .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row span.sheet-template-right span {
         width: 32px; }
-      .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.fullfail, .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row span.fullcrit {
+      .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row span.fullfail, .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row span.fullcrit {
         border: 0; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-row .sheet-template-vals {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row .sheet-template-vals {
       margin: auto; }
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span {
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span {
     color: green; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span .inlinerollresult {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span .inlinerollresult {
       border: 1px solid green; }
-  .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row {
+  .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-row {
     padding: 5px;
     border-bottom: 1px solid black;
     box-sizing: border-box; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(odd), .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(odd) {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-row:nth-child(odd), .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-row:nth-child(odd) {
       background-color: #d9d9d6; }
-    .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(even), .sheet-rolltemplate-feat div.sheet-template-container .sheet-template-row:nth-child(even) {
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-row:nth-child(even), .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-row:nth-child(even) {
       background-color: #e9e9e9; }

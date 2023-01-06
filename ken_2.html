@@ -23,8 +23,9 @@
                 style="left: 545px; top: 84px; width: 30px;" min="0" max="100" value="0" />
         </div>
         <div id="general-roll-container">
-            <button name="act_general" type="action" title="general-roll" style="position:absolute; left:290px; top: 110px;font-family:dicefontd6; border: transparent;"
-                value="|||"class="sm-roll">f</button>
+            <button name="act_general" type="action" title="general-roll"
+                style="position:absolute; left:290px; top: 110px; border: transparent;" value="|||" class="sm-roll">
+                <span style="font-family:dicefontd6;">f</span><span style="font-family:dicefontd6;">f</span></button>
         </div>
 
         <!-- Attributes -->
@@ -1317,14 +1318,17 @@
                     <div id="base-martial-container">
                         <div id="martial-kick" class="element">
                             <div class="name">
-                                <button name="roll_roll_kick" type="roll"
-                                    value="/em uses @{kick_name} with MS [[0 - 2d6]]">
-                                    <span name="attr_kick_name"></span>
+                                <input type="hidden" name="attr_kick-rolldmg" value="true" />
+                                <input type="hidden" name="attr_kick-isphysical" value="true" />
+                                <button name="act_am" type="action" title="kick"
+                                    value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                                    class="sm-roll">
+                                    <span name="attr_kick-name"></span>
                                 </button>
                                 <span class="used">
                                     <input type="checkbox" name="attr_kick_used" class="martial-used" value="1" />
                                 </span>
-                                <input type="hidden" name="attr_kick_name" value="B2 Calcio Marziale" />
+                                <input type="hidden" name="attr_kick-name" value="B2 Calcio Marziale" />
                             </div>
                             <div class="value">
                                 <div class="inner-cell">
@@ -1334,58 +1338,58 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_kick_value" type="radio" value="-2" checked />
+                                        <input name="attr_kick" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_kick_value" type="radio" value="0" />
+                                        <input name="attr_kick" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_kick_value" type="radio" value="1" />
+                                        <input name="attr_kick" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_kick_value" type="radio" value="2" />
+                                        <input name="attr_kick" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_kick_value" type="radio" value="3" />
+                                        <input name="attr_kick" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
                             </div>
                             <div class="requisites">
-                                <span name="attr_kick_req"></span>
-                                <input type="hidden" name="attr_kick_req" value="---" />
+                                <span name="attr_kick-req"></span>
+                                <input type="hidden" name="attr_kick-req" value="---" />
                             </div>
                             <div class="cell" name="t">
-                                <span name="attr_kick_t"></span>
-                                <input type="hidden" name="attr_kick_t" value="C" />
+                                <span name="attr_kick-t"></span>
+                                <input type="hidden" name="attr_kick-t" value="C" />
                             </div>
                             <div class="cell" name="c">
-                                <span name="attr_kick_c"></span>
-                                <input type="hidden" name="attr_kick_c" value="1" />
+                                <span name="attr_kick-c"></span>
+                                <input type="hidden" name="attr_kick-c" value="1" />
                             </div>
                             <div class="damage">
-                                <span name="attr_kick_dmg"></span>
-                                <input type="hidden" name="attr_kick_dmg" value="(C)PV (B)PR" />
+                                <span name="attr_kick-dmg"></span>
+                                <input type="hidden" name="attr_kick-dmg" value="(C)PV (B)PR" />
                             </div>
                             <div class="special">
-                                <span name="attr_kick_spec"></span>
-                                <input type="hidden" name="attr_kick_spec" value="---" />
+                                <span name="attr_kick-spec"></span>
+                                <input type="hidden" name="attr_kick-spec" value="---" />
                             </div>
                             <div class="notes">
-                                <span name="attr_kick_notes"></span>
-                                <input type="hidden" name="attr_kick_notes" value="---" />
+                                <span name="attr_kick-notes"></span>
+                                <input type="hidden" name="attr_kick-notes" value="---" />
                             </div>
                         </div>
                         <div id="martial-rush" class="element">
@@ -2275,8 +2279,7 @@
                                     <div class="name">
                                         <button class="martial-options-toggle" type="action"
                                             name="act_activate"><i>i</i></button>
-                                        <button name="roll_roll_martial" type="roll""
-                                            value="/em uses @{martial_name} with MS [[0 - 2d6]]">
+                                        <button name="act_am" type="action" class="roll-button">
                                             <span name="attr_martial_name"></span>
                                         </button>
                                         <span class="used">
@@ -2384,13 +2387,54 @@
                                             <span class="label-span left-side">Danno:</span>
                                             <input class="right-side" type="text" name="attr_martial_dmg" value="---" />
                                         </div>
-                                        <div>
-                                            <span class="label-span left-side-small">T:</span>
+                                        <div class="choices">
+                                            <span class="label-span left-side-smaller">T:</span>
                                             <input class="right-side-small" type="text" name="attr_martial_t" />
-                                            <span class="label-span left-side-small">C:</span>
+                                            <span class="label-span left-side-smaller">C:</span>
                                             <input class="right-side-small" type="text" name="attr_martial_c" />
-                                        </div>
+                                            <!--<span class="label-span left-side-small">Potenza</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_usepotenza" value="true" /></span>
+                                            <span class="label-span left-side-small">Rapidità</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_userapidita" value="true" /></span>
+                                            <span class="label-span" style="width:55px; margin-left:2px;">Precisione</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_useprecisione" value="true" /></span>-->
+                                            <input type="hidden" name="attr_usepotenza" value="true" />
+                                            <input type="hidden" name="attr_userapidita" value="true" />
+                                            <input type="hidden" name="attr_useprecisione" value="true" />
 
+
+                                            <span class="label-span left-side-small">Attacco</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_useattacco" value="true" /></span>
+                                            <span class="label-span left-side-small">Difesa</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_usedifesa" value="true" /></span>
+                                            <span class="label-span"
+                                                style="width:75px;margin-left:2px;">M.Armatura</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_isphysical" value="true" /></span>
+                                        </div>
+                                        <div class="choices">
+                                            <!--<span class="label-span left-side-small">Attacco</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_useattacco" value="true" /></span>
+                                            <span class="label-span left-side-small">Difesa</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_usedifesa" value="true" /></span>
+                                            <span class="label-span"
+                                                style="width:75px;margin-left:2px;">M.Armatura</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_isphysical" value="true" /></span>-->
+                                            <span class="label-span left-side-small">Danni</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_rolldmg" value="true" /></span>
+                                            <span class="label-span left-side-smaller">D</span>
+                                            <span class="label-span right-side-small checkbox-container"><input
+                                                    type="checkbox" name="attr_isdistance" value="true" /></span>
+                                        </div>
                                     </div>
                                     <div class="half">
                                         <div>
@@ -2454,9 +2498,11 @@
         });
     });
     on("sheet:opened", () => setArmorMalus());
-    on("clicked:feat", (info) => processRoll(info));
+    on("clicked:feat", (info) => processFeatRoll(info));
+    on("clicked:am", (info) => processAmRoll(info));
     on("clicked:general", (info) => rollGeneral(info));
-    on("clicked:repeating_feats:feat", (info) => processRepeatingRoll(info));
+    on("clicked:repeating_feats:feat", (info) => processRepeatingFeatRoll(info));
+    on("clicked:repeating_martial:am", (info) => processRepeatingAmRoll(info));
     on("change:bpotenza change:bprecisione change:brapidita", function(eventInfo) {
         const attr = eventInfo.triggerName.split("b")[1];
         const battr = eventInfo.triggerName;
@@ -2621,7 +2667,7 @@
         return {dice: dice, range: range};
     }
     /* check if roll needs query by user and sends to prepareTemplate */
-    const processRoll = function(info) {
+    const processFeatRoll = function(info) {
         /* check if any need */
         const title = info.htmlAttributes.title;
         info.htmlAttributes["modifier"] = title;
@@ -2640,9 +2686,31 @@
             }
             prepareRollTemplate(info);
         });
-        
     }
-    const processRepeatingRoll = function(info) {
+    const processAmRoll = function(info) {
+        /* check if any need */
+        const title = info.htmlAttributes.title;
+        info.htmlAttributes["modifier"] = title;
+        info.htmlAttributes["displaytitle"] = title + "-name";
+        info.htmlAttributes["rolldmg"] = title + "-rolldmg";
+        info.htmlAttributes["isPhysical"] = title + "-isphysical";
+        info.htmlAttributes["desc"] = "Descr";
+        const getValsArray = ["repeating_martial_isdistance", "repeating_martial_martial_t"];
+        let values = [];
+        getAttrs(getValsArray, (vals) => {
+            let sobstMod = "";
+            if(vals[getValsArray[0]] == "true") {
+                sobstMod = "feat-3";
+            }
+            else if(vals[getValsArray[1]] == "CO") sobstMod = "feat-1";
+            else sobstMod = "feat-19";
+            getAttrs([sobstMod,info.htmlAttributes["modifier"] ], (vs) => {
+                if(parseInt(vs[info.htmlAttributes["modifier"]]) > parseInt(vs[sobstMod])) info.htmlAttributes["modifier"] = sobstMod;
+                prepareRollTemplate(info);
+            });
+        });
+    }
+    const processRepeatingFeatRoll = function(info) {
         /* GetInfo and prepare value */        
         const attrs = ["repeating_feats_componente", "repeating_feats_mezzo", "repeating_feats_regno"];
         const mods = ["repeating_feats_usepotenza", "repeating_feats_userapidita", "repeating_feats_useprecisione", "repeating_feats_useattacco", "repeating_feats_usedifesa"];
@@ -2663,6 +2731,45 @@
                 });
                 info.htmlAttributes.value = values.join("|");
                 prepareRollTemplate(info);        
+            });
+        });
+    }
+    const processRepeatingAmRoll = function(info) {
+        /* GetInfo and prepare value */        
+        const attrs = ["repeating_martial_componente", "repeating_martial_mezzo", "repeating_martial_regno"];
+        const mods = [/*"repeating_martial_usepotenza", "repeating_martial_userapidita", "repeating_martial_useprecisione",*/ "repeating_martial_useattacco", "repeating_martial_usedifesa"];
+        info.htmlAttributes["displaytitle"] = "repeating_martial_martial_name";
+        info.htmlAttributes["modifier"] = "repeating_martial_martial_value";
+        info.htmlAttributes["isPhysical"] = "repeating_martial_isphysical";
+        info.htmlAttributes["rolldmg"] = "repeating_martial_rolldmg";
+        info.htmlAttributes["desc"] = "Descr";
+        const getValsArray = ["repeating_martial_isdistance", "repeating_martial_martial_t"];
+        const replace = "repeating_martial_use";
+        let values = [];
+        getAttrs(getValsArray, (vals) => {
+            let sobstMod = "";
+            if(vals[getValsArray[0]] == "true") {
+                sobstMod = "feat-3";
+            }
+            else if(vals[getValsArray[1]] == "CO") sobstMod = "feat-1";
+            else sobstMod = "feat-19";
+            getAttrs([sobstMod, info.htmlAttributes["modifier"]], (vs) => {
+                if(parseInt(vs[info.htmlAttributes["modifier"]]) > parseInt(vs[sobstMod])) info.htmlAttributes["modifier"] = sobstMod;
+                getAttrs(attrs, (vs) => {
+                    Object.keys(vs).forEach((k) => {
+                        values.push(vs[k]);
+                    });
+                    getAttrs(mods, (vals) => {
+                        values = values.concat(["{\"potenza\": true}", "{\"rapidita\": true}", "{\"precisione\": true}"]);
+                        Object.keys(vals).forEach((k) => {
+                            const mod = {};
+                            mod[k.replace(replace, "")] = vals[k] === 'true';
+                            values.push(JSON.stringify(mod));
+                        });
+                        info.htmlAttributes.value = values.join("|");
+                        prepareRollTemplate(info);        
+                    });
+                });
             });
         });
     }
@@ -2756,6 +2863,7 @@
                         let showdmg = misc[rolldmg] === 'true';
                         let roll = `&{template:roll} {{name=${misc.character_name}}} {{rollname=${misc[name]}}} {{malus=${totalMalus}}} `;
                         roll += `{{modifier=[[${mod}]]}} {{critrange=[[${critInfo.range}]]}} `;
+                        if(info.htmlAttributes["desc"]) roll += ` {{showdesc=1}} {{desc=${info.htmlAttributes["desc"]}}}`;
                         if(showdmg) { 
                             const locRes = await startRoll("! {{loc=[[1d6]]}} {{sp=[[1d6]]}}");
                             let loc = locRes.results.loc.result;
@@ -3004,6 +3112,14 @@
             </div>
             {{/rollBetween() roll 0 critrange }}
             {{/showdmg}}
+            {{#showdesc}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-vals">
+                    <span class="sheet-template-left">Description</span>
+                    <span class="sheet-template-right">{{desc}}</span>
+                </div>
+            </div>
+            {{/showdesc}}
         </div>
     </div>
 </rolltemplate>
