@@ -213,7 +213,7 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
   display: none; }
 
 #front-container {
-  background-image: url("https://raw.githubusercontent.com/mdragonsrage/Ken_2/master/assets/img/scheda_fronte.jpg?token=GHSAT0AAAAAAB46BKDCAZIH63QLXKVPPT32Y5R4DZQ"); }
+  background-image: url("https://raw.githubusercontent.com/mdragonsrage/Ken_2/master/assets/img/scheda_fronte.jpg"); }
 
 .header {
   height: 15px;
@@ -941,7 +941,7 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
             text-align: left; }
           #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer .footer-textarea {
             height: 90px;
-            width: 515px; }
+            width: 500px; }
 
 .sheet-rolltemplate-feat div.sheet-template-container {
   border: 2px solid #000 !important;

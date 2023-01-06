@@ -22,6 +22,11 @@
             <input name="attr_pa" type="number" class="sm-prop sm-num header"
                 style="left: 545px; top: 84px; width: 30px;" min="0" max="100" value="0" />
         </div>
+        <div id="general-roll-container">
+            <button name="act_general" type="action" title="general-roll" style="position:absolute; left:290px; top: 110px;font-family:dicefontd6; border: transparent;"
+                value="|||"class="sm-roll">f</button>
+        </div>
+
         <!-- Attributes -->
         <div id="attributes-container" class="attributes">
             <!--Components & Mediums-->
@@ -482,7 +487,7 @@
                     <input type="checkbox" name="attr_feat-2-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-2-isphysical" value="true" />
                     <button name="act_feat" type="action" title="feat-2"
-                        value="corpo|pecezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
+                        value="corpo|percezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
                     <label class="repeating minus-4">
@@ -1184,7 +1189,7 @@
                         <input type="hidden" name="attr_featvalue" value="-1000" />
                         <div class="display feat">
                             <input type="checkbox" name="attr_featused" class="feat-used" value="1" />
-                            <button name="act_feat" type="action"class="roll-button">
+                            <button name="act_feat" type="action" class="roll-button">
                                 <span type="text" name="attr_featname"></span>
                             </button>
                             <label class="minus-4">
@@ -1238,11 +1243,12 @@
                             <div>
                                 <span class="label-span left-side">Regno:</span>
                                 <select class="right-side" name="attr_regno">
+                                    <option value="umano">Umano</option>
+                                    <option value="meccanico">Meccanico</option>
                                     <option value="minerale">Minerale</option>
                                     <option value="vegetale">Vegetale</option>
                                     <option value="animale">Animale</option>
-                                    <option value="umano">Umano</option>
-                                    <option value="meccanico">Meccanico</option>
+                                    <option value="nulla">Nulla</option>
                                 </select>
                             </div>
                             <div>
@@ -1260,12 +1266,12 @@
                             <div>
                                 <span class="label-span left-side">Difesa</span>
                                 <span><input type="checkbox" name="attr_usedifesa" value="true" /></span>
-                                <span class="label-span left-side">Armatura</span>
+                                <span class="label-span left-side">M.Armatura</span>
                                 <span><input type="checkbox" name="attr_isphysical" value="true" /></span>
                             </div>
                             <div>
                                 <span class="label-span left-side">Danni</span>
-                                <span><input type="checkbox" name="attr_rolldmg" value="true"/></span>
+                                <span><input type="checkbox" name="attr_rolldmg" value="true" /></span>
                             </div>
                         </div>
                         <button class="feat-options-toggle" type="action" name="act_activate"><i>i</i></button>
@@ -2269,7 +2275,7 @@
                                     <div class="name">
                                         <button class="martial-options-toggle" type="action"
                                             name="act_activate"><i>i</i></button>
-                                        <button name="roll_roll_martial" type="roll"
+                                        <button name="roll_roll_martial" type="roll""
                                             value="/em uses @{martial_name} with MS [[0 - 2d6]]">
                                             <span name="attr_martial_name"></span>
                                         </button>
@@ -2344,29 +2350,30 @@
                                         <div>
                                             <span class="label-span left-side">Componente:</span>
                                             <select class="right-side" name="attr_componente">
-                                                <option value="@{corpo}">Corpo</option>
-                                                <option value="@{istinto}">Istinto</option>
-                                                <option value="@{cuore}">Cuore</option>
-                                                <option value="@{mente}">Mente</option>
+                                                <option value="corpo">Corpo</option>
+                                                <option value="istinto">Istinto</option>
+                                                <option value="cuore">Cuore</option>
+                                                <option value="mente">Mente</option>
                                             </select>
                                         </div>
                                         <div>
                                             <span class="label-span left-side">Mezzo:</span>
                                             <select class="right-side" name="attr_mezzo">
-                                                <option value="@{percezione}">Percezione</option>
-                                                <option value="@{azione}">Azione</option>
-                                                <option value="@{desiderio}">Desiderio</option>
-                                                <option value="@{resistenza}">Resistenza</option>
+                                                <option value="percezione">Percezione</option>
+                                                <option value="azione">Azione</option>
+                                                <option value="desiderio">Desiderio</option>
+                                                <option value="resistenza">Resistenza</option>
                                             </select>
                                         </div>
                                         <div>
                                             <span class="label-span left-side">Regno:</span>
                                             <select class="right-side" name="attr_regno">
-                                                <option value="@{minerale}">Minerale</option>
-                                                <option value="@{vegetale}">Vegetale</option>
-                                                <option value="@{animale}">Animale</option>
-                                                <option value="@{umano}">Umano</option>
-                                                <option value="@{meccanico}">Meccanico</option>
+                                                <option value="umano">Umano</option>
+                                                <option value="meccanico">Meccanico</option>
+                                                <option value="minerale">Minerale</option>
+                                                <option value="vegetale">Vegetale</option>
+                                                <option value="animale">Animale</option>
+                                                <option value="nulla">Nulla</option>
                                             </select>
                                         </div>
                                         <div>
@@ -2393,7 +2400,7 @@
                                         </div>
                                     </div>
                                     <div class="footer">
-                                        <span class="label-span left-side-footer">Nome:</span>
+                                        <span class="label-span left-side-footer">Note:</span>
                                         <textarea class="textarea footer-textarea" type="text"
                                             name="attr_martial_notes">---</textarea>
                                     </div>
@@ -2448,6 +2455,7 @@
     });
     on("sheet:opened", () => setArmorMalus());
     on("clicked:feat", (info) => processRoll(info));
+    on("clicked:general", (info) => rollGeneral(info));
     on("clicked:repeating_feats:feat", (info) => processRepeatingRoll(info));
     on("change:bpotenza change:bprecisione change:brapidita", function(eventInfo) {
         const attr = eventInfo.triggerName.split("b")[1];
@@ -2739,25 +2747,39 @@
                         techList.push(tech);
                     });
                     let miscArray = ["malus_points", "character_name", name, modifier, rolldmg, isPhysical, "malus_p"];
-                    getAttrs(miscArray, function(misc) {
+                    getAttrs(miscArray, async function(misc) {
                         let damagedie = 2;
                         let critInfo = getCritInfo(misc[modifier]);
                         let mod = misc[modifier] ? parseInt(misc[modifier]) : -4;
                         let totalMalus = parseInt(misc.malus_points) - (misc[isPhysical] === 'true' ? parseInt(misc["malus_p"]) : 0);
                         let sum = totalMalus + mod;
                         let showdmg = misc[rolldmg] === 'true';
-                        let roll = `&{template:feat} {{name=${misc.character_name}}} {{rollname=${misc[name]}}} {{malus=${totalMalus}}} `;
+                        let roll = `&{template:roll} {{name=${misc.character_name}}} {{rollname=${misc[name]}}} {{malus=${totalMalus}}} `;
                         roll += `{{modifier=[[${mod}]]}} {{critrange=[[${critInfo.range}]]}} `;
-                        if(showdmg) roll += `{{showdmg=1}}`;
+                        if(showdmg) { 
+                            const locRes = await startRoll("! {{loc=[[1d6]]}} {{sp=[[1d6]]}}");
+                            let loc = locRes.results.loc.result;
+                            if(loc == 6) {
+                                const isHth = _.some(attributeList, function(o) {return _.propertyOf(o)('name') == 'azione'});
+                                if(!isHth) {
+                                    if(locRes.results.sp.result%2 == 0) loc += "p";
+                                    else loc += "d"
+                                }
+                            }
+                            roll += `{{showdmg=1}} {{loc=${loc}}}`
+                        };
                         attributeList.forEach((attr, index) => {
-                            roll += `{{component${index+1}Name=${attr.name}}} `;
-                            roll += `{{component${index+1}Value=${attr.val}}} `;
+                            roll += `{{at${index+1}Name=${attr.name}}} `;
+                            roll += `{{at${index+1}Value=${attr.val}}} `;
                             sum += parseInt(attr.val);
                         });
                         energyList.forEach((en, index) => {
                             roll += `{{energy${index+1}Name=${en.name}}} `;
                             roll += `{{energy${index+1}Value=${en.val}}} `;
                             sum += parseInt(en.val);
+                            if(en.name == "potenza") {
+                                damagedie += parseInt(en.val);
+                            }
                         });
                         techList.forEach((t, index) => {
                             roll += `{{tech${index+1}Name=${t.name}}} `;
@@ -2773,9 +2795,26 @@
             });
         });
     }
+    const rollGeneral = async function(info) {
+        const title = "Roll";
+        let needArray = ["component", "medium", "reign"];
+        info = await queryValues(info, needArray);
+        let attrs = info.htmlAttributes.value.split("|");
+        attrs = attrs.concat(["potenza", "rapidita", "precisione", "character_name", "malus_points"]);
+        getAttrs(attrs, async function(attr) {
+            let sum = 0 + parseInt(attr[attrs[0]]) + parseInt(attr[attrs[1]]) + parseInt(attr[attrs[2]]) + parseInt(attr["potenza"]) + parseInt(attr["rapidita"]) + parseInt(attr["precisione"]) + parseInt(attr["malus_points"]);
+            let roll = `&{template:roll} {{name=${attr.character_name}}} {{rollname=Roll}} {{malus=${attr["malus_points"]}}} {{critrange=[[2]]}}`;
+            roll += `{{at1Name=${attrs[0]}}} {{at1Value=${attr[attrs[0]]}}} {{at2Name=${attrs[1]}}} {{at2Value=${attr[attrs[1]]}}} {{at3Name=${attrs[2]}}} {{at3Value=${attr[attrs[2]]}}} `;
+            roll += `{{energy1Name=potenza}} {{energy1Value=${attr["potenza"]}}} {{energy1Name=rapidita}} {{energy1Value=${attr["rapidita"]}}} {{energy1Name=precisione}} {{energy1Value=${attr["precisione"]}}} `;
+            roll += ` [[${sum}  -[[2d6]] ]] {{roll=$[[1]]}} {{ms=$[[2]]}} `;
+            startRoll(roll, (res) => {
+                finishRoll(res.rollId,res);
+            });
+        });
+    }
 </script>
 
-<rolltemplate class="sheet-rolltemplate-feat">
+<rolltemplate class="sheet-rolltemplate-roll">
     <div class="sheet-template-container">
         <div class="sheet-template-header">
             <div class="sheet-template-main">
@@ -2786,36 +2825,36 @@
             </div>
         </div>
         <div class="sheet-template-used">
-            {{#component1Name}}
+            {{#at1Name}}
             <div class="sheet-template-row">
                 <div class="sheet-template-left">
-                    <div>{{component1Name}}</div>
+                    <div>{{at1Name}}</div>
                 </div>
                 <div class="sheet-template-right">
-                    <div>{{component1Value}}</div>
+                    <div>{{at1Value}}</div>
                 </div>
             </div>
-            {{/component1Name}}
-            {{#component2Name}}
+            {{/at1Name}}
+            {{#at2Name}}
             <div class="sheet-template-row">
                 <div class="sheet-template-left">
-                    <div>{{component2Name}}</div>
+                    <div>{{at2Name}}</div>
                 </div>
                 <div class="sheet-template-right">
-                    <div>{{component2Value}}</div>
+                    <div>{{at2Value}}</div>
                 </div>
             </div>
-            {{/component2Name}}
-            {{#component3Name}}
+            {{/at2Name}}
+            {{#at3Name}}
             <div class="sheet-template-row">
                 <div class="sheet-template-left">
-                    <div>{{component3Name}}</div>
+                    <div>{{at3Name}}</div>
                 </div>
                 <div class="sheet-template-right">
-                    <div>{{component3Value}}</div>
+                    <div>{{at3Value}}</div>
                 </div>
             </div>
-            {{/component3Name}}
+            {{/at3Name}}
             {{#energy1Name}}
             <div class="sheet-template-row">
                 <div class="sheet-template-left">
@@ -2915,43 +2954,55 @@
                 </div>
             </div>
             {{#showdmg}}
+            {{#rollGreater() ms 0 }}
+            {{#^rollBetween() roll 0 critrange }}
+            <div class="sheet-template-row">
+                <div class="sheet-template-vals">
+                    <span class="sheet-template-left">Location</span>
+                    <span class="sheet-template-right">{{loc}}</span>
+                </div>
+            </div>
+            <div class="sheet-template-row">
+                <div class="sheet-template-vals">
+                    <span class="sheet-template-left">Damage</span>
+                    <span class="sheet-template-right">{{msdamage}}</span>
+                </div>
+            </div>
+            {{/^rollBetween() roll 0 critrange }}
+            {{/rollGreater() ms 0 }}
+            {{#rollBetween() roll 0 critrange }}
+            <div class="sheet-template-critical">
+                <div class="sheet-template-row">It's a critcal roll!</div>
+                <div class="sheet-template-row">
+                    <div class="sheet-template-vals">
+                        <span class="sheet-template-left">Location</span>
+                        <span class="sheet-template-right">{{loc}}</span>
+                    </div>
+                </div>
+                {{#rollLess() ms 0 }}
+                <div class="sheet-template-row">
+                    <div class="sheet-template-vals">
+                        <span class="sheet-template-left">Damage</span>
+                        <span class="sheet-template-right">{{damage}}</span>
+                    </div>
+                </div>
+                {{/rollLess() ms 0 }}
                 {{#rollGreater() ms 0 }}
-                {{#^rollBetween() roll 0 critrange }}
                 <div class="sheet-template-row">
                     <div class="sheet-template-vals">
                         <span class="sheet-template-left">Damage</span>
                         <span class="sheet-template-right">{{msdamage}}</span>
                     </div>
                 </div>
-                {{/^rollBetween() roll 0 critrange }}
                 {{/rollGreater() ms 0 }}
-                {{#rollBetween() roll 0 critrange }}
-                <div class="sheet-template-critical">
-                    <div class="sheet-template-row">It's a critcal roll!</div>
-                    {{#rollLess() ms 0 }}
-                        <div class="sheet-template-row">
-                            <div class="sheet-template-vals">
-                                <span class="sheet-template-left">Damage</span>
-                                <span class="sheet-template-right">{{damage}}</span>
-                            </div>
-                        </div>
-                    {{/rollLess() ms 0 }}
-                    {{#rollGreater() ms 0 }}
-                        <div class="sheet-template-row">
-                            <div class="sheet-template-vals">
-                                <span class="sheet-template-left">Damage</span>
-                                <span class="sheet-template-right">{{msdamage}}</span>
-                            </div>
-                        </div>
-                    {{/rollGreater() ms 0 }}
-                    <div class="sheet-template-row">
-                        <div class="sheet-template-vals">
-                            <span class="sheet-template-left">Crit</span>
-                            <span class="sheet-template-right">{{crit}}</span>
-                        </div>
+                <div class="sheet-template-row">
+                    <div class="sheet-template-vals">
+                        <span class="sheet-template-left">Crit</span>
+                        <span class="sheet-template-right">{{crit}}</span>
                     </div>
                 </div>
-                {{/rollBetween() roll 0 critrange }}
+            </div>
+            {{/rollBetween() roll 0 critrange }}
             {{/showdmg}}
         </div>
     </div>
