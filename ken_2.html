@@ -2,7 +2,7 @@
 <div id="sheet-tab-container">
     <button type="action" name="act_front">Front</button>
     <button type="action" name="act_rear">Rear</button>
-    <button type="action" name="act_learn">Prerequisites</button>
+    <button type="action" name="act_misc">Prerequisites</button>
 </div>
 
 <div class="sheet-front">
@@ -2482,11 +2482,11 @@
         </div>
     </div>
 </div>
-<div class="sheet-learn">
-    <div id="learn-container" class="sheet-container">
-        <div id="learn-box">
+<div class="sheet-misc">
+    <div id="misc-container" class="sheet-container">
+        <div id="misc-box">
             <div class="title"><span>Prerequisiti</span></div>
-            <div class="grid-container">
+            <div id="grid-prereq" class="grid-container">
                 <div class="grid-title">
                     <div class="name"><span>Nome</span></div>
                     <div class="cell" title="Conosciuto"><span>C</span></div>
@@ -2501,22 +2501,24 @@
                     </div>
                 </div>
                 <div class="grid-values">
-                    <div id="prereq-Hokuto" class="element">
+                    <div id="prereq-hokuto" class="element">
                         <div class="name">
-                            <input type="hidden" name="attr_prereq-hokuto" value="0" />
-                            <input type="hidden" name="attr_prereq-hokuto_rolldmg" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto" value="-6" />
+                            <input type="hidden" name="attr_prereq-hokuto_rolldmg" value="false" />
                             <input type="hidden" name="attr_prereq-hokuto_isphysical" value="true" />
-                            <button name="act_prereq" type="action" alt="prereq-hokuto" class="sm-roll"
-                                value="|||#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                            <input type="hidden" name="attr_prereq-hokuto-needcomponent" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-needmedium" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-needreign" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-hokuto" class="sm-roll" value="|||#|$">
                                 <span name="attr_prereq-hokuto_name"></span>
                             </button>
                             <input type="hidden" name="attr_prereq-hokuto_name" value="Vie di Hokuto" />
                         </div>
                         <div class="cell" name="c">
-                            <input type="checkbox" aname="attr_prereq-hokuto-c" value="true" />
+                            <input type="checkbox" name="attr_prereq-hokuto-c" value="true" />
                         </div>
                         <div class="cell" name="u">
-                            <input type="checkbox" aname="attr_prereq-hokuto-u" value="true" />
+                            <input type="checkbox" name="attr_prereq-hokuto-u" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2545,6 +2547,310 @@
                             </label>
                         </div>
                     </div>
+                    <div id="prereq-hokuto-koryu" class="element">
+                        <div class="name">
+                            <input type="hidden" name="attr_prereq-hokuto-koryu" value="-6" />
+                            <input type="hidden" name="attr_prereq-hokuto-koryu_rolldmg" value="false" />
+                            <input type="hidden" name="attr_prereq-hokuto-koryu_isphysical" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-koryu-needcomponent" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-koryu-needmedium" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-koryu-needreign" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-hokuto-koryu" class="sm-roll" value="|||#|$">
+                                <span name="attr_prereq-hokuto-koryu_name"></span>
+                            </button>
+                            <input type="hidden" name="attr_prereq-hokuto-koryu_name" value="Vie di Hokuto Koryu" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-hokuto-koryu-c" value="true" />
+                        </div>
+                        <div class="cell" name="u">
+                            <input type="checkbox" name="attr_prereq-hokuto-koryu-u" value="true" />
+                        </div>
+                        <div class="value no-border">
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-minus-4" value="usable" />
+                                <span id="prereq-hokuto-koryu-minus-4" value="-4" type="prereq-hokuto-koryu"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-minus-2" value="usable" />
+                                <span id="prereq-hokuto-koryu-minus-2" value="-2" type="prereq-hokuto-koryu"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-0" value="usable" />
+                                <span id="prereq-hokuto-koryu-0" value="0" type="prereq-hokuto-koryu"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-1" value="usable" />
+                                <span id="prereq-hokuto-koryu-1" value="1" type="prereq-hokuto-koryu"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-2" value="usable" />
+                                <span id="prereq-hokuto-koryu-2" value="2" type="prereq-hokuto-koryu"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-3" value="usable" />
+                                <span id="prereq-hokuto-koryu-3" value="3" type="prereq-hokuto-koryu"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="prereq-nanto" class="element">
+                        <div class="name">
+                            <input type="hidden" name="attr_prereq-nanto" value="-6" />
+                            <input type="hidden" name="attr_prereq-nanto_rolldmg" value="false" />
+                            <input type="hidden" name="attr_prereq-nanto_isphysical" value="true" />
+                            <input type="hidden" name="attr_prereq-nanto-needcomponent" value="true" />
+                            <input type="hidden" name="attr_prereq-nanto-needmedium" value="true" />
+                            <input type="hidden" name="attr_prereq-nanto-needreign" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-nanto" class="sm-roll" value="|||#|$">
+                                <span name="attr_prereq-nanto_name"></span>
+                            </button>
+                            <input type="hidden" name="attr_prereq-nanto_name" value="Vie di Nanto" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-nanto-c" value="true" />
+                        </div>
+                        <div class="cell" name="u">
+                            <input type="checkbox" name="attr_prereq-nanto-u" value="true" />
+                        </div>
+                        <div class="value no-border">
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-nanto-minus-4" value="usable" />
+                                <span id="prereq-nanto-minus-4" value="-4" type="prereq-nanto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-nanto-minus-2" value="usable" />
+                                <span id="prereq-nanto-minus-2" value="-2" type="prereq-nanto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-nanto-0" value="usable" />
+                                <span id="prereq-nanto-0" value="0" type="prereq-nanto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-nanto-1" value="usable" />
+                                <span id="prereq-nanto-1" value="1" type="prereq-nanto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-nanto-2" value="usable" />
+                                <span id="prereq-nanto-2" value="2" type="prereq-nanto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-nanto-3" value="usable" />
+                                <span id="prereq-nanto-3" value="3" type="prereq-nanto"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="prereq-gento" class="element">
+                        <div class="name">
+                            <input type="hidden" name="attr_prereq-gento" value="-6" />
+                            <input type="hidden" name="attr_prereq-gento_rolldmg" value="false" />
+                            <input type="hidden" name="attr_prereq-gento_isphysical" value="true" />
+                            <input type="hidden" name="attr_prereq-gento-needcomponent" value="true" />
+                            <input type="hidden" name="attr_prereq-gento-needmedium" value="true" />
+                            <input type="hidden" name="attr_prereq-gento-needreign" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-gento" class="sm-roll" value="|||#|$">
+                                <span name="attr_prereq-gento_name"></span>
+                            </button>
+                            <input type="hidden" name="attr_prereq-gento_name" value="Vie di Gento" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-gento-c" value="true" />
+                        </div>
+                        <div class="cell" name="u">
+                            <input type="checkbox" name="attr_prereq-gento-u" value="true" />
+                        </div>
+                        <div class="value no-border">
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-gento-minus-4" value="usable" />
+                                <span id="prereq-gento-minus-4" value="-4" type="prereq-gento"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-gento-minus-2" value="usable" />
+                                <span id="prereq-gento-minus-2" value="-2" type="prereq-gento"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-gento-0" value="usable" />
+                                <span id="prereq-gento-0" value="0" type="prereq-gento"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-gento-1" value="usable" />
+                                <span id="prereq-gento-1" value="1" type="prereq-gento"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-gento-2" value="usable" />
+                                <span id="prereq-gento-2" value="2" type="prereq-gento"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-gento-3" value="usable" />
+                                <span id="prereq-gento-3" value="3" type="prereq-gento"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="prereq-hokuto-jen" class="element">
+                        <div class="name">
+                            <input type="hidden" name="attr_prereq-hokuto-jen" value="-6" />
+                            <input type="hidden" name="attr_prereq-hokuto-jen_rolldmg" value="false" />
+                            <input type="hidden" name="attr_prereq-hokuto-jen_isphysical" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-jen-needcomponent" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-jen-needmedium" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto-jen-needreign" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-hokuto-jen" class="sm-roll" value="|||#|$">
+                                <span name="attr_prereq-hokuto-jen_name"></span>
+                            </button>
+                            <input type="hidden" name="attr_prereq-hokuto-jen_name" value="Vie di Hokuto Jen" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-hokuto-jen-c" value="true" />
+                        </div>
+                        <div class="cell" name="u">
+                            <input type="checkbox" name="attr_prereq-hokuto-jen-u" value="true" />
+                        </div>
+                        <div class="value no-border">
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-minus-4" value="usable" />
+                                <span id="prereq-hokuto-jen-minus-4" value="-4" type="prereq-hokuto-jen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-minus-2" value="usable" />
+                                <span id="prereq-hokuto-jen-minus-2" value="-2" type="prereq-hokuto-jen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-0" value="usable" />
+                                <span id="prereq-hokuto-jen-0" value="0" type="prereq-hokuto-jen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-1" value="usable" />
+                                <span id="prereq-hokuto-jen-1" value="1" type="prereq-hokuto-jen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-2" value="usable" />
+                                <span id="prereq-hokuto-jen-2" value="2" type="prereq-hokuto-jen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-3" value="usable" />
+                                <span id="prereq-hokuto-jen-3" value="3" type="prereq-hokuto-jen"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="prereq-shura" class="element">
+                        <div class="name">
+                            <input type="hidden" name="attr_prereq-shura" value="-6" />
+                            <input type="hidden" name="attr_prereq-shura_rolldmg" value="false" />
+                            <input type="hidden" name="attr_prereq-shura_isphysical" value="true" />
+                            <input type="hidden" name="attr_prereq-shura-needcomponent" value="true" />
+                            <input type="hidden" name="attr_prereq-shura-needmedium" value="true" />
+                            <input type="hidden" name="attr_prereq-shura-needreign" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-shura" class="sm-roll" value="|||#|$">
+                                <span name="attr_prereq-shura_name"></span>
+                            </button>
+                            <input type="hidden" name="attr_prereq-shura_name" value="Vie di Shura" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-shura-c" value="true" />
+                        </div>
+                        <div class="cell" name="u">
+                            <input type="checkbox" name="attr_prereq-shura-u" value="true" />
+                        </div>
+                        <div class="value no-border">
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-shura-minus-4" value="usable" />
+                                <span id="prereq-shura-minus-4" value="-4" type="prereq-shura"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-shura-minus-2" value="usable" />
+                                <span id="prereq-shura-minus-2" value="-2" type="prereq-shura"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-shura-0" value="usable" />
+                                <span id="prereq-shura-0" value="0" type="prereq-shura"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-shura-1" value="usable" />
+                                <span id="prereq-shura-1" value="1" type="prereq-shura"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-shura-2" value="usable" />
+                                <span id="prereq-shura-2" value="2" type="prereq-shura"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-shura-3" value="usable" />
+                                <span id="prereq-shura-3" value="3" type="prereq-shura"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="prereq-taishen" class="element">
+                        <div class="name">
+                            <input type="hidden" name="attr_prereq-taishen" value="-6" />
+                            <input type="hidden" name="attr_prereq-taishen_rolldmg" value="false" />
+                            <input type="hidden" name="attr_prereq-taishen_isphysical" value="true" />
+                            <input type="hidden" name="attr_prereq-taishen-needcomponent" value="true" />
+                            <input type="hidden" name="attr_prereq-taishen-needmedium" value="true" />
+                            <input type="hidden" name="attr_prereq-taishen-needreign" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-taishen" class="sm-roll" value="|||#|$">
+                                <span name="attr_prereq-taishen_name"></span>
+                            </button>
+                            <input type="hidden" name="attr_prereq-taishen_name" value="Vie di Taishen" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-taishen-c" value="true" />
+                        </div>
+                        <div class="cell" name="u">
+                            <input type="checkbox" name="attr_prereq-taishen-u" value="true" />
+                        </div>
+                        <div class="value no-border">
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-taishen-minus-4" value="usable" />
+                                <span id="prereq-taishen-minus-4" value="-4" type="prereq-taishen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-taishen-minus-2" value="usable" />
+                                <span id="prereq-taishen-minus-2" value="-2" type="prereq-taishen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-taishen-0" value="usable" />
+                                <span id="prereq-taishen-0" value="0" type="prereq-taishen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-taishen-1" value="usable" />
+                                <span id="prereq-taishen-1" value="1" type="prereq-taishen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-taishen-2" value="usable" />
+                                <span id="prereq-taishen-2" value="2" type="prereq-taishen"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-taishen-3" value="usable" />
+                                <span id="prereq-taishen-3" value="3" type="prereq-taishen"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rolls-prereq" class="grid-container">
+                <div class="grid-title">
+                    <div style="width:100%;"><span>Tiri</span></div>
+                </div>
+                <div class="grid-values">
+                    <div id="learn-roll">
+                        <input type="hidden" name="attr_learnprereq_rolldmg" value="false" />
+                        <input type="hidden" name="attr_learnprereq_isphysical" value="true" />
+                        <button name="act_learnprereq" type="action" alt="learnprereq" class="sm-roll" 
+                            value="mente|percezione|umano|#|$">
+                            <span name="attr_learnprereq_name"></span>
+                            <span style="font-family:dicefontd6;">f</span>
+                        </button>
+                        <input type="hidden" name="attr_learnprereq_name" value="Impara nuovo Colpo" />
+                    </div>
+                    <div id="endure-roll">
+                        <input type="hidden" name="attr_endureprereq_rolldmg" value="false" />
+                        <input type="hidden" name="attr_endureprereq_isphysical" value="true" />
+                        <input type="hidden" name="attr_endureprereq_needcomponent" value="true" />
+                        <button name="act_endureprereq" type="action" alt="endureprereq" class="sm-roll" 
+                            value="?|resistenza|nulla|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:true}">
+                            <span name="attr_endureprereq_name"></span>
+                            <span style="font-family:dicefontd6;">f</span>
+                        </button>
+                        <input type="hidden" name="attr_endureprereq_name" value="Resisti effetti Speciali" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -2554,7 +2860,7 @@
     const dolorPointsAttributes = ['dolore-5', 'dolore-4', 'dolore-3', 'dolore-2', 'dolore-1', 'dolore-coma'];
     const resistencePointsAttributes = ['pres-9', 'pres-8', 'pres-7', 'pres-6', 'pres-5', 'pres-4', 'pres-3', 'pres-2', 'pres-1', 'pres-ko'];
     const equilibriumPointsAttributes = ['peq-9', 'peq-8', 'peq-7', 'peq-6', 'peq-5', 'peq-4', 'peq-3', 'peq-2', 'peq-1', 'peq-pazzo'];
-    const tabList = ["front","rear", "learn"];
+    const tabList = ["front","rear", "misc"];
     const attributes = [
         {"cuore": "component"}, {"istinto": "component"}, {"corpo": "component"}, {"mente": "component"},
         {"percezione": "medium"}, {"azione": "medium"}, {"desiderio": "medium"}, {"resistenza": "medium"},
@@ -2566,7 +2872,7 @@
     $20("button.repcontrol_edit").on("click", function(){$20("button.repcontrol_edit").toggleClass("clicked")})
     $20(".wound div").on("click", (event) => toggleWound(event));
     $20(".points span").on("click", (event) => togglePoint(event));
-    $20("#learn-box .value span").on("click", (event) => togglePrereq(event));
+    $20("#misc-box .value span").on("click", (event) => togglePrereq(event));
     
     /* tab selection */
     tabList.forEach(tab => {
@@ -2592,7 +2898,8 @@
     });
     on("sheet:opened", () => setArmorMalus());
     on("clicked:feat", (info) => processFeatRoll(info));
-    on("clicked:am", (info) => processAmRoll(info));
+    on("clicked:am", (info) => processAmPrereqRoll(info, true));
+    on("clicked:prereq", (info) => processAmPrereqRoll(info, false));
     on("clicked:general", (info) => rollGeneral(info));
     on("clicked:repeating_feats:feat", (info) => processRepeatingFeatRoll(info));
     on("clicked:repeating_martial:am", (info) => processRepeatingAmRoll(info));
@@ -2663,18 +2970,19 @@
             setAttrs(attr);
         });
     }
+    /* Set prerequisite bonus value */
     const togglePrereq = function(event) {
         const htmlAttrs = event.htmlAttributes;
         const attrName = htmlAttrs.type;
-        const prefix = attrName.split("_")[1];
         let newVal = htmlAttrs.value;
-        let array = ["-4", "-2", "0", "1", "2", "3"];
+        let array = ["-minus-4", "-minus-2", "-0", "-1", "-2", "-3"];
         array.forEach((el, i) => {
-            array[i] = prefix + el;
+            array[i] = attrName + el;
         });
-        getAttrs([htmlAttrs.id], function(val) {
+        getAttrs([htmlAttrs.id, attrName + "-c"], function(val) {
             let newColorStatus = val[htmlAttrs.id];
-            if(event.altKey || event.ctrlKey || event.shiftKey) {
+            const notKnown = val[attrName + "-c"] !== "true";
+            if(event.altKey || event.ctrlKey || event.shiftKey || notKnown) {
                 newColorStatus = "usable";
                 newVal = -6;
             }
@@ -2691,7 +2999,7 @@
             // change other attributes background color
             getAttrs(array, function(values){
                 array.forEach((key) => {
-                    if(values[key] == "selected" && key != htmlAttrs.id) {
+                    if(values[key] == "selected" && (notKnown || key != htmlAttrs.id)) {
                         values[key] = "usable";
                     }
                     else if(key == htmlAttrs.id) values[key] = newColorStatus;
@@ -2812,18 +3120,7 @@
         info.htmlAttributes["displaytitle"] = title + "-name";
         info.htmlAttributes["rolldmg"] = title + "-rolldmg";
         info.htmlAttributes["isPhysical"] = title + "-isphysical";
-        let needArray = [];
-        const attrs = [title + "-needcomponent", title + "-needreign", title + "-needmedium"];
-        getAttrs(attrs, async (vals) => {
-            Object.keys(vals).forEach((k) => {
-                let needed = vals[k];
-                if(needed === 'true') needArray.push(k.split("need")[1]);
-            });
-            if(needArray.length > 0) {
-                info = await queryValues(info, needArray);
-            }
-            prepareRollTemplate(info);
-        });
+        checkIfAnyNeeded(info, title);
     }
     const processRepeatingFeatRoll = function(info) {
         /* GetInfo and prepare value */        
@@ -2849,7 +3146,7 @@
             });
         });
     }
-    const processAmRoll = function(info) {
+    const processAmPrereqRoll = function(info, isAm) {
         /* check if any need */
         const title = info.htmlAttributes.alt;
         info.htmlAttributes["modifier"] = title;
@@ -2857,9 +3154,11 @@
         info.htmlAttributes["rolldmg"] = title + "_rolldmg";
         info.htmlAttributes["isPhysical"] = title + "_isphysical";
         info.htmlAttributes["desc"] = "Descr";
-        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("#", `{"potenza":true}|{"rapidita":true}|{"precisione":true}`) ;
+        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("#", `{"potenza":true}|{"rapidita":true}|{"precisione":true}`);
+        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("$", `{"attacco":false}|{"difesa":false}|{"aura":false}`);
         const getValsArray = [title + "_isdistance", title + "_martial_t"];
-        getAmValuesAndRoll(getValsArray, info, false);
+        if(isAm) getAmValuesAndRoll(getValsArray, info, false);
+        else checkIfAnyNeeded(info, title);
     }
     const processRepeatingAmRoll = function(info) {
         /* GetInfo and prepare value */        
@@ -2905,6 +3204,20 @@
                     });
                 }
             });
+        });
+    }
+    const checkIfAnyNeeded = async function (info, title) {
+        let needArray = [];
+        const attrs = [title + "-needcomponent", title + "-needreign", title + "-needmedium"];
+        getAttrs(attrs, async (vals) => {
+            Object.keys(vals).forEach((k) => {
+                let needed = vals[k];
+                if(needed === 'true') needArray.push(k.split("need")[1]);
+            });
+            if(needArray.length > 0) {
+                info = await queryValues(info, needArray);
+            }
+            prepareRollTemplate(info);
         });
     }
     /* query for reign and set value */

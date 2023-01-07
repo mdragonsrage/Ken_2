@@ -112,7 +112,7 @@ div.repcontrol {
 
 .sheet-front,
 .sheet-rear,
-.sheet-learn {
+.sheet-misc {
   height: 576px;
   overflow: auto;
 }
@@ -120,12 +120,12 @@ div.repcontrol {
 /*Configure the tab buttons*/
 .charsheet .sheet-front,
 .charsheet .sheet-rear,
-.charsheet .sheet-learn {
+.charsheet .sheet-misc {
   display: none;
 }
 
 .charsheet button[name="act_front"],
-.charsheet button[name="act_learn"],
+.charsheet button[name="act_misc"],
 .charsheet button[name="act_rear"] {
   border: 0;
   background-color: transparent;
@@ -134,12 +134,12 @@ div.repcontrol {
 /* show the selected tab */
 .charsheet .sheet-tabstoggle[value="front"] ~ div.sheet-front,
 .charsheet .sheet-tabstoggle[value="rear"] ~ div.sheet-rear,
-.charsheet .sheet-tabstoggle[value="learn"] ~ div.sheet-learn {
+.charsheet .sheet-tabstoggle[value="misc"] ~ div.sheet-misc {
   display: block;
 }
 
 .charsheet .sheet-tabstoggle[value="front"] ~ #sheet-tab-container > button[name="act_front"],
-.charsheet .sheet-tabstoggle[value="learn"] ~ #sheet-tab-container > button[name="act_learn"],
+.charsheet .sheet-tabstoggle[value="misc"] ~ #sheet-tab-container > button[name="act_misc"],
 .charsheet .sheet-tabstoggle[value="rear"] ~ #sheet-tab-container > button[name="act_rear"] {
   border: 2px solid black;
 }
