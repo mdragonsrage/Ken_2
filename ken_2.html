@@ -298,7 +298,7 @@
                 </button>
                 <button disabled class="sm-roll right row_3 splitted"></button>
                 <button name="roll_roll_parata_u"
-                    value="@{character_name} uses Parata Umano with MS [[(@{parata_u}) - 2d6]]" type="roll"
+                    value="/em @{character_name} uses Parata Umano with MS [[(@{parata_u}) - 2d6]]" type="roll"
                     class="sm-roll right row_3 calculated-triangle right-top">
                     <input name="attr_parata_u" value="(@{corpo} + @{azione} + @{umano} + @{difesa})" disabled="true"
                         type="number" class="sm-num" />
@@ -452,7 +452,7 @@
                     <input type="hidden" name="attr_feat-1-rolldmg" value="true" />
                     <input type="hidden" name="attr_feat-1-isphysical" value="true" />
                     <input type="checkbox" name="attr_feat-1-used" class="feat-used" value="1" />
-                    <button name="act_feat" type="action" title="feat-1"
+                    <button name="act_feat" type="action" alt="feat-1"
                         value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -487,7 +487,7 @@
                     <input type="hidden" name="attr_feat-2-rolldmg" value="true" />
                     <input type="checkbox" name="attr_feat-2-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-2-isphysical" value="true" />
-                    <button name="act_feat" type="action" title="feat-2"
+                    <button name="act_feat" type="action" alt="feat-2"
                         value="corpo|percezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -522,7 +522,7 @@
                     <input type="checkbox" name="attr_feat-3-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-3-rolldmg" value="true" />
                     <input type="hidden" name="attr_feat-3-isphysical" value="true" />
-                    <button name="act_feat" type="action" title="feat-3"
+                    <button name="act_feat" type="action" alt="feat-3"
                         value="corpo|percezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -557,7 +557,7 @@
                     <input type="checkbox" name="attr_feat-4-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-4-rolldmg" value="false" />
                     <input type="hidden" name="attr_feat-4-isphysical" value="true" />
-                    <button name="act_feat" type="action" title="feat-4"
+                    <button name="act_feat" type="action" alt="feat-4"
                         value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>>
@@ -584,7 +584,7 @@
                     <input type="checkbox" name="attr_feat-5-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-5-rolldmg" value="false" />
                     <input type="hidden" name="attr_feat-5-isphysical" value="true" />
-                    <button name="act_feat" type="action" title="feat-5"
+                    <button name="act_feat" type="action" alt="feat-5"
                         value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -620,7 +620,7 @@
                     <input type="hidden" name="attr_feat-6-rolldmg" value="false" />
                     <input type="hidden" name="attr_feat-6-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-6-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-6"
+                    <button name="act_feat" type="action" alt="feat-6"
                         value="|percezione||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -650,7 +650,7 @@
                     <input type="hidden" name="attr_feat-7-name" value="Commerciare" />
                     <input type="checkbox" name="attr_feat-7-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-7-rolldmg" value="false" />
-                    <button name="act_feat" type="action" title="feat-7"
+                    <button name="act_feat" type="action" alt="feat-7"
                         value="mente|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -684,7 +684,7 @@
                     <input type="hidden" name="attr_feat-8-name" value="Concentrazione" />
                     <input type="checkbox" name="attr_feat-8-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-8-rolldmg" value="false" />
-                    <button name="act_feat" type="action" title="feat-8"
+                    <button name="act_feat" type="action" alt="feat-8"
                         value="mente|resistenza|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -711,7 +711,7 @@
                     <input type="checkbox" name="attr_feat-9-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-9-rolldmg" value="false" />
                     <input type="hidden" name="attr_feat-1-isphysical" value="true" />
-                    <button name="act_feat" type="action" title="feat-9"
+                    <button name="act_feat" type="action" alt="feat-9"
                         value="corpo|resistenza|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -748,7 +748,7 @@
                     <input type="hidden" name="attr_feat-10-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-10-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-10-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-10"
+                    <button name="act_feat" type="action" alt="feat-10"
                         value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -779,7 +779,7 @@
                     <input type="checkbox" name="attr_feat-11-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-11-rolldmg" value="false" />
                     <input type="hidden" name="attr_feat-1-isphysical" value="true" />
-                    <button name="act_feat" type="action" title="feat-11"
+                    <button name="act_feat" type="action" alt="feat-11"
                         value="corpo|percezione|meccanico|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -846,7 +846,7 @@
                     <input type="hidden" name="attr_feat-13-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-13-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-13-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-13"
+                    <button name="act_feat" type="action" alt="feat-13"
                         value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -883,7 +883,7 @@
                     <input type="hidden" name="attr_feat-14-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-14-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-14-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-14"
+                    <button name="act_feat" type="action" alt="feat-14"
                         value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -917,7 +917,8 @@
                     <input type="hidden" name="attr_feat-15-name" value="Medicina" />
                     <input type="checkbox" name="attr_feat-15-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-15-rolldmg" value="false" />
-                    <button name="act_feat" type="action" title="feat-15"
+                    <input type="hidden" name="attr_feat-15-needreign" value="true" />
+                    <button name="act_feat" type="action" alt="feat-15"
                         value="mente|percezione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -954,7 +955,7 @@
                     <input type="hidden" name="attr_feat-16-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-16-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-16-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-16"
+                    <button name="act_feat" type="action" alt="feat-16"
                         value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -988,10 +989,8 @@
                     <input type="hidden" name="attr_feat-17-name" value="Pronto Soccorso" />
                     <input type="checkbox" name="attr_feat-17-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-17-rolldmg" value="false" />
-                    <input type="hidden" name="attr_feat-17-needcomponent" value="true" />
-                    <input type="hidden" name="attr_feat-17-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-17-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-17"
+                    <button name="act_feat" type="action" alt="feat-17"
                         value="mente|percezione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -1024,7 +1023,7 @@
                     <input type="hidden" name="attr_feat-18-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-18-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-18-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-18"
+                    <button name="act_feat" type="action" alt="feat-18"
                         value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -1058,8 +1057,8 @@
                     <input type="hidden" name="attr_feat-19-name" value="Rissare" />
                     <input type="checkbox" name="attr_feat-19-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-19-rolldmg" value="false" />
-                    <input type="hidden" name="attr_feat-1-isphysical" value="true" />
-                    <button name="act_feat" type="action" title="feat-19"
+                    <input type="hidden" name="attr_feat-19-isphysical" value="true" />
+                    <button name="act_feat" type="action" alt="feat-19"
                         value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -1086,8 +1085,8 @@
                     <input type="checkbox" name="attr_feat-20-used" class="feat-used" value="1" />
                     <input type="hidden" name="attr_feat-20-rolldmg" value="false" />
                     <input type="hidden" name="attr_feat-20-isphysical" value="true" />
-                    <button name="roll_roll_feat-20"
-                        value="/em uses @{feat-20-name} with MS [[(@{dist_m}) + (@{feat-20}) - 2d6]]" type="roll"
+                    <button name="act_feat" type="action" alt="feat-20"
+                        value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
                     <label class="minus-2">
@@ -1119,7 +1118,7 @@
                     <input type="hidden" name="attr_feat-21-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-21-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-21-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-21"
+                    <button name="act_feat" type="action" alt="feat-21"
                         value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -1156,7 +1155,7 @@
                     <input type="hidden" name="attr_feat-22-needcomponent" value="true" />
                     <input type="hidden" name="attr_feat-22-needmedium" value="true" />
                     <input type="hidden" name="attr_feat-22-needreign" value="true" />
-                    <button name="act_feat" type="action" title="feat-22"
+                    <button name="act_feat" type="action" alt="feat-22"
                         value="|||{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
                         class="sm-roll">
                     </button>
@@ -1318,17 +1317,16 @@
                     <div id="base-martial-container">
                         <div id="martial-kick" class="element">
                             <div class="name">
-                                <input type="hidden" name="attr_kick-rolldmg" value="true" />
-                                <input type="hidden" name="attr_kick-isphysical" value="true" />
-                                <button name="act_am" type="action" title="kick"
-                                    value="corpo|azione|umano|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:true}|{&quot;precisione&quot;:true}|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}"
-                                    class="sm-roll">
-                                    <span name="attr_kick-name"></span>
+                                <input type="hidden" name="attr_kick_rolldmg" value="true" />
+                                <input type="hidden" name="attr_kick_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="kick" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                    <span name="attr_kick_name"></span>
                                 </button>
                                 <span class="used">
                                     <input type="checkbox" name="attr_kick_used" class="martial-used" value="1" />
                                 </span>
-                                <input type="hidden" name="attr_kick-name" value="B2 Calcio Marziale" />
+                                <input type="hidden" name="attr_kick_name" value="B2 Calcio Marziale" />
                             </div>
                             <div class="value">
                                 <div class="inner-cell">
@@ -1368,8 +1366,8 @@
                                 </div>
                             </div>
                             <div class="requisites">
-                                <span name="attr_kick-req"></span>
-                                <input type="hidden" name="attr_kick-req" value="---" />
+                                <span name="attr_kick_req"></span>
+                                <input type="hidden" name="attr_kick_req" value="---" />
                             </div>
                             <div class="cell" name="t">
                                 <span name="attr_kick-t"></span>
@@ -1394,8 +1392,10 @@
                         </div>
                         <div id="martial-rush" class="element">
                             <div class="name">
-                                <button name="roll_roll_rush" type="roll"
-                                    value="/em uses @{rush_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_rush_rolldmg" value="true" />
+                                <input type="hidden" name="attr_rush_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="rush" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_rush_name"></span>
                                 </button>
                                 <span class="used">
@@ -1411,31 +1411,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_rush_value" type="radio" value="-2" checked />
+                                        <input name="attr_rush" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_rush_value" type="radio" value="0" />
+                                        <input name="attr_rush" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_rush_value" type="radio" value="1" />
+                                        <input name="attr_rush" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_rush_value" type="radio" value="2" />
+                                        <input name="attr_rush" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_rush_value" type="radio" value="3" />
+                                        <input name="attr_rush" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -1465,16 +1465,18 @@
                                 <input type="hidden" name="attr_rush_notes" value="---" />
                             </div>
                         </div>
-                        <div id="martial-grap" class="element">
+                        <div id="martial-grab" class="element">
                             <div class="name">
-                                <button name="roll_roll_grap" type="roll"
-                                    value="/em uses @{grap_name} with MS [[0 - 2d6]]">
-                                    <span name="attr_grap_name"></span>
+                                <input type="hidden" name="attr_grab_rolldmg" value="true" />
+                                <input type="hidden" name="attr_grab_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="grab" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                    <span name="attr_grab_name"></span>
                                 </button>
                                 <span class="used">
-                                    <input type="checkbox" name="attr_grap_used" class="martial-used" value="1" />
+                                    <input type="checkbox" name="attr_grab_used" class="martial-used" value="1" />
                                 </span>
-                                <input type="hidden" name="attr_grap_name" value="B5 Immobilizzare" />
+                                <input type="hidden" name="attr_grab_name" value="B5 Immobilizzare" />
                             </div>
                             <div class="value">
                                 <div class="inner-cell">
@@ -1484,64 +1486,66 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_grap_value" type="radio" value="-2" checked />
+                                        <input name="attr_grab" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_grap_value" type="radio" value="0" />
+                                        <input name="attr_grab" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_grap_value" type="radio" value="1" />
+                                        <input name="attr_grab" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_grap_value" type="radio" value="2" />
+                                        <input name="attr_grab" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_grap_value" type="radio" value="3" />
+                                        <input name="attr_grab" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
                             </div>
                             <div class="requisites">
-                                <span name="attr_grap_req"></span>
-                                <input type="hidden" name="attr_grap_req" value="---" />
+                                <span name="attr_grab_req"></span>
+                                <input type="hidden" name="attr_grab_req" value="---" />
                             </div>
                             <div class="cell" name="t">
-                                <span name="attr_grap_t"></span>
-                                <input type="hidden" name="attr_grap_t" value="P" />
+                                <span name="attr_grab_t"></span>
+                                <input type="hidden" name="attr_grab_t" value="P" />
                             </div>
                             <div class="cell" name="c">
-                                <span name="attr_grap_c"></span>
-                                <input type="hidden" name="attr_grap_c" value="2F" />
+                                <span name="attr_grab_c"></span>
+                                <input type="hidden" name="attr_grab_c" value="2F" />
                             </div>
                             <div class="damage">
-                                <span name="attr_grap_dmg"></span>
-                                <input type="hidden" name="attr_grap_dmg" value="(B)PR" />
+                                <span name="attr_grab_dmg"></span>
+                                <input type="hidden" name="attr_grab_dmg" value="(B)PR" />
                             </div>
                             <div class="special">
-                                <span name="attr_grap_spec"></span>
-                                <input type="hidden" name="attr_grap_spec" value="---" />
+                                <span name="attr_grab_spec"></span>
+                                <input type="hidden" name="attr_grab_spec" value="---" />
                             </div>
                             <div class="notes">
-                                <span name="attr_grap_notes"></span>
-                                <input type="hidden" name="attr_grap_notes" value="2 arti immobilizzati" />
+                                <span name="attr_grab_notes"></span>
+                                <input type="hidden" name="attr_grab_notes" value="2 arti immobilizzati" />
                             </div>
                         </div>
                         <div id="martial-punch" class="element">
                             <div class="name">
-                                <button name="roll_roll_punch" type="roll"
-                                    value="/em uses @{punch_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_punch_rolldmg" value="true" />
+                                <input type="hidden" name="attr_punch_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="punch" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_punch_name"></span>
                                 </button>
                                 <span class="used">
@@ -1557,31 +1561,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_punch_value" type="radio" value="-2" checked />
+                                        <input name="attr_punch" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_punch_value" type="radio" value="0" />
+                                        <input name="attr_punch" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_punch_value" type="radio" value="1" />
+                                        <input name="attr_punch" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_punch_value" type="radio" value="2" />
+                                        <input name="attr_punch" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_punch_value" type="radio" value="3" />
+                                        <input name="attr_punch" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -1613,8 +1617,10 @@
                         </div>
                         <div id="martial-push" class="element">
                             <div class="name">
-                                <button name="roll_roll_push" type="roll"
-                                    value="/em uses @{push_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_push_rolldmg" value="true" />
+                                <input type="hidden" name="attr_push_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="push" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_push_name"></span>
                                 </button>
                                 <span class="used">
@@ -1630,31 +1636,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_push_value" type="radio" value="-2" checked />
+                                        <input name="attr_push" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_push_value" type="radio" value="0" />
+                                        <input name="attr_push" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_push_value" type="radio" value="1" />
+                                        <input name="attr_push" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_push_value" type="radio" value="2" />
+                                        <input name="attr_push" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_push_value" type="radio" value="3" />
+                                        <input name="attr_push" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -1686,8 +1692,10 @@
                         </div>
                         <div id="martial-crush" class="element">
                             <div class="name">
-                                <button name="roll_roll_crush" type="roll"
-                                    value="/em uses @{crush_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_crush_rolldmg" value="true" />
+                                <input type="hidden" name="attr_crush_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="crush" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_crush_name"></span>
                                 </button>
                                 <span class="used">
@@ -1703,31 +1711,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_crush_value" type="radio" value="-2" checked />
+                                        <input name="attr_crush" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_crush_value" type="radio" value="0" />
+                                        <input name="attr_crush" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_crush_value" type="radio" value="1" />
+                                        <input name="attr_crush" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_crush_value" type="radio" value="2" />
+                                        <input name="attr_crush" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_crush_value" type="radio" value="3" />
+                                        <input name="attr_crush" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -1759,8 +1767,10 @@
                         </div>
                         <div id="martial-headbut" class="element">
                             <div class="name">
-                                <button name="roll_roll_headbut" type="roll"
-                                    value="/em uses @{headbut_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_headbut_rolldmg" value="true" />
+                                <input type="hidden" name="attr_headbut_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="headbut" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_headbut_name"></span>
                                 </button>
                                 <span class="used">
@@ -1776,31 +1786,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_headbut_value" type="radio" value="-2" checked />
+                                        <input name="attr_headbut" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_headbut_value" type="radio" value="0" />
+                                        <input name="attr_headbut" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_headbut_value" type="radio" value="1" />
+                                        <input name="attr_headbut" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_headbut_value" type="radio" value="2" />
+                                        <input name="attr_headbut" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_headbut_value" type="radio" value="3" />
+                                        <input name="attr_headbut" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -1832,8 +1842,10 @@
                         </div>
                         <div id="martial-jump-kick" class="element">
                             <div class="name">
-                                <button name="roll_roll_jump-kick" type="roll"
-                                    value="/em uses @{jump-kick_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_jump-kick_rolldmg" value="true" />
+                                <input type="hidden" name="attr_jump-kick_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="jump-kick" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_jump-kick_name"></span>
                                 </button>
                                 <span class="used">
@@ -1849,31 +1861,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_jump-kick_value" type="radio" value="-2" checked />
+                                        <input name="attr_jump-kick" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_jump-kick_value" type="radio" value="0" />
+                                        <input name="attr_jump-kick" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_jump-kick_value" type="radio" value="1" />
+                                        <input name="attr_jump-kick" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_jump-kick_value" type="radio" value="2" />
+                                        <input name="attr_jump-kick" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_jump-kick_value" type="radio" value="3" />
+                                        <input name="attr_jump-kick" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -1905,8 +1917,10 @@
                         </div>
                         <div id="martial-endure" class="element">
                             <div class="name">
-                                <button name="roll_roll_endure" type="roll"
-                                    value="/em uses @{endure_name} with MS [[@{mente} + @{desiderio} + @{umano} + @{endure_value} - 2d6]]">
+                                <input type="hidden" name="attr_endure_rolldmg" value="true" />
+                                <input type="hidden" name="attr_endure_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="endure" class="sm-roll"
+                                    value="mente|desiderio|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_endure_name"></span>
                                 </button>
                                 <span class="used">
@@ -1922,31 +1936,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_endure_value" type="radio" value="-2" checked />
+                                        <input name="attr_endure" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_endure_value" type="radio" value="0" />
+                                        <input name="attr_endure" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_endure_value" type="radio" value="1" />
+                                        <input name="attr_endure" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_endure_value" type="radio" value="2" />
+                                        <input name="attr_endure" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_endure_value" type="radio" value="3" />
+                                        <input name="attr_endure" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -1971,15 +1985,17 @@
                                 <span name="attr_endure_spec"></span>
                                 <input type="hidden" name="attr_endure_spec" value="---" />
                             </div>
-                            <div class="notes">
+                            <div class="notes" title="Test: Mente + Desiderio + Umano">
                                 <span name="attr_endure_notes"></span>
                                 <input type="hidden" name="attr_endure_notes" value="Test: Mente + Des. + Umano" />
                             </div>
                         </div>
                         <div id="martial-melee" class="element">
                             <div class="name">
-                                <button name="roll_roll_melee" type="roll"
-                                    value="/em uses @{melee_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_melee_rolldmg" value="true" />
+                                <input type="hidden" name="attr_melee_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="melee" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_melee_name"></span>
                                 </button>
                                 <span class="used">
@@ -1995,31 +2011,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_melee_value" type="radio" value="-2" checked />
+                                        <input name="attr_melee" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_melee_value" type="radio" value="0" />
+                                        <input name="attr_melee" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_melee_value" type="radio" value="1" />
+                                        <input name="attr_melee" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_melee_value" type="radio" value="2" />
+                                        <input name="attr_melee" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_melee_value" type="radio" value="3" />
+                                        <input name="attr_melee" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -2051,8 +2067,11 @@
                         </div>
                         <div id="martial-bullet" class="element">
                             <div class="name">
-                                <button name="roll_roll_bullet" type="roll"
-                                    value="/em uses @{bullet_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_bullet_isdistance" value="true" />
+                                <input type="hidden" name="attr_bullet_rolldmg" value="true" />
+                                <input type="hidden" name="attr_bullet_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="bullet" class="sm-roll"
+                                    value="corpo|percezione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_bullet_name"></span>
                                 </button>
                                 <span class="used">
@@ -2068,31 +2087,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_bullet_value" type="radio" value="-2" checked />
+                                        <input name="attr_bullet" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_bullet_value" type="radio" value="0" />
+                                        <input name="attr_bullet" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_bullet_value" type="radio" value="1" />
+                                        <input name="attr_bullet" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_bullet_value" type="radio" value="2" />
+                                        <input name="attr_bullet" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_bullet_value" type="radio" value="3" />
+                                        <input name="attr_bullet" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -2124,8 +2143,10 @@
                         </div>
                         <div id="martial-wall" class="element">
                             <div class="name">
-                                <button name="roll_roll_wall" type="roll"
-                                    value="/em uses @{wall_name} with MS [[0 - 2d6]]">
+                                <input type="hidden" name="attr_wall_rolldmg" value="true" />
+                                <input type="hidden" name="attr_wall_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="wall" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_wall_name"></span>
                                 </button>
                                 <span class="used">
@@ -2141,31 +2162,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_wall_value" type="radio" value="-2" checked />
+                                        <input name="attr_wall" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_wall_value" type="radio" value="0" />
+                                        <input name="attr_wall" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_wall_value" type="radio" value="1" />
+                                        <input name="attr_wall" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_wall_value" type="radio" value="2" />
+                                        <input name="attr_wall" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_wall_value" type="radio" value="3" />
+                                        <input name="attr_wall" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -2196,9 +2217,11 @@
                             </div>
                         </div>
                         <div id="martial-cross-ref" class="element">
-                            <div class="name">
-                                <button name="roll_roll_cross-ref" type="roll"
-                                    value="/em uses @{cross-ref_name} with MS [[0 - 2d6]]">
+                            <div class="name" title="B13 Tec. Rifl. Incrociata">
+                                <input type="hidden" name="attr_cross-ref_rolldmg" value="true" />
+                                <input type="hidden" name="attr_cross-ref_isphysical" value="true" />
+                                <button name="act_am" type="action" alt="cross-ref" class="sm-roll"
+                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_cross-ref_name"></span>
                                 </button>
                                 <span class="used">
@@ -2214,31 +2237,31 @@
                                 </div>
                                 <div class="inner-cell">
                                     <label class="minus-2">
-                                        <input name="attr_cross-ref_value" type="radio" value="-2" checked />
+                                        <input name="attr_cross-ref" type="radio" value="-2" checked />
                                         <span class="checked"></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="zero">
-                                        <input name="attr_cross-ref_value" type="radio" value="0" />
+                                        <input name="attr_cross-ref" type="radio" value="0" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-1">
-                                        <input name="attr_cross-ref_value" type="radio" value="1" />
+                                        <input name="attr_cross-ref" type="radio" value="1" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-2">
-                                        <input name="attr_cross-ref_value" type="radio" value="2" />
+                                        <input name="attr_cross-ref" type="radio" value="2" />
                                         <span></span>
                                     </label>
                                 </div>
                                 <div class="inner-cell">
                                     <label class="plus-3">
-                                        <input name="attr_cross-ref_value" type="radio" value="3" />
+                                        <input name="attr_cross-ref" type="radio" value="3" />
                                         <span></span>
                                     </label>
                                 </div>
@@ -2669,7 +2692,7 @@
     /* check if roll needs query by user and sends to prepareTemplate */
     const processFeatRoll = function(info) {
         /* check if any need */
-        const title = info.htmlAttributes.title;
+        const title = info.htmlAttributes.alt;
         info.htmlAttributes["modifier"] = title;
         info.htmlAttributes["displaytitle"] = title + "-name";
         info.htmlAttributes["rolldmg"] = title + "-rolldmg";
@@ -2685,29 +2708,6 @@
                 info = await queryValues(info, needArray);
             }
             prepareRollTemplate(info);
-        });
-    }
-    const processAmRoll = function(info) {
-        /* check if any need */
-        const title = info.htmlAttributes.title;
-        info.htmlAttributes["modifier"] = title;
-        info.htmlAttributes["displaytitle"] = title + "-name";
-        info.htmlAttributes["rolldmg"] = title + "-rolldmg";
-        info.htmlAttributes["isPhysical"] = title + "-isphysical";
-        info.htmlAttributes["desc"] = "Descr";
-        const getValsArray = ["repeating_martial_isdistance", "repeating_martial_martial_t"];
-        let values = [];
-        getAttrs(getValsArray, (vals) => {
-            let sobstMod = "";
-            if(vals[getValsArray[0]] == "true") {
-                sobstMod = "feat-3";
-            }
-            else if(vals[getValsArray[1]] == "CO") sobstMod = "feat-1";
-            else sobstMod = "feat-19";
-            getAttrs([sobstMod,info.htmlAttributes["modifier"] ], (vs) => {
-                if(parseInt(vs[info.htmlAttributes["modifier"]]) > parseInt(vs[sobstMod])) info.htmlAttributes["modifier"] = sobstMod;
-                prepareRollTemplate(info);
-            });
         });
     }
     const processRepeatingFeatRoll = function(info) {
@@ -2734,17 +2734,29 @@
             });
         });
     }
+    const processAmRoll = function(info) {
+        /* check if any need */
+        const title = info.htmlAttributes.alt;
+        info.htmlAttributes["modifier"] = title;
+        info.htmlAttributes["displaytitle"] = title + "_name";
+        info.htmlAttributes["rolldmg"] = title + "_rolldmg";
+        info.htmlAttributes["isPhysical"] = title + "_isphysical";
+        info.htmlAttributes["desc"] = "Descr";
+        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("#", `{"potenza":true}|{"rapidita":true}|{"precisione":true}`) ;
+        const getValsArray = [title + "_isdistance", title + "_martial_t"];
+        getAmValuesAndRoll(getValsArray, info, false);
+    }
     const processRepeatingAmRoll = function(info) {
         /* GetInfo and prepare value */        
-        const attrs = ["repeating_martial_componente", "repeating_martial_mezzo", "repeating_martial_regno"];
-        const mods = [/*"repeating_martial_usepotenza", "repeating_martial_userapidita", "repeating_martial_useprecisione",*/ "repeating_martial_useattacco", "repeating_martial_usedifesa"];
         info.htmlAttributes["displaytitle"] = "repeating_martial_martial_name";
         info.htmlAttributes["modifier"] = "repeating_martial_martial_value";
         info.htmlAttributes["isPhysical"] = "repeating_martial_isphysical";
         info.htmlAttributes["rolldmg"] = "repeating_martial_rolldmg";
         info.htmlAttributes["desc"] = "Descr";
         const getValsArray = ["repeating_martial_isdistance", "repeating_martial_martial_t"];
-        const replace = "repeating_martial_use";
+        getAmValuesAndRoll(getValsArray, info, true);
+    }
+    const getAmValuesAndRoll = function (getValsArray, info, isRepeating) {
         let values = [];
         getAttrs(getValsArray, (vals) => {
             let sobstMod = "";
@@ -2753,23 +2765,30 @@
             }
             else if(vals[getValsArray[1]] == "CO") sobstMod = "feat-1";
             else sobstMod = "feat-19";
-            getAttrs([sobstMod, info.htmlAttributes["modifier"]], (vs) => {
+            getAttrs([sobstMod,info.htmlAttributes["modifier"] ], (vs) => {
                 if(parseInt(vs[info.htmlAttributes["modifier"]]) > parseInt(vs[sobstMod])) info.htmlAttributes["modifier"] = sobstMod;
-                getAttrs(attrs, (vs) => {
-                    Object.keys(vs).forEach((k) => {
-                        values.push(vs[k]);
-                    });
-                    getAttrs(mods, (vals) => {
-                        values = values.concat(["{\"potenza\": true}", "{\"rapidita\": true}", "{\"precisione\": true}"]);
-                        Object.keys(vals).forEach((k) => {
-                            const mod = {};
-                            mod[k.replace(replace, "")] = vals[k] === 'true';
-                            values.push(JSON.stringify(mod));
+                if(!isRepeating) prepareRollTemplate(info);
+                else {
+                    let values = [];
+                    const attrs = ["repeating_martial_componente", "repeating_martial_mezzo", "repeating_martial_regno"];
+                    const mods = [/*"repeating_martial_usepotenza", "repeating_martial_userapidita", "repeating_martial_useprecisione",*/ "repeating_martial_useattacco", "repeating_martial_usedifesa"];
+                    const replace = "repeating_martial_use";
+                    getAttrs(attrs, (vs) => {
+                        Object.keys(vs).forEach((k) => {
+                            values.push(vs[k]);
                         });
-                        info.htmlAttributes.value = values.join("|");
-                        prepareRollTemplate(info);        
+                        getAttrs(mods, (vals) => {
+                            values = values.concat(["{\"potenza\": true}", "{\"rapidita\": true}", "{\"precisione\": true}"]);
+                            Object.keys(vals).forEach((k) => {
+                                const mod = {};
+                                mod[k.replace(replace, "")] = vals[k] === 'true';
+                                values.push(JSON.stringify(mod));
+                            });
+                            info.htmlAttributes.value = values.join("|");
+                            prepareRollTemplate(info);        
+                        });
                     });
-                });
+                }
             });
         });
     }
