@@ -88,26 +88,31 @@ div.repcontrol {
     content: ")"; }
 
 .sheet-front,
-.sheet-rear {
+.sheet-rear,
+.sheet-learn {
   height: 576px;
   overflow: auto; }
 
 /*Configure the tab buttons*/
 .charsheet .sheet-front,
-.charsheet .sheet-rear {
+.charsheet .sheet-rear,
+.charsheet .sheet-learn {
   display: none; }
 
 .charsheet button[name="act_front"],
+.charsheet button[name="act_learn"],
 .charsheet button[name="act_rear"] {
   border: 0;
   background-color: transparent; }
 
 /* show the selected tab */
 .charsheet .sheet-tabstoggle[value="front"] ~ div.sheet-front,
-.charsheet .sheet-tabstoggle[value="rear"] ~ div.sheet-rear {
+.charsheet .sheet-tabstoggle[value="rear"] ~ div.sheet-rear,
+.charsheet .sheet-tabstoggle[value="learn"] ~ div.sheet-learn {
   display: block; }
 
 .charsheet .sheet-tabstoggle[value="front"] ~ #sheet-tab-container > button[name="act_front"],
+.charsheet .sheet-tabstoggle[value="learn"] ~ #sheet-tab-container > button[name="act_learn"],
 .charsheet .sheet-tabstoggle[value="rear"] ~ #sheet-tab-container > button[name="act_rear"] {
   border: 2px solid black; }
 
@@ -820,7 +825,7 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
         box-sizing: border-box; }
         #rear-box .grid-values div.element div span {
           font-size: 10px; }
-        #rear-box .grid-values div.element div button[type="roll"], #rear-box .grid-values div.element div button[type="action"] {
+        #rear-box .grid-values div.element div button[type="action"] {
           width: calc(100% - 15px);
           height: calc(100% + 1px);
           border: 0;
@@ -954,6 +959,110 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
           #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer .footer-textarea {
             height: 90px;
             width: 500px; }
+
+#learn-container {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: auto;
+  height: 570px; }
+
+#learn-box {
+  border: 3px solid black;
+  height: 100%; }
+  #learn-box .title {
+    width: fit-content;
+    margin: 10px auto; }
+  #learn-box .title,
+  #learn-box .grid-title > * {
+    font-family: Vollkorn, serif;
+    font-weight: 900;
+    font-size: 15px;
+    text-transform: uppercase; }
+  #learn-box .grid-container {
+    width: 350px;
+    margin: 10px; }
+    #learn-box .grid-container .name {
+      width: 194px; }
+    #learn-box .grid-container .value {
+      width: 117px; }
+    #learn-box .grid-container .cell,
+    #learn-box .grid-container .inner-cell {
+      width: 19.5px; }
+  #learn-box .grid-title div,
+  #learn-box .grid-values div {
+    text-align: center;
+    float: left; }
+  #learn-box .grid-title {
+    height: 21.24px; }
+    #learn-box .grid-title .cell {
+      font-size: 14px; }
+  #learn-box .grid-values {
+    width: 100%;
+    height: 480px;
+    border: 1px solid grey;
+    font-size: 0; }
+    #learn-box .grid-values div.element {
+      box-sizing: border-box;
+      border-bottom: 1px solid grey; }
+      #learn-box .grid-values div.element input[type="checkbox"] {
+        width: 17px;
+        height: 19px; }
+      #learn-box .grid-values div.element .name span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: 100%;
+        line-height: 2; }
+      #learn-box .grid-values div.element div {
+        box-sizing: border-box; }
+        #learn-box .grid-values div.element div span {
+          font-size: 10px; }
+        #learn-box .grid-values div.element div button[type="action"] {
+          width: calc(100% - 15px);
+          height: calc(100% + 1px);
+          border: 0;
+          margin: 0;
+          padding: 0;
+          line-height: 0;
+          background: transparent !important;
+          position: relative; }
+        #learn-box .grid-values div.element div.name span {
+          padding-left: 5px;
+          text-align: center; }
+          #learn-box .grid-values div.element div.name span.used {
+            width: 10px;
+            vertical-align: top; }
+        #learn-box .grid-values div.element div.no-border {
+          border: 0; }
+        #learn-box .grid-values div.element div label.inner-cell,
+        #learn-box .grid-values div.element div div.inner-cell {
+          border-right: 1px solid grey;
+          border-bottom: 0; }
+          #learn-box .grid-values div.element div label.inner-cell:last-child,
+          #learn-box .grid-values div.element div div.inner-cell:last-child {
+            border-right: 0; }
+        #learn-box .grid-values div.element div label.inner-cell {
+          padding: 0;
+          margin: 0;
+          display: inline-block;
+          border: 0;
+          height: 19px; }
+          #learn-box .grid-values div.element div label.inner-cell span {
+            height: 17px;
+            width: 17px;
+            box-sizing: border-box;
+            vertical-align: bottom;
+            border: 1px solid grey;
+            display: inherit; }
+            #learn-box .grid-values div.element div label.inner-cell span:before, #learn-box .grid-values div.element div label.inner-cell span:after {
+              content: ""; }
+          #learn-box .grid-values div.element div label.inner-cell .color[value="usable"] + span {
+            background-color: transparent;
+            opacity: 1; }
+          #learn-box .grid-values div.element div label.inner-cell .color[value="selected"] + span {
+            background-color: black;
+            opacity: 1; }
 
 .sheet-rolltemplate-roll div.sheet-template-container {
   border: 2px solid #000 !important;

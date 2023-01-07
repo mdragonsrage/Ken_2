@@ -2,6 +2,7 @@
 <div id="sheet-tab-container">
     <button type="action" name="act_front">Front</button>
     <button type="action" name="act_rear">Rear</button>
+    <button type="action" name="act_learn">Prerequisites</button>
 </div>
 
 <div class="sheet-front">
@@ -2481,11 +2482,79 @@
         </div>
     </div>
 </div>
+<div class="sheet-learn">
+    <div id="learn-container" class="sheet-container">
+        <div id="learn-box">
+            <div class="title"><span>Prerequisiti</span></div>
+            <div class="grid-container">
+                <div class="grid-title">
+                    <div class="name"><span>Nome</span></div>
+                    <div class="cell" title="Conosciuto"><span>C</span></div>
+                    <div class="cell" title="Usato"><span>U</span></div>
+                    <div class="value">
+                        <div class="inner-cell">-4</div>
+                        <div class="inner-cell">-2</div>
+                        <div class="inner-cell">0</div>
+                        <div class="inner-cell">+1</div>
+                        <div class="inner-cell">+2</div>
+                        <div class="inner-cell">+3</div>
+                    </div>
+                </div>
+                <div class="grid-values">
+                    <div id="prereq-Hokuto" class="element">
+                        <div class="name">
+                            <input type="hidden" name="attr_prereq-hokuto" value="0" />
+                            <input type="hidden" name="attr_prereq-hokuto_rolldmg" value="true" />
+                            <input type="hidden" name="attr_prereq-hokuto_isphysical" value="true" />
+                            <button name="act_prereq" type="action" alt="prereq-hokuto" class="sm-roll"
+                                value="|||#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                <span name="attr_prereq-hokuto_name"></span>
+                            </button>
+                            <input type="hidden" name="attr_prereq-hokuto_name" value="Vie di Hokuto" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" aname="attr_prereq-hokuto-c" value="true" />
+                        </div>
+                        <div class="cell" name="u">
+                            <input type="checkbox" aname="attr_prereq-hokuto-u" value="true" />
+                        </div>
+                        <div class="value no-border">
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-minus-4" value="usable" />
+                                <span id="prereq-hokuto-minus-4" value="-4" type="prereq-hokuto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-minus-2" value="usable" />
+                                <span id="prereq-hokuto-minus-2" value="-2" type="prereq-hokuto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-0" value="usable" />
+                                <span id="prereq-hokuto-0" value="0" type="prereq-hokuto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-1" value="usable" />
+                                <span id="prereq-hokuto-1" value="1" type="prereq-hokuto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-2" value="usable" />
+                                <span id="prereq-hokuto-2" value="2" type="prereq-hokuto"></span>
+                            </label>
+                            <label class="inner-cell">
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-3" value="usable" />
+                                <span id="prereq-hokuto-3" value="3" type="prereq-hokuto"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/worker">
     const dolorPointsAttributes = ['dolore-5', 'dolore-4', 'dolore-3', 'dolore-2', 'dolore-1', 'dolore-coma'];
     const resistencePointsAttributes = ['pres-9', 'pres-8', 'pres-7', 'pres-6', 'pres-5', 'pres-4', 'pres-3', 'pres-2', 'pres-1', 'pres-ko'];
     const equilibriumPointsAttributes = ['peq-9', 'peq-8', 'peq-7', 'peq-6', 'peq-5', 'peq-4', 'peq-3', 'peq-2', 'peq-1', 'peq-pazzo'];
-    const tabList = ["front","rear"];
+    const tabList = ["front","rear", "learn"];
     const attributes = [
         {"cuore": "component"}, {"istinto": "component"}, {"corpo": "component"}, {"mente": "component"},
         {"percezione": "medium"}, {"azione": "medium"}, {"desiderio": "medium"}, {"resistenza": "medium"},
@@ -2497,6 +2566,7 @@
     $20("button.repcontrol_edit").on("click", function(){$20("button.repcontrol_edit").toggleClass("clicked")})
     $20(".wound div").on("click", (event) => toggleWound(event));
     $20(".points span").on("click", (event) => togglePoint(event));
+    $20("#learn-box .value span").on("click", (event) => togglePrereq(event));
     
     /* tab selection */
     tabList.forEach(tab => {
@@ -2591,6 +2661,51 @@
                 "malus_p": Math.floor(sum/6)
             };
             setAttrs(attr);
+        });
+    }
+    const togglePrereq = function(event) {
+        const htmlAttrs = event.htmlAttributes;
+        const attrName = htmlAttrs.type;
+        const prefix = attrName.split("_")[1];
+        let newVal = htmlAttrs.value;
+        let array = ["-4", "-2", "0", "1", "2", "3"];
+        array.forEach((el, i) => {
+            array[i] = prefix + el;
+        });
+        getAttrs([htmlAttrs.id], function(val) {
+            let newColorStatus = val[htmlAttrs.id];
+            if(event.altKey || event.ctrlKey || event.shiftKey) {
+                newColorStatus = "usable";
+                newVal = -6;
+            }
+            else {
+                switch(newColorStatus.toLowerCase()) {
+                    case "usable":
+                        newColorStatus = "selected";
+                        break;
+                    case "selected":
+                        newColorStatus = "usable";
+                        break;;
+                }
+            }
+            // change other attributes background color
+            getAttrs(array, function(values){
+                array.forEach((key) => {
+                    if(values[key] == "selected" && key != htmlAttrs.id) {
+                        values[key] = "usable";
+                    }
+                    else if(key == htmlAttrs.id) values[key] = newColorStatus;
+                })
+                setAttrs(values);
+            })
+            // set background color
+            val[htmlAttrs.id] = newColorStatus;
+            setAttrs(val);
+            // set worker value
+            getAttrs([attrName], function(value) {
+                value[attrName] = newVal;
+                setAttrs(value);
+            });
         });
     }
     /* Enable the use of blocked/lost points, set malus value */
