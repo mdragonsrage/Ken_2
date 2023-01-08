@@ -11,7 +11,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-button[type="roll"]::before {
+button[type="action"]::before {
   content: "" !important;
 }
 
@@ -70,7 +70,7 @@ button[type="roll"]::before {
   border: none;
 }
 /* Base edited css */
-button[type="roll"] {
+button[type="action"] {
   input[disabled] {
     cursor: inherit;
   }

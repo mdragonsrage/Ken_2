@@ -287,23 +287,34 @@
                 <input name="attr_dist_m" value="(@{corpo} + @{percezione} + @{meccanico} + @{attacco})" disabled="true"
                     type="number" class="sm-num calculated-triangle right-bottom" />
 
-                <button name="roll_roll_dodge" value="/em uses Schivata with MS [[(@{schivata}) - 2d6]]" type="roll"
-                    class="sm-roll left row_3">
-                    <input name="attr_schivata" value="(@{istinto} + @{percezione} + @{umano} + @{difesa})"
+                <button name="act_feat" type="action" alt="dodge" class="sm-roll left row_3"
+                    value="istinto|percezione|umano|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
+                    <input name="attr_dodge_display" value="(@{istinto} + @{percezione} + @{umano} + @{difesa})"
                         disabled="true" type="number" class="sm-num" />
                 </button>
+                <input type="hidden" name="attr_dodge-name" value="Schivata" />
+                <input type="hidden" name="attr_dodge-isphysical" value="true" />
+                <input type="hidden" name="attr_dodge" value="0" />
+
                 <button disabled class="sm-roll right row_3 splitted"></button>
-                <button name="roll_roll_parata_u"
-                    value="/em @{character_name} uses Parata Umano with MS [[(@{parata_u}) - 2d6]]" type="roll"
-                    class="sm-roll right row_3 calculated-triangle right-top">
+                <button name="act_feat" type="action" alt="parata_u" class="sm-roll right row_3 calculated-triangle right-top"
+                    value="corpo|azione|umano|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
                     <input name="attr_parata_u" value="(@{corpo} + @{azione} + @{umano} + @{difesa})" disabled="true"
                         type="number" class="sm-num" />
                 </button>
-                <button name="roll_roll_parata_m" value="/em uses Parata Meccanico with MS [[(@{parata_m}) - 2d6]]"
-                    type="roll" class="sm-roll right row_3 calculated-triangle right-bottom">
+                <input type="hidden" name="attr_parata_u-name" value="Parata Umano" />
+                <input type="hidden" name="attr_parata_u-isphysical" value="true" />
+                <input type="hidden" name="attr_parata_u" value="0" />
+
+                <button name="act_feat" type="action" alt="parata_m" class="sm-roll right row_3 calculated-triangle right-bottom"
+                    value="corpo|azione|meccanico|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
                     <input name="attr_parata_m" value="(@{corpo} + @{azione} + @{meccanico} + @{difesa})"
                         disabled="true" type="number" class="sm-num" />
                 </button>
+                <input type="hidden" name="attr_parata_m-name" value="Parata Meccanico" />
+                <input type="hidden" name="attr_parata_m-isphysical" value="true" />
+                <input type="hidden" name="attr_parata_m" value="0" />
+                
                 <span name="attr_malus_p" class="sm-num"></span>
             </div>
         </div>
@@ -2497,6 +2508,7 @@
                     </div>
                 </div>
                 <div class="grid-values">
+                    <input type="hidden" name="attr_prereq-minor" value="0" />
                     <div id="prereq-hokuto" class="element">
                         <div class="name">
                             <input type="hidden" name="attr_prereq-hokuto" value="-6" />
@@ -3139,9 +3151,9 @@
         const mods = ["repeating_feats_usepotenza", "repeating_feats_userapidita", "repeating_feats_useprecisione", "repeating_feats_useattacco", "repeating_feats_usedifesa"];
         const values = [];
         info.htmlAttributes["displaytitle"] = "repeating_feats_featname";
-        info.htmlAttributes["modifier"] = "repeating_feats_featvalue";
         info.htmlAttributes["isPhysical"] = "repeating_feats_isphysical";
         info.htmlAttributes["rolldmg"] = "repeating_feats_rolldmg";
+        info.htmlAttributes["modifier"] = "repeating_feats_featvalue";
         getAttrs(attrs, (vals) => {
             Object.keys(vals).forEach((k) => {
                 values.push(vals[k]);
@@ -3171,9 +3183,9 @@
     const processRepeatingAmRoll = function(info) {
         /* GetInfo and prepare value */        
         info.htmlAttributes["displaytitle"] = "repeating_martial_martial_name";
-        info.htmlAttributes["modifier"] = "repeating_martial_martial_value";
         info.htmlAttributes["isPhysical"] = "repeating_martial_isphysical";
         info.htmlAttributes["rolldmg"] = "repeating_martial_rolldmg";
+        info.htmlAttributes["modifier"] = "repeating_martial_martial_value";
         info.htmlAttributes["desc"] = "Descr";
         const getValsArray = ["repeating_martial_isdistance", "repeating_martial_martial_t"];
         getAmValuesAndRoll(getValsArray, info, true);

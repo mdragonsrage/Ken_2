@@ -9,7 +9,7 @@ input[type="number"] {
   appearance: textfield;
   -moz-appearance: textfield; }
 
-button[type="roll"]::before {
+button[type="action"]::before {
   content: "" !important; }
 
 .sheetmagic {
@@ -57,7 +57,7 @@ button[type="roll"]::before {
   border: none; }
 
 /* Base edited css */
-button[type="roll"] input[disabled] {
+button[type="action"] input[disabled] {
   cursor: inherit; }
 
 /* Repeating custom values */
@@ -1050,7 +1050,8 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
           margin: 0;
           display: inline-block;
           border: 0;
-          height: 19px; }
+          height: 19px;
+          cursor: pointer; }
           #misc-box .grid-values div.element div label.inner-cell span {
             height: 17px;
             width: 17px;
