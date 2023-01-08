@@ -2,7 +2,7 @@
 <div id="sheet-tab-container">
     <button type="action" name="act_front">Front</button>
     <button type="action" name="act_rear">Rear</button>
-    <button type="action" name="act_misc">Prerequisites</button>
+    <button type="action" name="act_misc">Misc</button>
 </div>
 
 <div class="sheet-front">
@@ -22,11 +22,6 @@
             <span class="title" style="position: absolute; left: 523px; top: 84px; width: 50px;">P.A.</span>
             <input name="attr_pa" type="number" class="sm-prop sm-num header"
                 style="left: 545px; top: 84px; width: 30px;" min="0" max="100" value="0" />
-        </div>
-        <div id="general-roll-container">
-            <button name="act_general" type="action" title="general-roll"
-                style="position:absolute; left:290px; top: 110px; border: transparent;" value="|||" class="sm-roll">
-                <span style="font-family:dicefontd6;">f</span><span style="font-family:dicefontd6;">f</span></button>
         </div>
 
         <!-- Attributes -->
@@ -2485,12 +2480,13 @@
 <div class="sheet-misc">
     <div id="misc-container" class="sheet-container">
         <div id="misc-box">
-            <div class="title"><span>Prerequisiti</span></div>
+            <!--<div class="title"><span>Prerequisiti</span></div>-->
+            <div class="title"><span style="visibility:hidden">Title</span></div>
             <div id="grid-prereq" class="grid-container">
                 <div class="grid-title">
-                    <div class="name"><span>Nome</span></div>
-                    <div class="cell" title="Conosciuto"><span>C</span></div>
+                    <div class="name"><span>Prerequisito</span></div>
                     <div class="cell" title="Usato"><span>U</span></div>
+                    <div class="cell" title="Conosciuto"><span>C</span></div>
                     <div class="value">
                         <div class="inner-cell">-4</div>
                         <div class="inner-cell">-2</div>
@@ -2514,11 +2510,11 @@
                             </button>
                             <input type="hidden" name="attr_prereq-hokuto_name" value="Vie di Hokuto" />
                         </div>
-                        <div class="cell" name="c">
-                            <input type="checkbox" name="attr_prereq-hokuto-c" value="true" />
-                        </div>
                         <div class="cell" name="u">
                             <input type="checkbox" name="attr_prereq-hokuto-u" value="true" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-hokuto-c" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2560,11 +2556,11 @@
                             </button>
                             <input type="hidden" name="attr_prereq-hokuto-koryu_name" value="Vie di Hokuto Koryu" />
                         </div>
+                         <div class="cell" name="u">
+                            <input type="checkbox" name="attr_prereq-hokuto-koryu-u" value="true" />
+                        </div>
                         <div class="cell" name="c">
                             <input type="checkbox" name="attr_prereq-hokuto-koryu-c" value="true" />
-                        </div>
-                        <div class="cell" name="u">
-                            <input type="checkbox" name="attr_prereq-hokuto-koryu-u" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2606,11 +2602,11 @@
                             </button>
                             <input type="hidden" name="attr_prereq-nanto_name" value="Vie di Nanto" />
                         </div>
-                        <div class="cell" name="c">
-                            <input type="checkbox" name="attr_prereq-nanto-c" value="true" />
-                        </div>
                         <div class="cell" name="u">
                             <input type="checkbox" name="attr_prereq-nanto-u" value="true" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-nanto-c" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2652,11 +2648,11 @@
                             </button>
                             <input type="hidden" name="attr_prereq-gento_name" value="Vie di Gento" />
                         </div>
-                        <div class="cell" name="c">
-                            <input type="checkbox" name="attr_prereq-gento-c" value="true" />
-                        </div>
                         <div class="cell" name="u">
                             <input type="checkbox" name="attr_prereq-gento-u" value="true" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-gento-c" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2698,11 +2694,11 @@
                             </button>
                             <input type="hidden" name="attr_prereq-hokuto-jen_name" value="Vie di Hokuto Jen" />
                         </div>
-                        <div class="cell" name="c">
-                            <input type="checkbox" name="attr_prereq-hokuto-jen-c" value="true" />
-                        </div>
                         <div class="cell" name="u">
                             <input type="checkbox" name="attr_prereq-hokuto-jen-u" value="true" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-hokuto-jen-c" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2744,11 +2740,11 @@
                             </button>
                             <input type="hidden" name="attr_prereq-shura_name" value="Vie di Shura" />
                         </div>
-                        <div class="cell" name="c">
-                            <input type="checkbox" name="attr_prereq-shura-c" value="true" />
-                        </div>
                         <div class="cell" name="u">
                             <input type="checkbox" name="attr_prereq-shura-u" value="true" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-shura-c" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2790,11 +2786,11 @@
                             </button>
                             <input type="hidden" name="attr_prereq-taishen_name" value="Vie di Taishen" />
                         </div>
-                        <div class="cell" name="c">
-                            <input type="checkbox" name="attr_prereq-taishen-c" value="true" />
-                        </div>
                         <div class="cell" name="u">
                             <input type="checkbox" name="attr_prereq-taishen-u" value="true" />
+                        </div>
+                        <div class="cell" name="c">
+                            <input type="checkbox" name="attr_prereq-taishen-c" value="true" />
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
@@ -2833,7 +2829,7 @@
                     <div id="learn-roll">
                         <input type="hidden" name="attr_learnprereq_rolldmg" value="false" />
                         <input type="hidden" name="attr_learnprereq_isphysical" value="true" />
-                        <button name="act_learnprereq" type="action" alt="learnprereq" class="sm-roll" 
+                        <button name="act_mixedprereq" type="action" alt="learnprereq" class="sm-roll" 
                             value="mente|percezione|umano|#|$">
                             <span name="attr_learnprereq_name"></span>
                             <span style="font-family:dicefontd6;">f</span>
@@ -2843,13 +2839,20 @@
                     <div id="endure-roll">
                         <input type="hidden" name="attr_endureprereq_rolldmg" value="false" />
                         <input type="hidden" name="attr_endureprereq_isphysical" value="true" />
-                        <input type="hidden" name="attr_endureprereq_needcomponent" value="true" />
-                        <button name="act_endureprereq" type="action" alt="endureprereq" class="sm-roll" 
+                        <input type="hidden" name="attr_endureprereq-needcomponent" value="true" />
+                        <button name="act_mixedprereq" type="action" alt="endureprereq" class="sm-roll" 
                             value="?|resistenza|nulla|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:true}">
                             <span name="attr_endureprereq_name"></span>
                             <span style="font-family:dicefontd6;">f</span>
                         </button>
                         <input type="hidden" name="attr_endureprereq_name" value="Resisti effetti Speciali" />
+                    </div>
+                    <div id="general-roll-container">
+                        <button name="act_general" type="action" title="general-roll" 
+                            value="|||" class="sm-roll">
+                            <span>Tiro Generico</span>
+                            <span style="font-family:dicefontd6;">f</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -2869,6 +2872,7 @@
         {"attacco": "tech"}, {"difesa": "tech"}, {"aura": "tech"}
     ];
     const defences = ["testa", "torso", "bd", "bs", "gd", "gs"];
+    const rxGrab = /^0(.*)\s*$/;
     $20("button.repcontrol_edit").on("click", function(){$20("button.repcontrol_edit").toggleClass("clicked")})
     $20(".wound div").on("click", (event) => toggleWound(event));
     $20(".points span").on("click", (event) => togglePoint(event));
@@ -2903,6 +2907,7 @@
     on("clicked:general", (info) => rollGeneral(info));
     on("clicked:repeating_feats:feat", (info) => processRepeatingFeatRoll(info));
     on("clicked:repeating_martial:am", (info) => processRepeatingAmRoll(info));
+    on("clicked:mixedprereq", (info) => processMixedPrereqRoll(info));
     on("change:bpotenza change:bprecisione change:brapidita", function(eventInfo) {
         const attr = eventInfo.triggerName.split("b")[1];
         const battr = eventInfo.triggerName;
@@ -2993,7 +2998,8 @@
                         break;
                     case "selected":
                         newColorStatus = "usable";
-                        break;;
+                        newVal = -6;
+                        break;
                 }
             }
             // change other attributes background color
@@ -3112,14 +3118,19 @@
         }
         return {dice: dice, range: range};
     }
+    const processMixedPrereqRoll = async function (info) {
+         /* check if any need */
+        const title = info.htmlAttributes.alt;
+        info.htmlAttributes["modifier"] = await queryPrereqName();
+        setAttrNames(info, title, "_");
+        checkIfAnyNeeded(info, title);
+    }
     /* check if roll needs query by user and sends to prepareTemplate */
     const processFeatRoll = function(info) {
         /* check if any need */
         const title = info.htmlAttributes.alt;
         info.htmlAttributes["modifier"] = title;
-        info.htmlAttributes["displaytitle"] = title + "-name";
-        info.htmlAttributes["rolldmg"] = title + "-rolldmg";
-        info.htmlAttributes["isPhysical"] = title + "-isphysical";
+        setAttrNames(info, title, "-");
         checkIfAnyNeeded(info, title);
     }
     const processRepeatingFeatRoll = function(info) {
@@ -3150,12 +3161,9 @@
         /* check if any need */
         const title = info.htmlAttributes.alt;
         info.htmlAttributes["modifier"] = title;
-        info.htmlAttributes["displaytitle"] = title + "_name";
-        info.htmlAttributes["rolldmg"] = title + "_rolldmg";
-        info.htmlAttributes["isPhysical"] = title + "_isphysical";
+        setAttrNames(info, title, "_");
         info.htmlAttributes["desc"] = "Descr";
-        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("#", `{"potenza":true}|{"rapidita":true}|{"precisione":true}`);
-        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("$", `{"attacco":false}|{"difesa":false}|{"aura":false}`);
+        replaceBatchValueInfo(info);
         const getValsArray = [title + "_isdistance", title + "_martial_t"];
         if(isAm) getAmValuesAndRoll(getValsArray, info, false);
         else checkIfAnyNeeded(info, title);
@@ -3208,7 +3216,7 @@
     }
     const checkIfAnyNeeded = async function (info, title) {
         let needArray = [];
-        const attrs = [title + "-needcomponent", title + "-needreign", title + "-needmedium"];
+        const attrs = [title + "-needcomponent", title + "-needmedium", title + "-needreign"];
         getAttrs(attrs, async (vals) => {
             Object.keys(vals).forEach((k) => {
                 let needed = vals[k];
@@ -3217,37 +3225,73 @@
             if(needArray.length > 0) {
                 info = await queryValues(info, needArray);
             }
+            replaceBatchValueInfo(info);
             prepareRollTemplate(info);
         });
     }
     /* query for reign and set value */
     const queryValues = async function(info, needs) {
-        const rxGrab = /^0(.*)\s*$/;
         let vals = info.htmlAttributes.value.split("|");
-        let roll = "";
+        let query = "";
         for(let i = 0; i < needs.length; i++) {
             let n = needs[i];
             if(n==="component") {
-                roll = "! {{query1= [[ 0?{Componente|Corpo|Istinto|Cuore|Mente}]]}}"
-                let res = await startRoll(roll);
-                let val = (res.results.query1.expression.match(rxGrab) || [])[1]; 
-                vals[0] = val;
+                query = "! {{query1= [[ 0?{Componente|Corpo|Istinto|Cuore|Mente}]]}}"
+                vals[0] = await getQueryVal(query);;
             }
             else if(n==="medium") {
-                roll = "! {{query1= [[ 0?{Mezzo|Percezione|Azione|Desiderio|Resistenza}]]}}"
-                let res = await startRoll(roll);
-                let val = (res.results.query1.expression.match(rxGrab) || [])[1]; 
-                vals[1] = val;
+                query = "! {{query1= [[ 0?{Mezzo|Percezione|Azione|Desiderio|Resistenza}]]}}"
+                vals[1] = await getQueryVal(query);
             }
             else if(n==="reign") {
-                roll = "! {{query1= [[ 0?{Regno|Umano|Meccanico|Minerale|Vegetale|Animale}]]}}"
-                let res = await startRoll(roll);
-                let val = (res.results.query1.expression.match(rxGrab) || [])[1]; 
-                vals[2] = val;
+                query = "! {{query1= [[ 0?{Regno|Umano|Meccanico|Minerale|Vegetale|Animale}]]}}"
+                vals[2] = await getQueryVal(query);
             }
         }
         info.htmlAttributes.value = vals.join("|");
         return info;
+    }
+    const queryPrereqName = async function() {
+        const query = "! {{query1= [[ 0?{Prerequisito" +
+            "|Hokuto,prereq-hokuto" +
+            "|Hokuto Koryu,prereq-hokuto-koryu" +
+            "|Nanto,prereq-nanto" +
+            "|Gento,prereq-gento" +
+            "|Hokuto Jen,prereq-hokuto-jen" +
+            "|Shura,prereq-shura" +
+            "|Taishen,prereq-taishen}]]}}"
+        return await getQueryVal(query);
+    }
+    const getQueryVal = async function(query) {
+        let res = await startRoll(query);
+        finishRoll(res);
+        return (res.results.query1.expression.match(rxGrab) || [])[1];
+    }
+    const setAttrNames = function(info, title, separator) {
+        info.htmlAttributes["displaytitle"] = title + separator + "name";
+        info.htmlAttributes["rolldmg"] = title + separator + "rolldmg";
+        info.htmlAttributes["isPhysical"] = title + separator + "isphysical";
+    }
+    const rollGeneral = async function(info) {
+        const title = "Roll";
+        let needArray = ["component", "medium", "reign"];
+        info = await queryValues(info, needArray);
+        let attrs = info.htmlAttributes.value.split("|");
+        attrs = attrs.concat(["potenza", "rapidita", "precisione", "character_name", "malus_points"]);
+        getAttrs(attrs, async function(attr) {
+            let sum = 0 + parseInt(attr[attrs[0]]) + parseInt(attr[attrs[1]]) + parseInt(attr[attrs[2]]) + parseInt(attr["potenza"]) + parseInt(attr["rapidita"]) + parseInt(attr["precisione"]) + parseInt(attr["malus_points"]);
+            let roll = `&{template:roll} {{name=${attr.character_name}}} {{rollname=Roll}} {{malus=${attr["malus_points"]}}} {{critrange=[[2]]}}`;
+            roll += `{{at1Name=${attrs[0]}}} {{at1Value=${attr[attrs[0]]}}} {{at2Name=${attrs[1]}}} {{at2Value=${attr[attrs[1]]}}} {{at3Name=${attrs[2]}}} {{at3Value=${attr[attrs[2]]}}} `;
+            roll += `{{energy1Name=potenza}} {{energy1Value=${attr["potenza"]}}} {{energy1Name=rapidita}} {{energy1Value=${attr["rapidita"]}}} {{energy1Name=precisione}} {{energy1Value=${attr["precisione"]}}} `;
+            roll += ` [[${sum}  -[[2d6]] ]] {{roll=$[[1]]}} {{ms=$[[2]]}} `;
+            startRoll(roll, (res) => {
+                finishRoll(res.rollId,res);
+            });
+        });
+    }
+    const replaceBatchValueInfo = function (info) {
+        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("#", `{"potenza":true}|{"rapidita":true}|{"precisione":true}`);
+        info.htmlAttributes["value"] = info.htmlAttributes["value"].replace("$", `{"attacco":false}|{"difesa":false}|{"aura":false}`);
     }
     /* get attributes and starts rolltemplate */
     const prepareRollTemplate = function(info) {
@@ -3347,23 +3391,6 @@
                         });
                     });
                 });
-            });
-        });
-    }
-    const rollGeneral = async function(info) {
-        const title = "Roll";
-        let needArray = ["component", "medium", "reign"];
-        info = await queryValues(info, needArray);
-        let attrs = info.htmlAttributes.value.split("|");
-        attrs = attrs.concat(["potenza", "rapidita", "precisione", "character_name", "malus_points"]);
-        getAttrs(attrs, async function(attr) {
-            let sum = 0 + parseInt(attr[attrs[0]]) + parseInt(attr[attrs[1]]) + parseInt(attr[attrs[2]]) + parseInt(attr["potenza"]) + parseInt(attr["rapidita"]) + parseInt(attr["precisione"]) + parseInt(attr["malus_points"]);
-            let roll = `&{template:roll} {{name=${attr.character_name}}} {{rollname=Roll}} {{malus=${attr["malus_points"]}}} {{critrange=[[2]]}}`;
-            roll += `{{at1Name=${attrs[0]}}} {{at1Value=${attr[attrs[0]]}}} {{at2Name=${attrs[1]}}} {{at2Value=${attr[attrs[1]]}}} {{at3Name=${attrs[2]}}} {{at3Value=${attr[attrs[2]]}}} `;
-            roll += `{{energy1Name=potenza}} {{energy1Value=${attr["potenza"]}}} {{energy1Name=rapidita}} {{energy1Value=${attr["rapidita"]}}} {{energy1Name=precisione}} {{energy1Value=${attr["precisione"]}}} `;
-            roll += ` [[${sum}  -[[2d6]] ]] {{roll=$[[1]]}} {{ms=$[[2]]}} `;
-            startRoll(roll, (res) => {
-                finishRoll(res.rollId,res);
             });
         });
     }
