@@ -1924,10 +1924,10 @@
                         </div>
                         <div id="martial-endure" class="element">
                             <div class="name">
-                                <input type="hidden" name="attr_endure_rolldmg" value="true" />
+                                <input type="hidden" name="attr_endure_rolldmg" value="false" />
                                 <input type="hidden" name="attr_endure_isphysical" value="true" />
                                 <button name="act_am" type="action" alt="endure" class="sm-roll"
-                                    value="mente|desiderio|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                    value="mente|desiderio|umano|#|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_endure_name"></span>
                                 </button>
                                 <span class="used">
@@ -1982,7 +1982,7 @@
                             </div>
                             <div class="cell" name="c">
                                 <span name="attr_endure_c"></span>
-                                <input type="hidden" name="attr_endure_c" value="XF" />
+                                <input type="hidden" name="attr_endure_c" value="6" />
                             </div>
                             <div class="damage">
                                 <span name="attr_endure_dmg"></span>
@@ -2002,7 +2002,7 @@
                                 <input type="hidden" name="attr_melee_rolldmg" value="true" />
                                 <input type="hidden" name="attr_melee_isphysical" value="true" />
                                 <button name="act_am" type="action" alt="melee" class="sm-roll"
-                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                    value="corpo|azione|meccanico|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_melee_name"></span>
                                 </button>
                                 <span class="used">
@@ -2078,7 +2078,7 @@
                                 <input type="hidden" name="attr_bullet_rolldmg" value="true" />
                                 <input type="hidden" name="attr_bullet_isphysical" value="true" />
                                 <button name="act_am" type="action" alt="bullet" class="sm-roll"
-                                    value="corpo|percezione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                    value="corpo|percezione|meccanico|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
                                     <span name="attr_bullet_name"></span>
                                 </button>
                                 <span class="used">
@@ -2153,7 +2153,7 @@
                                 <input type="hidden" name="attr_wall_rolldmg" value="true" />
                                 <input type="hidden" name="attr_wall_isphysical" value="true" />
                                 <button name="act_am" type="action" alt="wall" class="sm-roll"
-                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                    value="corpo|azione|meccanico|#|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
                                     <span name="attr_wall_name"></span>
                                 </button>
                                 <span class="used">
@@ -2204,7 +2204,7 @@
                             </div>
                             <div class="cell" name="t">
                                 <span name="attr_wall_t"></span>
-                                <input type="hidden" name="attr_wall_t" value="CO" />
+                                <input type="hidden" name="attr_wall_t" value="SP" />
                             </div>
                             <div class="cell" name="c">
                                 <span name="attr_wall_c"></span>
@@ -2225,10 +2225,10 @@
                         </div>
                         <div id="martial-cross-ref" class="element">
                             <div class="name" title="B13 Tec. Rifl. Incrociata">
-                                <input type="hidden" name="attr_cross-ref_rolldmg" value="true" />
+                                <input type="hidden" name="attr_cross-ref_rolldmg" value="false" />
                                 <input type="hidden" name="attr_cross-ref_isphysical" value="true" />
                                 <button name="act_am" type="action" alt="cross-ref" class="sm-roll"
-                                    value="corpo|azione|umano|#|{&quot;attacco&quot;:true}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:false}">
+                                    value="corpo|azione|meccanico|#|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
                                     <span name="attr_cross-ref_name"></span>
                                 </button>
                                 <span class="used">
@@ -2279,7 +2279,7 @@
                             </div>
                             <div class="cell" name="t">
                                 <span name="attr_cross-ref_t"></span>
-                                <input type="hidden" name="attr_cross-ref_t" value="CO" />
+                                <input type="hidden" name="attr_cross-ref_t" value="SP" />
                             </div>
                             <div class="cell" name="c">
                                 <span name="attr_cross-ref_c"></span>
@@ -3366,13 +3366,13 @@
                         let showdmg = misc[rolldmg] === 'true';
                         let roll = `&{template:roll} {{name=${misc.character_name}}} {{rollname=${misc[name]}}} {{malus=${totalMalus}}} `;
                         roll += `{{modifier=[[${mod}]]}} {{critrange=[[${critInfo.range}]]}} `;
-                        if(info.htmlAttributes["desc"]) roll += ` {{showdesc=1}} {{desc=${info.htmlAttributes["desc"]}}}`;
+                        if(info.htmlAttributes["desc"]) roll += ` {{showdesc=1}} {{dmgtype=${info.htmlAttributes["dmgtype"]}}} {{spec=${info.htmlAttributes["spec"]}}} {{notes=${info.htmlAttributes["notes"]}}}`;
                         if(showdmg) { 
                             const locRes = await startRoll("! {{loc=[[1d6]]}} {{sp=[[1d6]]}}");
                             let loc = locRes.results.loc.result;
                             if(loc == 6) {
                                 const isHth = _.some(attributeList, function(o) {return _.propertyOf(o)('name') == 'azione'});
-                                if(!isHth) {
+                                if(isHth) {
                                     if(locRes.results.sp.result%2 == 0) loc += "p";
                                     else loc += "d"
                                 }
@@ -3601,10 +3601,24 @@
             {{#showdesc}}
             <div class="sheet-template-row">
                 <div class="sheet-template-vals">
-                    <span class="sheet-template-left">Description</span>
-                    <span class="sheet-template-right">{{desc}}</span>
+                    <span class="sheet-template-left">Dmg Type</span>
+                    <span class="sheet-template-right">{{dmgtype}}</span>
                 </div>
             </div>
+            <div class="sheet-template-row">
+                <div class="sheet-template-vals">
+                    <span class="sheet-template-left">Notes</span>
+                    <span class="sheet-template-right">{{notes}}</span>
+                </div>
+            </div>
+            {{#rollBetween() roll 0 critrange }}
+            <div class="sheet-template-row">
+                <div class="sheet-template-vals">
+                    <span class="sheet-template-left">Special</span>
+                    <span class="sheet-template-right">{{spec}}</span>
+                </div>
+            </div>
+            {{/rollBetween() roll 0 critrange }}
             {{/showdesc}}
         </div>
     </div>
