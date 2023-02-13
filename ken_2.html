@@ -1236,6 +1236,7 @@
                                     <option value="istinto">Istinto</option>
                                     <option value="cuore">Cuore</option>
                                     <option value="mente">Mente</option>
+                                    <option value=" "></option>
                                 </select>
                             </div>
                             <div>
@@ -1245,6 +1246,7 @@
                                     <option value="azione">Azione</option>
                                     <option value="desiderio">Desiderio</option>
                                     <option value="resistenza">Resistenza</option>
+                                    <option value=" "></option>
                                 </select>
                             </div>
                             <div>
@@ -1256,6 +1258,7 @@
                                     <option value="vegetale">Vegetale</option>
                                     <option value="animale">Animale</option>
                                     <option value="nulla">Nulla</option>
+                                    <option value=" "></option>
                                 </select>
                             </div>
                             <div>
@@ -2387,6 +2390,7 @@
                                                 <option value="istinto">Istinto</option>
                                                 <option value="cuore">Cuore</option>
                                                 <option value="mente">Mente</option>
+                                                <option value=" "></option>
                                             </select>
                                         </div>
                                         <div>
@@ -2396,6 +2400,7 @@
                                                 <option value="azione">Azione</option>
                                                 <option value="desiderio">Desiderio</option>
                                                 <option value="resistenza">Resistenza</option>
+                                                <option value=" "></option>
                                             </select>
                                         </div>
                                         <div>
@@ -2407,6 +2412,7 @@
                                                 <option value="vegetale">Vegetale</option>
                                                 <option value="animale">Animale</option>
                                                 <option value="nulla">Nulla</option>
+                                                <option value=" "></option>
                                             </select>
                                         </div>
                                         <div>
@@ -3158,14 +3164,31 @@
             Object.keys(vals).forEach((k) => {
                 values.push(vals[k]);
             });
-            getAttrs(mods, (vals) => {
+            getAttrs(mods, async (vals) => {
                 Object.keys(vals).forEach((k) => {
                     const mod = {};
                     mod[k.replace("repeating_feats_use", "")] = vals[k] === 'true';
                     values.push(JSON.stringify(mod));
                 });
-                info.htmlAttributes.value = values.join("|");
-                prepareRollTemplate(info);        
+                let needArray = [];
+                for(let i = 0; i<3 ; i++) {
+                    if(values[i]==" "){
+                        switch(i){
+                            case 0:
+                            needArray.push("component")
+                            break;
+                            case 1:
+                            needArray.push("medium")
+                            break;
+                            case 2:
+                            needArray.push("reign")
+                            break;
+                        }
+                    }
+                }
+                info.htmlAttributes.value = values.join("|").replace(" ", "");
+                await queryValues(info, needArray);
+                prepareRollTemplate(info);
             });
         });
     }
@@ -3211,14 +3234,31 @@
                         Object.keys(vs).forEach((k) => {
                             values.push(vs[k]);
                         });
-                        getAttrs(mods, (vals) => {
+                        getAttrs(mods, async (vals) => {
                             values = values.concat(["{\"potenza\": true}", "{\"rapidita\": true}", "{\"precisione\": true}"]);
                             Object.keys(vals).forEach((k) => {
                                 const mod = {};
                                 mod[k.replace(replace, "")] = vals[k] === 'true';
                                 values.push(JSON.stringify(mod));
                             });
-                            info.htmlAttributes.value = values.join("|");
+                            let needArray = [];
+                            for(let i = 0; i<3 ; i++) {
+                                if(values[i]==" "){
+                                    switch(i){
+                                        case 0:
+                                        needArray.push("component")
+                                        break;
+                                        case 1:
+                                        needArray.push("medium")
+                                        break;
+                                        case 2:
+                                        needArray.push("reign")
+                                        break;
+                                    }
+                                }
+                            }
+                            info.htmlAttributes.value = values.join("|").replace(" ", "");
+                            await queryValues(info, needArray);
                             prepareRollTemplate(info);        
                         });
                     });
@@ -3256,7 +3296,7 @@
                 vals[1] = await getQueryVal(query);
             }
             else if(n==="reign") {
-                query = "! {{query1= [[ 0?{Regno|Umano|Meccanico|Minerale|Vegetale|Animale}]]}}"
+                query = "! {{query1= [[ 0?{Regno|Umano|Meccanico|Minerale|Vegetale|Animale|Nulla}]]}}"
                 vals[2] = await getQueryVal(query);
             }
         }
@@ -3371,11 +3411,11 @@
                             const locRes = await startRoll("! {{loc=[[1d6]]}} {{sp=[[1d6]]}}");
                             let loc = locRes.results.loc.result;
                             if(loc == 6) {
-                                const isHth = _.some(attributeList, function(o) {return _.propertyOf(o)('name') == 'azione'});
-                                if(isHth) {
+                                //const isHth = _.some(attributeList, function(o) {return _.propertyOf(o)('name') == 'azione'});
+                                //if(isHth) {
                                     if(locRes.results.sp.result%2 == 0) loc += "p";
                                     else loc += "d"
-                                }
+                                //}
                             }
                             roll += `{{showdmg=1}} {{loc=${loc}}}`
                         };
