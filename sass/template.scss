@@ -63,6 +63,9 @@
                 .sheet-template-vals {
                     margin: auto;
                 }
+                &.sheet-template-desc {
+                    text-align: left;
+                }
             }
             .sheet-template-critical {
                 .sheet-template-row {

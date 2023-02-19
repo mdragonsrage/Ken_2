@@ -1159,6 +1159,8 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
         border: 0; }
     .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row .sheet-template-vals {
       margin: auto; }
+    .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-row.sheet-template-desc {
+      text-align: left; }
   .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span {
     color: green; }
     .sheet-rolltemplate-roll div.sheet-template-container .sheet-template-results .sheet-template-critical .sheet-template-row span .inlinerollresult {
