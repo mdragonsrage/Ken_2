@@ -155,8 +155,7 @@ div.repcontrol {
   font-family: Didact Gothic, sans-serif;
 }
 
-div[data-groupname="repeating_feats"],
-div[data-groupname="repeating_martial"] {
+div[data-groupname="repeating_feats"] {
   &.repcontainer {
     overflow-y: auto;
     overflow-x: hidden;
@@ -199,16 +198,20 @@ div[data-groupname="repeating_martial"] {
     &::-webkit-scrollbar-button:vertical:single-button:increment:hover {
       border-color: #bbb transparent transparent transparent;
     }
-    a.repcontrol_move,
-      button.repcontrol_del {
-        padding: 4px;
-        box-sizing: border-box;
-        line-height: 8px;
-        font-family: "Pictos" !important;
-        float: right !important;
-        position: relative;
-        z-index: 2000;
-      }
+  }
+}
+
+div[data-groupname="repeating_feats"],
+div[data-groupname="repeating_martial"] {
+  a.repcontrol_move,
+  button.repcontrol_del {
+    padding: 4px;
+    box-sizing: border-box;
+    line-height: 8px;
+    font-family: "Pictos" !important;
+    float: right !important;
+    position: relative;
+    z-index: 2000;
   }
   .repitem {
     .options {

@@ -125,57 +125,49 @@ div.repcontrol {
   height: 1000px;
   font-family: Didact Gothic, sans-serif; }
 
-div[data-groupname="repeating_feats"].repcontainer,
-div[data-groupname="repeating_martial"].repcontainer {
+div[data-groupname="repeating_feats"].repcontainer {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
   /* Buttons */
   /* Up */
   /* Down */ }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar {
     width: 8px; }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-thumb,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-thumb {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-thumb {
     background-color: #bbb;
     background-clip: padding-box;
     border: 0.01em solid #eeeeee; }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-track,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-track {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-track {
     background-color: #ddd; }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button {
     background-color: #ddd;
     display: block;
     border-style: solid;
     height: 5px;
     width: 8px; }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement {
     border-width: 0 4px 4px 4px;
     border-color: transparent transparent #777 transparent; }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
     border-color: transparent transparent #bbb transparent; }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:increment,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:single-button:vertical:increment {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 4px 4px 0 4px;
     border-color: #777 transparent transparent transparent; }
-  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:vertical:single-button:increment:hover,
-  div[data-groupname="repeating_martial"].repcontainer::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  div[data-groupname="repeating_feats"].repcontainer::-webkit-scrollbar-button:vertical:single-button:increment:hover {
     border-color: #bbb transparent transparent transparent; }
-  div[data-groupname="repeating_feats"].repcontainer a.repcontrol_move,
-  div[data-groupname="repeating_feats"].repcontainer button.repcontrol_del,
-  div[data-groupname="repeating_martial"].repcontainer a.repcontrol_move,
-  div[data-groupname="repeating_martial"].repcontainer button.repcontrol_del {
-    padding: 4px;
-    box-sizing: border-box;
-    line-height: 8px;
-    font-family: "Pictos" !important;
-    float: right !important;
-    position: relative;
-    z-index: 2000; }
+
+div[data-groupname="repeating_feats"] a.repcontrol_move,
+div[data-groupname="repeating_feats"] button.repcontrol_del,
+div[data-groupname="repeating_martial"] a.repcontrol_move,
+div[data-groupname="repeating_martial"] button.repcontrol_del {
+  padding: 4px;
+  box-sizing: border-box;
+  line-height: 8px;
+  font-family: "Pictos" !important;
+  float: right !important;
+  position: relative;
+  z-index: 2000; }
 
 div[data-groupname="repeating_feats"] .repitem .options,
 div[data-groupname="repeating_martial"] .repitem .options {
@@ -671,8 +663,8 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
           width: 100%; }
       #repeating-feats-container div[data-groupname="repeating_feats"] .repitem div.feat-vals button.feat-options-toggle {
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: -2px;
+        left: -2px;
         width: 18px !important;
         height: 18px !important;
         z-index: 2; }
@@ -798,170 +790,210 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
     height: 480px;
     border: 1px solid grey;
     font-size: 0; }
-    #rear-box .grid-values #base-martial-container {
-      height: 254.319px;
-      width: 100%; }
-      #rear-box .grid-values #base-martial-container div {
-        height: 19.563px; }
-    #rear-box .grid-values div.element {
-      box-sizing: border-box;
-      border-bottom: 1px solid grey; }
-      #rear-box .grid-values div.element input[type="checkbox"] {
-        width: 10px;
-        height: 10px; }
-      #rear-box .grid-values div.element .notes span,
-      #rear-box .grid-values div.element .name span,
-      #rear-box .grid-values div.element .requisites span,
-      #rear-box .grid-values div.element .cell span,
-      #rear-box .grid-values div.element .damage span,
-      #rear-box .grid-values div.element .special span {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: inline-block;
-        width: 100%;
-        line-height: 2; }
-      #rear-box .grid-values div.element div {
-        border-right: 1px solid grey;
-        box-sizing: border-box; }
-        #rear-box .grid-values div.element div span {
-          font-size: 10px; }
-        #rear-box .grid-values div.element div button[type="action"] {
-          width: calc(100% - 15px);
-          height: calc(100% + 1px);
-          border: 0;
-          margin: 0;
-          padding: 0;
-          line-height: 0;
-          background: transparent !important;
-          position: relative; }
-        #rear-box .grid-values div.element div.name span {
-          padding-left: 5px;
-          text-align: left; }
-          #rear-box .grid-values div.element div.name span.used {
-            width: 10px;
-            vertical-align: top; }
-        #rear-box .grid-values div.element div.notes, #rear-box .grid-values div.element div.value {
-          border-right: 0; }
-        #rear-box .grid-values div.element div.requisites {
-          border-left: 1px solid grey; }
-        #rear-box .grid-values div.element div.no-border {
-          border: 0; }
-        #rear-box .grid-values div.element div:last-child {
-          border-bottom: 1px solid grey; }
-        #rear-box .grid-values div.element div div.inner-cell {
+    #rear-box .grid-values .grid-scrollable {
+      width: 102%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      /* Buttons */
+      /* Up */
+      /* Down */ }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar {
+        width: 8px; }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar-thumb {
+        background-color: #bbb;
+        background-clip: padding-box;
+        border: 0.01em solid #eeeeee; }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar-track {
+        background-color: #ddd; }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar-button:single-button {
+        background-color: #ddd;
+        display: block;
+        border-style: solid;
+        height: 5px;
+        width: 8px; }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar-button:single-button:vertical:decrement {
+        border-width: 0 4px 4px 4px;
+        border-color: transparent transparent #777 transparent; }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+        border-color: transparent transparent #bbb transparent; }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar-button:single-button:vertical:increment {
+        border-width: 4px 4px 0 4px;
+        border-color: #777 transparent transparent transparent; }
+      #rear-box .grid-values .grid-scrollable::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+        border-color: #bbb transparent transparent transparent; }
+      #rear-box .grid-values .grid-scrollable #base-martial-container {
+        width: 700px; }
+        #rear-box .grid-values .grid-scrollable #base-martial-container div {
+          height: 19.563px; }
+      #rear-box .grid-values .grid-scrollable div.element {
+        box-sizing: border-box;
+        border-bottom: 1px solid grey; }
+        #rear-box .grid-values .grid-scrollable div.element input[type="checkbox"] {
+          width: 10px;
+          height: 10px; }
+        #rear-box .grid-values .grid-scrollable div.element .notes span,
+        #rear-box .grid-values .grid-scrollable div.element .name span,
+        #rear-box .grid-values .grid-scrollable div.element .requisites span,
+        #rear-box .grid-values .grid-scrollable div.element .cell span,
+        #rear-box .grid-values .grid-scrollable div.element .damage span,
+        #rear-box .grid-values .grid-scrollable div.element .special span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+          width: 100%;
+          line-height: 2; }
+        #rear-box .grid-values .grid-scrollable div.element div {
           border-right: 1px solid grey;
-          border-bottom: 0; }
-          #rear-box .grid-values div.element div div.inner-cell:last-child {
-            border-right: 0; }
-          #rear-box .grid-values div.element div div.inner-cell label {
-            width: 0;
-            display: inline-block;
-            cursor: pointer;
-            width: 100%;
+          box-sizing: border-box; }
+          #rear-box .grid-values .grid-scrollable div.element div span {
+            font-size: 10px; }
+          #rear-box .grid-values .grid-scrollable div.element div button[type="action"] {
+            width: calc(100% - 15px);
+            height: calc(100% + 1px);
+            border: 0;
+            margin: 0;
+            padding: 0;
             line-height: 0;
-            height: 100%;
-            margin: 0; }
-            #rear-box .grid-values div.element div div.inner-cell label.no-click {
-              cursor: default; }
-            #rear-box .grid-values div.element div div.inner-cell label input[type="radio"] {
-              display: none; }
-            #rear-box .grid-values div.element div div.inner-cell label span {
+            background: transparent !important;
+            position: relative; }
+          #rear-box .grid-values .grid-scrollable div.element div.name span {
+            padding-left: 5px;
+            text-align: left; }
+            #rear-box .grid-values .grid-scrollable div.element div.name span.used {
+              width: 10px;
+              vertical-align: top; }
+          #rear-box .grid-values .grid-scrollable div.element div.notes, #rear-box .grid-values .grid-scrollable div.element div.value {
+            border-right: 0; }
+          #rear-box .grid-values .grid-scrollable div.element div.requisites {
+            border-left: 1px solid grey; }
+          #rear-box .grid-values .grid-scrollable div.element div.no-border {
+            border: 0; }
+          #rear-box .grid-values .grid-scrollable div.element div:last-child {
+            border-bottom: 1px solid grey; }
+          #rear-box .grid-values .grid-scrollable div.element div div.inner-cell {
+            border-right: 1px solid grey;
+            border-bottom: 0; }
+            #rear-box .grid-values .grid-scrollable div.element div div.inner-cell:last-child {
+              border-right: 0; }
+            #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label {
+              width: 0;
               display: inline-block;
-              position: relative;
+              cursor: pointer;
               width: 100%;
-              height: 100%; }
-              #rear-box .grid-values div.element div div.inner-cell label span.checked {
-                opacity: 1;
-                background: #222021; }
-              #rear-box .grid-values div.element div div.inner-cell label span:before, #rear-box .grid-values div.element div div.inner-cell label span:after {
-                content: "";
+              line-height: 0;
+              height: 100%;
+              margin: 0; }
+              #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label.no-click {
+                cursor: default; }
+              #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label input[type="radio"] {
+                display: none; }
+              #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label span {
+                display: inline-block;
+                position: relative;
                 width: 100%;
                 height: 100%; }
-              #rear-box .grid-values div.element div div.inner-cell label span:before {
-                margin-right: 10px;
-                display: inline-block;
-                vertical-align: top; }
-              #rear-box .grid-values div.element div div.inner-cell label span:after {
-                background: #222021;
-                transition: 300ms;
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0; }
-            #rear-box .grid-values div.element div div.inner-cell label input:checked + span:after {
-              opacity: 1; }
-    #rear-box .grid-values #repeating-martial-container {
-      width: 100%;
-      height: calc(100% - 254.319px); }
-      #rear-box .grid-values #repeating-martial-container span:has([name="attr_hasdiff"]:not(:checked)) ~ [name="attr_diff"] {
-        display: none; }
-      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"].repcontainer {
-        height: 100%;
-        width: 102%; }
-      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] div {
-        height: 19.563px; }
-      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .name button {
-        width: calc(100% - 13px - 15px); }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .name button[type="roll"] {
-          top: -3px; }
-      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] button.martial-options-toggle {
-        position: absolute;
-        top: 2px;
-        left: -2px;
-        width: 12px;
-        height: 13px;
-        border: 0;
-        padding: 0;
-        margin: 0;
-        background-color: transparent; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] button.martial-options-toggle i {
-          font-family: Pictos;
-          position: relative; }
-      #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options {
-        height: 300px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half {
-          width: 50%;
-          height: 235px; }
-          #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div {
-            width: 100%;
-            margin-bottom: 10px; }
-            #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div span {
+                #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label span.checked {
+                  opacity: 1;
+                  background: #222021; }
+                #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label span:before, #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label span:after {
+                  content: "";
+                  width: 100%;
+                  height: 100%; }
+                #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label span:before {
+                  margin-right: 10px;
+                  display: inline-block;
+                  vertical-align: top; }
+                #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label span:after {
+                  background: #222021;
+                  transition: 300ms;
+                  opacity: 0;
+                  position: absolute;
+                  top: 0;
+                  left: 0; }
+              #rear-box .grid-values .grid-scrollable div.element div div.inner-cell label input:checked + span:after {
+                opacity: 1; }
+      #rear-box .grid-values .grid-scrollable #repeating-martial-container {
+        width: 700px; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container span:has([name="attr_hasdiff"]:not(:checked)) ~ [name="attr_diff"] {
+          display: none; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"].repcontainer {
+          height: 100%;
+          width: 102%; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"].repcontrol {
+          position: absolute;
+          top: 646px;
+          left: 88px;
+          width: 148px; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] div {
+          height: 19.563px; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .name button {
+          width: calc(100% - 13px - 15px);
+          margin-left: 13px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .name button[type="roll"] {
+            top: -3px; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] button.martial-options-toggle {
+          position: absolute;
+          top: 2px;
+          width: 12px;
+          height: 13px;
+          border: 0;
+          padding: 0;
+          margin: 0;
+          background-color: transparent; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] button.martial-options-toggle i {
+            font-family: Pictos;
+            position: relative; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] span.used {
+          margin-top: -1px; }
+        #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options {
+          height: 340px;
+          border-bottom: 1px solid;
+          width: 700px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half {
+            width: 50%;
+            height: 235px; }
+            #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div {
+              width: 100%;
+              margin-bottom: 10px; }
+              #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .half div span {
+                text-align: left; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options div.choices {
+            text-align: left;
+            padding-left: 10px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side {
+            width: calc(100% - 160px - 10px);
+            margin-left: 10px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-small {
+            width: 45px;
+            margin-left: 2px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-smaller {
+            width: 10px;
+            margin-right: 2px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-footer {
+            width: calc(100% - 525px - 10px);
+            margin-left: 10px;
+            vertical-align: top; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side {
+            width: 160px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-small {
+            max-width: 30px;
+            margin-right: 10px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-textarea {
+            width: 176px;
+            height: 175px; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .checkbox-container {
+            vertical-align: super; }
+          #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer {
+            height: calc(100% - 235px);
+            width: 100%; }
+            #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer span {
               text-align: left; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options div.choices {
-          text-align: left;
-          padding-left: 10px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side {
-          width: calc(100% - 160px - 10px);
-          margin-left: 10px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-small {
-          width: 45px;
-          margin-left: 2px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-smaller {
-          width: 10px;
-          margin-right: 2px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .left-side-footer {
-          width: calc(100% - 525px - 10px);
-          margin-left: 10px;
-          vertical-align: top; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side {
-          width: 160px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-small {
-          max-width: 30px;
-          margin-right: 10px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .right-side-textarea {
-          width: 176px;
-          height: 175px; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .checkbox-container {
-          vertical-align: super; }
-        #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer {
-          height: calc(100% - 235px);
-          width: 100%; }
-          #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer span {
-            text-align: left; }
-          #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer .footer-textarea {
-            height: 90px;
-            width: 500px; }
+            #rear-box .grid-values .grid-scrollable #repeating-martial-container div[data-groupname="repeating_martial"] div[name="attr_martialrep"] .options .footer .footer-textarea {
+              height: 90px;
+              width: 500px; }
 
 #misc-container {
   padding: 0px;
