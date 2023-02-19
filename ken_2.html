@@ -297,7 +297,8 @@
                 <input type="hidden" name="attr_dodge" value="0" />
 
                 <button disabled class="sm-roll right row_3 splitted"></button>
-                <button name="act_feat" type="action" alt="parata_u" class="sm-roll right row_3 calculated-triangle right-top"
+                <button name="act_feat" type="action" alt="parata_u"
+                    class="sm-roll right row_3 calculated-triangle right-top"
                     value="corpo|azione|umano|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
                     <input name="attr_parata_u" value="(@{corpo} + @{azione} + @{umano} + @{difesa})" disabled="true"
                         type="number" class="sm-num" />
@@ -306,7 +307,8 @@
                 <input type="hidden" name="attr_parata_u-isphysical" value="true" />
                 <input type="hidden" name="attr_parata_u" value="0" />
 
-                <button name="act_feat" type="action" alt="parata_m" class="sm-roll right row_3 calculated-triangle right-bottom"
+                <button name="act_feat" type="action" alt="parata_m"
+                    class="sm-roll right row_3 calculated-triangle right-bottom"
                     value="corpo|azione|meccanico|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
                     <input name="attr_parata_m" value="(@{corpo} + @{azione} + @{meccanico} + @{difesa})"
                         disabled="true" type="number" class="sm-num" />
@@ -314,7 +316,7 @@
                 <input type="hidden" name="attr_parata_m-name" value="Parata Meccanico" />
                 <input type="hidden" name="attr_parata_m-isphysical" value="true" />
                 <input type="hidden" name="attr_parata_m" value="0" />
-                
+
                 <span name="attr_malus_p" class="sm-num"></span>
             </div>
         </div>
@@ -2474,6 +2476,7 @@
                                             <span class="label-span right-side-small checkbox-container">
                                                 <input type="checkbox" name="attr_hasdiff" value="true" />
                                             </span>
+                                            <input class="right-side-small" type="number" name="attr_diff" />
                                         </div>
                                     </div>
                                     <div class="half">
@@ -2498,6 +2501,7 @@
         </div>
     </div>
 </div>
+
 <div class="sheet-misc">
     <div id="misc-container" class="sheet-container">
         <div id="misc-box">
@@ -2573,12 +2577,13 @@
                             <input type="hidden" name="attr_prereq-hokuto-koryu-needcomponent" value="true" />
                             <input type="hidden" name="attr_prereq-hokuto-koryu-needmedium" value="true" />
                             <input type="hidden" name="attr_prereq-hokuto-koryu-needreign" value="true" />
-                            <button name="act_prereq" type="action" alt="prereq-hokuto-koryu" class="sm-roll" value="|||#|$">
+                            <button name="act_prereq" type="action" alt="prereq-hokuto-koryu" class="sm-roll"
+                                value="|||#|$">
                                 <span name="attr_prereq-hokuto-koryu_name"></span>
                             </button>
                             <input type="hidden" name="attr_prereq-hokuto-koryu_name" value="Vie di Hokuto Koryu" />
                         </div>
-                         <div class="cell" name="u">
+                        <div class="cell" name="u">
                             <input type="checkbox" name="attr_prereq-hokuto-koryu-u" value="true" />
                         </div>
                         <div class="cell" name="c">
@@ -2586,11 +2591,13 @@
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
-                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-minus-4" value="usable" />
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-minus-4"
+                                    value="usable" />
                                 <span id="prereq-hokuto-koryu-minus-4" value="-4" type="prereq-hokuto-koryu"></span>
                             </label>
                             <label class="inner-cell">
-                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-minus-2" value="usable" />
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-koryu-minus-2"
+                                    value="usable" />
                                 <span id="prereq-hokuto-koryu-minus-2" value="-2" type="prereq-hokuto-koryu"></span>
                             </label>
                             <label class="inner-cell">
@@ -2711,7 +2718,8 @@
                             <input type="hidden" name="attr_prereq-hokuto-jen-needcomponent" value="true" />
                             <input type="hidden" name="attr_prereq-hokuto-jen-needmedium" value="true" />
                             <input type="hidden" name="attr_prereq-hokuto-jen-needreign" value="true" />
-                            <button name="act_prereq" type="action" alt="prereq-hokuto-jen" class="sm-roll" value="|||#|$">
+                            <button name="act_prereq" type="action" alt="prereq-hokuto-jen" class="sm-roll"
+                                value="|||#|$">
                                 <span name="attr_prereq-hokuto-jen_name"></span>
                             </button>
                             <input type="hidden" name="attr_prereq-hokuto-jen_name" value="Vie di Hokuto Jen" />
@@ -2724,11 +2732,13 @@
                         </div>
                         <div class="value no-border">
                             <label class="inner-cell">
-                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-minus-4" value="usable" />
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-minus-4"
+                                    value="usable" />
                                 <span id="prereq-hokuto-jen-minus-4" value="-4" type="prereq-hokuto-jen"></span>
                             </label>
                             <label class="inner-cell">
-                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-minus-2" value="usable" />
+                                <input type="hidden" class="color" name="attr_prereq-hokuto-jen-minus-2"
+                                    value="usable" />
                                 <span id="prereq-hokuto-jen-minus-2" value="-2" type="prereq-hokuto-jen"></span>
                             </label>
                             <label class="inner-cell">
@@ -2851,7 +2861,7 @@
                     <div id="learn-roll">
                         <input type="hidden" name="attr_learnprereq_rolldmg" value="false" />
                         <input type="hidden" name="attr_learnprereq_isphysical" value="true" />
-                        <button name="act_mixedprereq" type="action" alt="learnprereq" class="sm-roll" 
+                        <button name="act_mixedprereq" type="action" alt="learnprereq" class="sm-roll"
                             value="mente|percezione|umano|#|$">
                             <span name="attr_learnprereq_name"></span>
                             <span style="font-family:dicefontd6;">f</span>
@@ -2862,7 +2872,7 @@
                         <input type="hidden" name="attr_endureprereq_rolldmg" value="false" />
                         <input type="hidden" name="attr_endureprereq_isphysical" value="true" />
                         <input type="hidden" name="attr_endureprereq-needcomponent" value="true" />
-                        <button name="act_mixedprereq" type="action" alt="endureprereq" class="sm-roll" 
+                        <button name="act_mixedprereq" type="action" alt="endureprereq" class="sm-roll"
                             value="?|resistenza|nulla|{&quot;potenza&quot;:true}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:false}|{&quot;aura&quot;:true}">
                             <span name="attr_endureprereq_name"></span>
                             <span style="font-family:dicefontd6;">f</span>
@@ -2870,8 +2880,7 @@
                         <input type="hidden" name="attr_endureprereq_name" value="Resisti effetti Speciali" />
                     </div>
                     <div id="general-roll-container">
-                        <button name="act_general" type="action" title="general-roll" 
-                            value="|||" class="sm-roll">
+                        <button name="act_general" type="action" title="general-roll" value="|||" class="sm-roll">
                             <span>Tiro Generico</span>
                             <span style="font-family:dicefontd6;">f</span>
                         </button>
@@ -3217,6 +3226,7 @@
         const getValsArray = ["repeating_martial_isdistance", "repeating_martial_martial_t"];
         getAmValuesAndRoll(getValsArray, info, true);
     }
+    
     const getAmValuesAndRoll = function (getValsArray, info, isRepeating) {
         let values = [];
         getAttrs(getValsArray, (vals) => {
@@ -3232,7 +3242,7 @@
                 else {
                     let values = [];
                     const attrs = ["repeating_martial_componente", "repeating_martial_mezzo", "repeating_martial_regno"];
-                    const mods = [/*"repeating_martial_usepotenza", "repeating_martial_userapidita", "repeating_martial_useprecisione",*/ "repeating_martial_useattacco", "repeating_martial_usedifesa"];
+                    const mods = ["repeating_martial_useattacco", "repeating_martial_usedifesa", 'repeating_martial_hasdiff', 'repeating_martial_diff'];
                     const replace = "repeating_martial_use";
                     getAttrs(attrs, (vs) => {
                         Object.keys(vs).forEach((k) => {
@@ -3240,6 +3250,15 @@
                         });
                         getAttrs(mods, async (vals) => {
                             values = values.concat(["{\"potenza\": true}", "{\"rapidita\": true}", "{\"precisione\": true}"]);
+                            info["hasDiff"] = vals['repeating_martial_hasdiff'] == 'true';
+                            if(info["hasDiff"]) {
+                                if(vals['repeating_martial_diff'].trim() != '') info["diffVal"] = parseInt(vals['repeating_martial_diff']);
+                                else {
+                                    info["diffVal"] = await getQueryVal("! {{query1= [[?{Insert diff value|0}]]}}", true);                  
+                                }
+                            }
+                            delete(vals["repeating_martial_hasdiff"]);
+                            delete(vals["repeating_martial_diff"]);
                             Object.keys(vals).forEach((k) => {
                                 const mod = {};
                                 mod[k.replace(replace, "")] = vals[k] === 'true';
@@ -3293,7 +3312,7 @@
             let n = needs[i];
             if(n==="component") {
                 query = "! {{query1= [[ 0?{Componente|Corpo|Istinto|Cuore|Mente}]]}}"
-                vals[0] = await getQueryVal(query);;
+                vals[0] = await getQueryVal(query);
             }
             else if(n==="medium") {
                 query = "! {{query1= [[ 0?{Mezzo|Percezione|Azione|Desiderio|Resistenza}]]}}"
@@ -3318,10 +3337,13 @@
             "|Taishen,prereq-taishen}]]}}"
         return await getQueryVal(query);
     }
-    const getQueryVal = async function(query) {
+    const getQueryVal = async function(query, isNumber) {
         let res = await startRoll(query);
-        finishRoll(res);
-        return (res.results.query1.expression.match(rxGrab) || [])[1];
+        finishRoll(res.rollId);
+        if(isNumber) {
+            return parseInt(res.results.query1.expression);
+        }
+        else return (res.results.query1.expression.match(rxGrab) || [])[1];
     }
     const setAttrNames = function(info, title, separator) {
         info.htmlAttributes["displaytitle"] = title + separator + "name";
@@ -3410,6 +3432,10 @@
                         let showdmg = misc[rolldmg] === 'true';
                         let roll = `&{template:roll} {{name=${misc.character_name}}} {{rollname=${misc[name]}}} {{malus=${totalMalus}}} `;
                         roll += `{{modifier=[[${mod}]]}} {{critrange=[[${critInfo.range}]]}} `;
+                        if(info["hasDiff"]) {
+                            sum -= info["diffVal"];
+                            roll += ` {{showdiff=1}} {{diffMod=${info["diffVal"]}}} `;
+                        } 
                         if(info.htmlAttributes["desc"]) roll += ` {{showdesc=1}} {{dmgtype=${info.htmlAttributes["dmgtype"]}}} {{spec=${info.htmlAttributes["spec"]}}} {{notes=${info.htmlAttributes["notes"]}}}`;
                         if(showdmg) { 
                             const locRes = await startRoll("! {{loc=[[1d6]]}} {{sp=[[1d6]]}}");
@@ -3563,6 +3589,16 @@
                 </div>
             </div>
             {{/modifier}}
+            {{#showdiff}}
+            <div class="sheet-template-row">
+                <div class="sheet-template-left">
+                    <div>Difficulty</div>
+                </div>
+                <div class="sheet-template-right">
+                    <div>{{diffMod}}</div>
+                </div>
+            </div>
+            {{/showdiff}}
             {{#malus}}
             <div class="sheet-template-row">
                 <div class="sheet-template-left">

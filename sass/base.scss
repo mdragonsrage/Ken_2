@@ -222,7 +222,8 @@ div[data-groupname="repeating_martial"] {
         display: inline-block;
       }
       input {
-        &[type="text"] {
+        &[type="text"],
+        &[type="number"] {
           background-color: transparent;
           margin-bottom: 9px;
           height: 24px;

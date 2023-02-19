@@ -188,8 +188,9 @@ div[data-groupname="repeating_martial"] .repitem .options {
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block; }
-  div[data-groupname="repeating_feats"] .repitem .options input[type="text"],
-  div[data-groupname="repeating_martial"] .repitem .options input[type="text"] {
+  div[data-groupname="repeating_feats"] .repitem .options input[type="text"], div[data-groupname="repeating_feats"] .repitem .options input[type="number"],
+  div[data-groupname="repeating_martial"] .repitem .options input[type="text"],
+  div[data-groupname="repeating_martial"] .repitem .options input[type="number"] {
     background-color: transparent;
     margin-bottom: 9px;
     height: 24px; }
@@ -893,6 +894,8 @@ div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .
     #rear-box .grid-values #repeating-martial-container {
       width: 100%;
       height: calc(100% - 254.319px); }
+      #rear-box .grid-values #repeating-martial-container span:has([name="attr_hasdiff"]:not(:checked)) ~ [name="attr_diff"] {
+        display: none; }
       #rear-box .grid-values #repeating-martial-container div[data-groupname="repeating_martial"].repcontainer {
         height: 100%;
         width: 102%; }

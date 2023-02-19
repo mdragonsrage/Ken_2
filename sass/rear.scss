@@ -193,6 +193,9 @@ $div-height: 19.563px;
         #repeating-martial-container {
             width: 100%;
             height: calc(100% - 254.319px);
+            span:has([name="attr_hasdiff"]:not(:checked)) ~ [name="attr_diff"] {
+                display: none;
+            }
             div[data-groupname="repeating_martial"] {
                 &.repcontainer {
                     height: 100%;
