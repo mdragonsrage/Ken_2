@@ -3250,7 +3250,7 @@
                 sobstMod = "feat-3";
             }
             else if(vals[getValsArray[1]] == "CO") sobstMod = "feat-1";
-            else sobstMod = "feat-19";
+            //else sobstMod = "feat-19";
             Object.keys(vals).forEach(k => {
                 if(k.indexOf("dmg") > -1 && vals[k].trim() != "" && vals[k] != "---") {
                     info.htmlAttributes["desc"] = "Descr";
@@ -3266,7 +3266,7 @@
                 } 
             });
             getAttrs([sobstMod,info.htmlAttributes["modifier"] ], (vs) => {
-                if(parseInt(vs[info.htmlAttributes["modifier"]]) > parseInt(vs[sobstMod])) info.htmlAttributes["modifier"] = sobstMod;
+                if(sobstMod != "" && parseInt(vs[info.htmlAttributes["modifier"]]) > parseInt(vs[sobstMod])) info.htmlAttributes["modifier"] = sobstMod;
                 if(!isRepeating) prepareRollTemplate(info);
                 else {
                     let values = [];
