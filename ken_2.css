@@ -210,6 +210,44 @@ div[data-groupname="repeating_feats"] .repitem .display-control[value="0"] ~ .op
 div[data-groupname="repeating_martial"] .repitem .display-control[value="0"] ~ .options {
   display: none; }
 
+.tooltip-roll {
+  position: absolute;
+  padding: 5px 1px;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 350ms, 0ms;
+  transition-delay: 350ms, 0ms;
+  transition-property: opacity, visibility;
+  color: black;
+  width: auto !important;
+  white-space: normal !important;
+  overflow: auto !important;
+  text-overflow: unset !important;
+  z-index: 1;
+  height: auto;
+  border: 1px solid;
+  font-size: 11px !important;
+  top: 21px; }
+  .tooltip-roll.tooltip-name {
+    left: 79px; }
+  .tooltip-roll.tooltip-req {
+    left: 310px; }
+  .tooltip-roll.tooltip-dmg {
+    left: 450px; }
+  .tooltip-roll.tooltip-spec {
+    left: 485px; }
+  .tooltip-roll.tooltip-notes {
+    left: 590px; }
+
+span.show-tooltip:hover ~ .tooltip-roll {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 350ms, 0ms;
+  transition-delay: 350ms, 0ms;
+  transition-property: opacity, visibility; }
+
 #front-container {
   background-image: url("https://raw.githubusercontent.com/mdragonsrage/Ken_2/master/assets/img/scheda_fronte.jpg"); }
 
