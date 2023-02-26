@@ -38,6 +38,29 @@ $div-height: 19.563px;
             width: 19.5px;
         }
     }
+    .grid-full-container {
+        width: 100%;
+        margin: 2px;
+        .misc-grid-values {
+            width: 100%;
+            .misc-grid-column {
+                width: 33.3%;
+                float: left;
+                span {
+                    display: inline-block;
+                    width: calc(100% - 51px);
+                    height: 20px;
+                    text-align: center;
+                }
+                input {
+                    width: 31px;
+                    height: 20px;
+                    vertical-align: top;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
     .grid-title,
     .grid-values {
         div {
@@ -124,7 +147,7 @@ $div-height: 19.563px;
                         height: 17px;
                         width: 17px;
                         box-sizing: border-box;
-                        vertical-align: bottom;;
+                        vertical-align: bottom;
                         border: $grey-border;
                         display: inherit;
                         &:before,

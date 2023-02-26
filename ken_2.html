@@ -2899,6 +2899,25 @@
                     </div>
                 </div>
             </div>
+            <div id="misc-values" class="grid-full-container">
+                <div class="grid-title">
+                    <div style="width:100%;"><span>Misc Values</span></div>
+                </div>
+                <div class="misc-grid-values">
+                    <div class="misc-grid-column">
+                        <span>Aura Omicida</span>
+                        <input type="number" name="attr_killeraura" value="0" />
+                    </div>
+                    <div class="misc-grid-column">
+                        <span>Onore</span>
+                        <input type="number" name="attr_honor" value="0" />
+                    </div>
+                    <div class="misc-grid-column">
+                        <span>Fattore Shura</span>
+                        <input type="number" readonly name="attr_shurafactor" value="0"  />
+                    </div>
+                </div>  
+            </div>
         </div>
     </div>
 </div>
@@ -2944,6 +2963,17 @@
         on(`change:${def}`, function(eventInfo) {
             setArmorMalus()
         });
+    });
+    on("change:cuore change:istinto change:mente change:aura change:killeraura sheet:opened ", function() {
+        getAttrs(["cuore", "mente", "istinto", "aura", "killeraura"], function(vals) {
+            let subVal = Math.max(vals["killeraura"], vals["aura"]);
+            delete(vals["killeraura"]);
+            delete(vals["aura"]);
+            let sum = Object.values(vals).reduce((a,b,) => parseInt(a)+parseInt(b),0);
+            setAttrs ({
+                "shurafactor": (Math.floor(sum/3) - subVal)
+            });
+        })
     });
     on("sheet:opened", () => setArmorMalus());
     on("clicked:feat", (info) => processFeatRoll(info));

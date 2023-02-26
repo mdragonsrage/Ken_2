@@ -1062,6 +1062,24 @@ span.show-tooltip:hover ~ .tooltip-roll {
     #misc-box .grid-container .cell,
     #misc-box .grid-container .inner-cell {
       width: 19.5px; }
+  #misc-box .grid-full-container {
+    width: 100%;
+    margin: 2px; }
+    #misc-box .grid-full-container .misc-grid-values {
+      width: 100%; }
+      #misc-box .grid-full-container .misc-grid-values .misc-grid-column {
+        width: 33.3%;
+        float: left; }
+        #misc-box .grid-full-container .misc-grid-values .misc-grid-column span {
+          display: inline-block;
+          width: calc(100% - 51px);
+          height: 20px;
+          text-align: center; }
+        #misc-box .grid-full-container .misc-grid-values .misc-grid-column input {
+          width: 31px;
+          height: 20px;
+          vertical-align: top;
+          background-color: transparent; }
   #misc-box .grid-title div,
   #misc-box .grid-values div {
     text-align: center;
