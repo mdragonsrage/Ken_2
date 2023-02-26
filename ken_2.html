@@ -1238,6 +1238,7 @@
                                     <option value="istinto">Istinto</option>
                                     <option value="cuore">Cuore</option>
                                     <option value="mente">Mente</option>
+                                    <option value="shurafactor">Fattore Shura</option>
                                     <option value=" "></option>
                                 </select>
                             </div>
@@ -2401,6 +2402,7 @@
                                                     <option value="istinto">Istinto</option>
                                                     <option value="cuore">Cuore</option>
                                                     <option value="mente">Mente</option>
+                                                    <option value="shurafactor">Fattore Shura</option>
                                                     <option value=" "></option>
                                                 </select>
                                             </div>
@@ -3371,7 +3373,7 @@
         for(let i = 0; i < needs.length; i++) {
             let n = needs[i];
             if(n==="component") {
-                query = "! {{query1= [[ 0?{Componente|Corpo|Istinto|Cuore|Mente}]]}}"
+                query = "! {{query1= [[ 0?{Componente|Corpo|Istinto|Cuore|Mente|Fattore Shura,shurafactor}]]}}"
                 vals[0] = await getQueryVal(query);
             }
             else if(n==="medium") {
