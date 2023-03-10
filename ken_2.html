@@ -271,26 +271,26 @@
         <!-- Calculated Values -->
         <div id="calculated-container">
             <div class="calculated">
-                <input name="attr_iniziativa" value="(@{istinto}) + (@{azione}) + (@{umano}) + (@{aura})"
-                    disabled="true" type="number" class="sm-num left row_1" />
-                <input name="attr_movimento" value="(8 + @{difesa})" disabled="true" type="number"
+                <input name="attr_iniziativa" value="0"
+                    readonly type="number" class="sm-num left row_1" />
+                <input name="attr_movimento" value="0" readonly type="number"
                     class="sm-num center row_1" />
-                <input name="attr_corsa" value="((@{movimento} + @{feat-9})*3)" disabled="true" type="number"
+                <input name="attr_corsa" value="0" readonly type="number"
                     class="sm-num right row_1" />
 
-                <input name="attr_cac_u" value="(@{corpo} + @{azione} + @{umano} + @{attacco})" disabled="true"
+                <input name="attr_cac_u" value="0" readonly
                     type="number" class="sm-num calculated-triangle left-top" />
-                <input name="attr_cac_m" value="(@{corpo} + @{azione} + @{meccanico} + @{attacco})" disabled="true"
+                <input name="attr_cac_m" value="0" readonly
                     type="number" class="sm-num calculated-triangle left-bottom" />
-                <input name="attr_dist_u" value="(@{corpo} + @{percezione} + @{umano} + @{attacco})" disabled="true"
+                <input name="attr_dist_u" value="0" readonly
                     type="number" class="sm-num calculated-triangle right-top" />
-                <input name="attr_dist_m" value="(@{corpo} + @{percezione} + @{meccanico} + @{attacco})" disabled="true"
+                <input name="attr_dist_m" value="0" readonly
                     type="number" class="sm-num calculated-triangle right-bottom" />
 
                 <button name="act_feat" type="action" alt="dodge" class="sm-roll left row_3"
                     value="istinto|percezione|umano|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
-                    <input name="attr_dodge_display" value="(@{istinto} + @{percezione} + @{umano} + @{difesa})"
-                        disabled="true" type="number" class="sm-num" />
+                    <input name="attr_dodge_display" value="0" style="cursor:pointer"
+                        readonly type="number" class="sm-num" />
                 </button>
                 <input type="hidden" name="attr_dodge-name" value="Schivata" />
                 <input type="hidden" name="attr_dodge-isphysical" value="true" />
@@ -300,7 +300,7 @@
                 <button name="act_feat" type="action" alt="parata_u"
                     class="sm-roll right row_3 calculated-triangle right-top"
                     value="corpo|azione|umano|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
-                    <input name="attr_parata_u" value="(@{corpo} + @{azione} + @{umano} + @{difesa})" disabled="true"
+                    <input name="attr_parata_u" value="0" readonly style="cursor:pointer"
                         type="number" class="sm-num" />
                 </button>
                 <input type="hidden" name="attr_parata_u-name" value="Parata Umano" />
@@ -310,8 +310,8 @@
                 <button name="act_feat" type="action" alt="parata_m"
                     class="sm-roll right row_3 calculated-triangle right-bottom"
                     value="corpo|azione|meccanico|{&quot;potenza&quot;:false}|{&quot;rapidita&quot;:false}|{&quot;precisione&quot;:false}|{&quot;attacco&quot;:false}|{&quot;difesa&quot;:true}|{&quot;aura&quot;:false}">
-                    <input name="attr_parata_m" value="(@{corpo} + @{azione} + @{meccanico} + @{difesa})"
-                        disabled="true" type="number" class="sm-num" />
+                    <input name="attr_parata_m" value="0"
+                        readonly style="cursor:pointer" type="number" class="sm-num" />
                 </button>
                 <input type="hidden" name="attr_parata_m-name" value="Parata Meccanico" />
                 <input type="hidden" name="attr_parata_m-isphysical" value="true" />
@@ -2939,11 +2939,7 @@
     ];
     const defences = ["testa", "torso", "bd", "bs", "gd", "gs"];
     const rxGrab = /^0(.*)\s*$/;
-    $20("button.repcontrol_edit").on("click", function(){$20("button.repcontrol_edit").toggleClass("clicked")})
-    $20(".wound div").on("click", (event) => toggleWound(event));
-    $20(".points span").on("click", (event) => togglePoint(event));
-    $20("#misc-box .value span").on("click", (event) => togglePrereq(event));
-    
+
     /* tab selection */
     tabList.forEach(tab => {
         on(`clicked:${tab}`, function() {
@@ -2956,7 +2952,7 @@
     attributes.forEach((attr) => {
         Object.keys(attr).forEach((a) => {
             const type = attr[a];
-            on(`change:${a} sheet:opened`, function(eventInfo) {
+            on(`change:${a}`, function(eventInfo) {
                 checkAttributeValue(a, type);
             });
         })
@@ -2966,7 +2962,7 @@
             setArmorMalus()
         });
     });
-    on("change:cuore change:istinto change:mente change:aura change:killeraura sheet:opened ", function() {
+    on("change:cuore change:istinto change:mente change:aura change:killeraura ", function() {
         getAttrs(["cuore", "mente", "istinto", "aura", "killeraura"], function(vals) {
             let subVal = Math.max(vals["killeraura"], vals["aura"]);
             delete(vals["killeraura"]);
@@ -2977,7 +2973,63 @@
             });
         })
     });
-    on("sheet:opened", () => setArmorMalus());
+    on("change:istinto change:azione change:umano change:aura", function() {
+        getAttrs(["istinto", "azione", "umano", "aura"], function(vals) {
+            let sum = Object.values(vals).reduce((a,b,) => parseInt(a)+parseInt(b),0);
+            setAttrs ({
+                "iniziativa": sum
+            });
+        })
+    });
+    on("change:difesa change:feat-9", function() {
+        getAttrs(["difesa", "feat-9"], function(vals) {
+            let mov = 8 + parseInt(vals["difesa"]);
+            let corsa = (mov + parseInt(vals["feat-9"]))*3
+            setAttrs ({
+                "movimento": mov,
+                "corsa": corsa
+            });
+        })
+    });
+    on("change:istinto change:corpo change:azione change:percezione change:umano change:meccanico change:difesa", function(){
+        getAttrs(["istinto","corpo","azione","percezione","umano","difesa","meccanico"], function(vals) {
+            let dodge = parseInt(vals["istinto"]) + parseInt(vals["percezione"]) + parseInt(vals["umano"])  + parseInt(vals["difesa"]);
+            let parata = parseInt(vals["corpo"]) + parseInt(vals["azione"]) + parseInt(vals["difesa"]);
+            let parata_u = parata + parseInt(vals["umano"]);
+            let parata_m = parata + parseInt(vals["meccanico"]);
+            setAttrs ({
+                "dodge_display": dodge,
+                "parata_u": parata_u,
+                "parata_m": parata_m
+            });
+        })
+    });
+    on("change:corpo change:azione change:umano change:attacco change:meccanico change:percezione", function(){
+        getAttrs(["corpo","azione","umano","attacco","meccanico","percezione"], function(vals) {
+            let cac_mod = parseInt(vals["corpo"]) + parseInt(vals["azione"]) + parseInt(vals["attacco"]);
+            let dist_mod = parseInt(vals["corpo"]) + parseInt(vals["percezione"]) + parseInt(vals["attacco"]);
+            let cac_u = cac_mod + parseInt(vals["umano"]) ;
+            let cac_m = cac_mod + parseInt(vals["meccanico"]);
+            let dist_u = dist_mod + parseInt(vals["umano"]);
+            let dist_m = dist_mod + parseInt(vals["meccanico"]);
+            setAttrs ({
+                "cac_u": cac_u,
+                "cac_m": cac_m,
+                "dist_u": dist_u,
+                "dist_m": dist_m,
+            });
+        })
+    });
+    on("change:bpotenza change:bprecisione change:brapidita", function(eventInfo) {
+        const attr = eventInfo.triggerName.split("b")[1];
+        const battr = eventInfo.triggerName;
+        const val = eventInfo.newValue;
+        checkBonusEnergy(attr, battr, val);
+    });
+    on("change:malus_dolore change:malus_peq change:malus_pres", function() {
+        setMalusPoints();
+    });
+    /* On click event */
     on("clicked:feat", (info) => processFeatRoll(info));
     on("clicked:am", (info) => processAmPrereqRoll(info, true));
     on("clicked:prereq", (info) => processAmPrereqRoll(info, false));
@@ -2985,12 +3037,6 @@
     on("clicked:repeating_feats:feat", (info) => processRepeatingFeatRoll(info));
     on("clicked:repeating_martial:am", (info) => processRepeatingAmRoll(info));
     on("clicked:mixedprereq", (info) => processMixedPrereqRoll(info));
-    on("change:bpotenza change:bprecisione change:brapidita", function(eventInfo) {
-        const attr = eventInfo.triggerName.split("b")[1];
-        const battr = eventInfo.triggerName;
-        const val = eventInfo.newValue;
-        checkBonusEnergy(attr, battr, val);
-    });
     on("clicked:repeating_feats:activate", function(eventInfo) {
         getAttrs (['repeating_feats_info-display'], function(values) {
            const output = {};
@@ -3005,10 +3051,11 @@
          setAttrs(output);
       });
     });
-    on("change:malus_dolore change:malus_peq change:malus_pres sheet:opened", function() {
-        setMalusPoints();
-    });
-
+    $20("button.repcontrol_edit").on("click", function(){$20("button.repcontrol_edit").toggleClass("clicked")})
+    $20(".wound div").on("click", (event) => toggleWound(event));
+    $20(".points span").on("click", (event) => togglePoint(event));
+    $20("#misc-box .value span").on("click", (event) => togglePrereq(event));
+    
     /* Check if attribute is between min/max and sets accordingly */
     const checkAttributeValue = function (attr, type) {
         const maxattr = 'max' + type;
